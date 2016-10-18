@@ -1,3 +1,10 @@
+/* Common */
+#sidebar .widget {
+  border: 1px solid #ccc;
+}
+#sidebar .widget .content {
+  padding: 10px;
+}
 /* Header */
 .logo {
   width: 150px;
@@ -8,6 +15,9 @@ main {
   padding: 10px;
   min-height: 1000px;
 }
+/* Sidebar */
+
+/* Footer */
 footer {
   padding: 10px;
 }
