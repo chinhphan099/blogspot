@@ -3,8 +3,8 @@
   font-family: "icomoon";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  src: url("https://raw.githubusercontent.com/chinhphan099/blogspot/master/icomoon.eot");
+  src: url("https://raw.githubusercontent.com/chinhphan099/blogspot/master/icomoon.eot?#iefix") format("embedded-opentype"), url("https://raw.githubusercontent.com/chinhphan099/blogspot/master/icomoon.woff") format("woff"), url("https://raw.githubusercontent.com/chinhphan099/blogspot/master/icomoon.ttf") format("truetype"), url("https://raw.githubusercontent.com/chinhphan099/blogspot/master/icomoon.svg#icomoon") format("svg");
 }
 /* End Fontface */
 /* Begin Reset */
