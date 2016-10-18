@@ -1,9 +1,9 @@
 /* Common */
-#sidebar .widget {
-  border: 1px solid #ccc;
-}
-#sidebar .widget .content {
+.sub-title {
   padding: 10px;
+  background-color: #ccc;
+  color: white;
+  text-transform: uppercase;
 }
 /* Header */
 .logo {
@@ -16,7 +16,15 @@ main {
   min-height: 1000px;
 }
 /* Sidebar */
-
+#sidebar .widget {
+  border: 1px solid #ccc;
+}
+#sidebar .widget + .widget {
+  margin-top: 15px;
+}
+#sidebar .widget .content {
+  padding: 10px;
+}
 /* Footer */
 footer {
   padding: 10px;
