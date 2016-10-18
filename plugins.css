@@ -2870,7 +2870,7 @@ Copyright (c) 2015 Daniel Eden
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("../images/loading.svg") center center / 50px no-repeat;
+  background: url("//rawgit.com/chinhphan099/blogspot/master/loading.svg") center center / 50px no-repeat;
 }
 .slick {
   position: relative;
