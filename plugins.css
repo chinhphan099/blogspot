@@ -2859,12 +2859,12 @@ Copyright (c) 2015 Daniel Eden
   display: none;
 }
 /* Slider */
-[data-slider] {
+[data-cslider] {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-[data-slider] .load {
+.load {
   position: absolute;
   top: 0;
   right: 0;
