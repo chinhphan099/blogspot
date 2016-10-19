@@ -1,7 +1,6 @@
 /* Begin Slide Menu */
 .wrapper {
   position: relative;
-  overflow: hidden;
 }
 .head-nav {
   position: relative;
@@ -207,6 +206,7 @@
 .open-left-nav .wrapper,
 .open-right-nav .wrapper {
   height: 100%;
+  overflow: hidden;
 }
 .open-left-nav .main-nav-wrap,
 .open-right-nav .main-nav-wrap {
