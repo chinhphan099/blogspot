@@ -130,13 +130,14 @@
   z-index: 3;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.main-container .cHeader {
+.cHeader {
   width: 100%;
   height: 40px;
   position: relative;
   z-index: 8;
 }
-.main-container .cHeader .temp-h1 {
+  
+.cHeader .temp-h1 {
   position: fixed;
   top: 0;
   right: 0;
@@ -145,8 +146,8 @@
   height: 40px;
   font-size: 1.429rem;
 }
-.main-container .cHeader [data-nav="open-left-nav"] .icon-hamburger,
-.main-container .cHeader [data-nav="open-left-nav"] .icon-close {
+.cHeader [data-nav="open-left-nav"] .icon-hamburger,
+.cHeader [data-nav="open-left-nav"] .icon-close {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -157,8 +158,8 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
-.main-container .cHeader [data-nav="open-right-nav"] .icon-search,
-.main-container .cHeader [data-nav="open-right-nav"] .icon-close {
+.cHeader [data-nav="open-right-nav"] .icon-search,
+.cHeader [data-nav="open-right-nav"] .icon-close {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -169,7 +170,7 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
-.main-container .cHeader .icon-close {
+.cHeader .icon-close {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .25s ease, visibility .25s ease;
@@ -190,7 +191,7 @@
   .navigation .temp-h1 {
     font-size: 1.429rem;
   }
-  .main-container .cHeader .temp-h1 {
+  .cHeader .temp-h1 {
     font-size: 1.429rem;
   }
 }
@@ -214,14 +215,14 @@
 .open-left-nav .navigation {
   position: absolute;
 }
-.open-left-nav .main-container .cHeader .temp-h1 {
+.open-left-nav .cHeader .temp-h1 {
   position: relative;
 }
-.open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .icon-hamburger {
+.open-left-nav .cHeader [data-nav="open-left-nav"] .icon-hamburger {
   opacity: 0;
   visibility: hidden;
 }
-.open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .icon-close {
+.open-left-nav .cHeader [data-nav="open-left-nav"] .icon-close {
   opacity: 1;
   visibility: visible;
 }
@@ -236,14 +237,14 @@
 .open-right-nav .right-navigation {
   position: absolute;
 }
-.open-right-nav .main-container .cHeader .temp-h1 {
+.open-right-nav .cHeader .temp-h1 {
   position: relative;
 }
-.open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .icon-search {
+.open-right-nav .cHeader [data-nav="open-right-nav"] .icon-search {
   opacity: 0;
   visibility: hidden;
 }
-.open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .icon-close {
+.open-right-nav .cHeader [data-nav="open-right-nav"] .icon-close {
   opacity: 1;
   visibility: visible;
 }
