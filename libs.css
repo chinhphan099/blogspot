@@ -484,7 +484,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #2199e8;
+  color: #ff0000;
 }
 :focus {
   outline: 0;
