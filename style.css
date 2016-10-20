@@ -34,21 +34,14 @@ footer {
 .sidebar .post + .post {
   margin-top: 10px;
 }
-.post .thumbnail {
-  float: left;
-  width: 35%;
-  padding-right: 10px;
-}
 .sidebar .post .thumbnail {
-  width: 120px;
 }
-.post .content {
-  overflow: hidden;
+.post .thumbnail a {
+  display: block;
 }
 .post .title {
-  padding-bottom: 2px;
   font-size: 1.143rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 .post .desc {
   font-size: 0.929rem;
