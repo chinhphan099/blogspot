@@ -36,6 +36,7 @@ footer {
 }
 .post .thumbnail {
   float: left;
+  width: 35%;
   padding-right: 10px;
 }
 .sidebar .post .thumbnail {
