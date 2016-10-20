@@ -5,6 +5,9 @@
   color: white;
   text-transform: uppercase;
 }
+.widget {
+  position: relative;
+}
 /* Header */
 .logo {
   width: 150px;
