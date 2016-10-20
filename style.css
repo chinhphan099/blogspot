@@ -48,6 +48,7 @@ footer {
 .post .title {
   padding-bottom: 2px;
   font-size: 1.143rem;
+  text-transform: capitalize;
 }
 .post .desc {
   font-size: 0.929rem;
