@@ -52,3 +52,14 @@ footer {
 .post .desc {
   font-size: 0.929rem;
 }
+/* Category Sidebar */
+.links li {
+  padding-top: 5px;
+  margin-top: 5px;
+}
+.links li + li {
+  border-top: 1px dashed #ccc;
+}
+.link a {
+  text-transform: capitalize;
+}
