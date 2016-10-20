@@ -8,6 +8,11 @@
 .widget {
   position: relative;
 }
+.widget-item-control {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
 /* Header */
 .logo {
   width: 150px;
