@@ -39,11 +39,15 @@ footer {
   transform: translateY(0);
 }
 .post:hover .thumbnail img {
+  opacity: .5;
 }
 .post + .post {
   margin-top: 10px;
 }
 .post .thumbnail img {
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 .post .thumbnail a {
   display: block;
