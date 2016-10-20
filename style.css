@@ -39,18 +39,11 @@ footer {
   transform: translateY(0);
 }
 .post:hover .thumbnail img {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-  transform: scale(1) rotate(0);
 }
 .post + .post {
   margin-top: 10px;
 }
 .post .thumbnail img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  transform: scale(1.5) rotate(20deg);
-  transition: all .5s ease;
 }
 .post .thumbnail a {
   display: block;
