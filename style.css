@@ -64,3 +64,7 @@ footer {
 .links a {
   text-transform: capitalize;
 }
+.links span {
+  font-size: 0.857rem;
+  color: #505050;
+}
