@@ -32,6 +32,9 @@ footer {
 /* End Structure */
 
 /* Post */
+.sidebar .post + .post {
+  margin-top: 10px;
+}
 .post .thumbnail {
   float: left;
   padding-right: 10px;
