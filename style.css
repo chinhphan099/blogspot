@@ -30,3 +30,22 @@ footer {
   padding: 10px;
 }
 /* End Structure */
+
+/* Post */
+.post .thumbnail {
+  float: left;
+  padding-right: 10px;
+}
+.sidebar .post .thumbnail {
+  padding-right: 5px;
+}
+.post .content {
+  overflow: hidden;
+}
+.post .title {
+  padding-bottom: 2px;
+  font-size: 1.071rem;
+}
+.post .desc {
+  font-size: 12px;
+}
