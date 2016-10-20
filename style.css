@@ -31,6 +31,13 @@ footer {
 /* End Structure */
 
 /* Post */
+.post {
+  position: relative;
+  overflow: hidden;
+}
+.post:hover .title {
+  transform: translateY(0);
+}
 .sidebar .post + .post {
   margin-top: 10px;
 }
@@ -40,8 +47,16 @@ footer {
   display: block;
 }
 .post .title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
   font-size: 1.143rem;
   text-transform: uppercase;
+  background-color: rgba(255,255,255,.7);
+  transform: translateY(100%);
+  transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .post .desc {
   font-size: 0.929rem;
