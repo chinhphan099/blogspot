@@ -62,7 +62,7 @@ footer {
   text-transform: uppercase;
   background-color: rgba(255,255,255,.7);
   transform: translateY(100%);
-  transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 .post .desc {
   font-size: 0.929rem;
