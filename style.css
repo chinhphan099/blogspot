@@ -22,7 +22,7 @@ main {
 #sidebar .widget + .widget {
   margin-top: 15px;
 }
-#sidebar .widget .content {
+#sidebar .widget .outer {
   padding: 10px;
 }
 /* Footer */
@@ -37,6 +37,7 @@ footer {
   padding-right: 10px;
 }
 .sidebar .post .thumbnail {
+  width: 50%;
   padding-right: 5px;
 }
 .post .content {
