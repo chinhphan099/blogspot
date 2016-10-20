@@ -10,19 +10,18 @@
   width: 150px;
 }
 /* Begin Structure */
-main {
-  margin: 5px 0;
-  padding: 10px;
-  min-height: 1000px;
+.main {
 }
 /* Sidebar */
-#sidebar .widget {
+.sidebar {
+}
+.sidebar .widget {
   border: 1px solid #ccc;
 }
-#sidebar .widget + .widget {
+.sidebar .widget + .widget {
   margin-top: 15px;
 }
-#sidebar .widget .outer {
+.sidebar .widget .outer {
   padding: 10px;
 }
 /* Footer */
