@@ -60,6 +60,6 @@ footer {
 .links li + li {
   border-top: 1px dashed #ccc;
 }
-.link a {
+.links a {
   text-transform: capitalize;
 }
