@@ -50,7 +50,7 @@ footer {
   opacity: .5;
 }
 .post:hover .title {
-  transform: translateY(-100%);
+  transform: translateY(0);
 }
 .post:hover .desc {
   transform: translateX(0);
@@ -79,6 +79,7 @@ footer {
   padding: 10px;
   font-size: 1.143rem;
   text-transform: uppercase;
+  background-color: rgba(255,255,255,.7);
   transform: translateY(-100%);
   transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
