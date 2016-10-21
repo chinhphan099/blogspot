@@ -84,6 +84,9 @@ footer {
   transform: translateY(-100%);
   transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
+.post .title a {
+  display: block;
+}
 .post .desc {
   font-size: 0.929rem;
   padding: 0 10px 10px;
