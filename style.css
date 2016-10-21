@@ -39,21 +39,21 @@ footer {
 /* End Structure */
 
 /* Post */
-.post {
+.post .inner {
   position: relative;
   overflow: hidden;
 }
-.post:hover .content {
+.post .inner:hover .content {
   transform: translateY(0);
 }
-.post:hover .thumbnail img {
+.post .inner:hover .thumbnail img {
   opacity: .5;
 }
-.post:hover .title {
+.post .inner:hover .title {
   background-color: transparent;
   transform: translateY(0);
 }
-.post:hover .desc {
+.post .inner:hover .desc {
   transform: translateX(0);
 }
 .post + .post {
