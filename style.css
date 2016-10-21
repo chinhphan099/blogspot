@@ -1,4 +1,7 @@
 /* Common */
+.main-container > .inner > .container {
+  background-color: white;
+}
 .sub-title {
   padding: 10px;
   background-color: #ccc;
@@ -135,4 +138,7 @@ footer {
 .links span {
   font-size: 0.857rem;
   color: #505050;
+}
+@media (min-width: 768px) {
+  
 }
