@@ -104,7 +104,7 @@ footer {
   display: inline-block;
 }
 .links a:before {
-  color: #fff;
+  color: red;
   content: attr(data-hover);
   position: absolute;
   opacity: 0;
@@ -116,6 +116,7 @@ footer {
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
+  font-weight: bold;
 }
 .links a:hover:before {
   -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
