@@ -1,5 +1,8 @@
 /* Common */
-.main-container > .inner > .container {
+.navigation .container,
+.cHeader .container,
+.main-container > .inner > .container,
+.footer > .inner > .container {
   background-color: white;
 }
 .sub-title {
