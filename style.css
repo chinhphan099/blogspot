@@ -43,21 +43,21 @@ footer {
 /* End Structure */
 
 /* Post */
-.post .inner {
+.post {
   position: relative;
   overflow: hidden;
 }
-.post .inner:hover .content {
+.post:hover .content {
   transform: translateY(0);
 }
-.post .inner:hover .thumbnail img {
+.post:hover .thumbnail img {
   opacity: .5;
 }
-.post .inner:hover .title {
+.post:hover .title {
   background-color: transparent;
   transform: translateY(0);
 }
-.post .inner:hover .desc {
+.post:hover .desc {
   transform: translateX(0);
 }
 .post + .post {
