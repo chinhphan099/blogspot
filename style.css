@@ -86,7 +86,7 @@ footer {
   font-size: 0.929rem;
   padding: 10px 10px 0;
   transform: translateX(-100%);
-  transition: all .3s .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all .1s .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 /* Category Sidebar */
 .links li {
