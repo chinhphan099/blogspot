@@ -43,11 +43,14 @@ footer {
   position: relative;
   overflow: hidden;
 }
-.post:hover .title {
+.post:hover .content {
   transform: translateY(0);
 }
 .post:hover .thumbnail img {
   opacity: .5;
+}
+.post:hover .desc {
+  transform: translateX(0);
 }
 .post + .post {
   margin-top: 10px;
@@ -78,6 +81,8 @@ footer {
 .post .desc {
   font-size: 0.929rem;
   padding: 10px;
+  transform: translateX(-100%);
+  transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 /* Category Sidebar */
 .links li {
