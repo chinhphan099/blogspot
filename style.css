@@ -4,9 +4,13 @@
   background-color: #ccc;
   color: white;
   text-transform: uppercase;
+  transition: all .3s ease;
 }
 .widget {
   position: relative;
+}
+.widget:hover .sub-title {
+  background-color: red;
 }
 .widget-item-control {
   position: absolute;
