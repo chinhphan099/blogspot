@@ -117,7 +117,7 @@ footer {
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 }
-.link a:hover:before {
+.links a:hover:before {
   -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   -moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
