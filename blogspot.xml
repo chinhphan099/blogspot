@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:fb='http://www.facebook.com/2008/fbml'>
+  <head>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+    <b:include data='blog' name='all-head-content'/>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+      <title><data:blog.pageTitle/></title>
+    <b:else/>
+      <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+        <title><data:blog.pageName/> - <data:blog.title/></title>
+      </b:if>
+    </b:if>
+    <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+      <title>Page Not Found - <data:blog.title/></title>
+      <meta content='3;/' http-equiv='refresh'/>
+    </b:if>
+
+    <b:if cond='data:blog.isMobile'>
+      <link rel='alternate' href='data:link.href' />
+    <b:else/>
+      <link rel='canonical' href='data:link.href' />
+    </b:if>
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+
+    <title><data:blog.pageTitle/></title>
+    &lt;style&gt;&lt;!--/*<b:skin><![CDATA[*/]]></b:skin>
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/libs.css' />
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/plugins.css' />
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/style.css' />
+    <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/mobile.css' />
+    <b:include data='blog' name='google-analytics'/>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/modernizr.js'></script>
+    <meta expr:content='data:blog.pageTitle' property='og:title'/>
+    <meta expr:content='data:blog.url' property='og:url'/>
+    <meta content='Kem Trắng Răng USA' property='og:site_name'/>
+    <meta content='//3.bp.blogspot.com/-luy3nJ7EJ_I/WATgn55hLgI/AAAAAAAADOI/Jrx1SRKoC6IEyCDHJFxgDE83sx_y7ZLHgCK4B/s1600/Stamp.jpg' property='og:image'/>
+    <meta content='1812285465652183 ' property='fb:app_id'/>
+    <meta content='http://www.facebook.com/chinhphan099' property='fb:admins'/>
+    <meta content='article' property='og:type'/>
+  </head>
+
+  <body>
+    <div id='fb-root'/>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId : &#39;1812285465652183&#39;,
+          status : true, // check login status
+          cookie : true, // enable cookies to allow the server to access the session
+          xfbml : true // parse XFBML
+          });
+      };
+      (function() {
+        var e = document.createElement(&#39;script&#39;);
+        e.src = document.location.protocol + &#39;//connect.facebook.net/en_US/all.js&#39;; 
+        e.async = true;
+        document.getElementById(&#39;fb-root&#39;).appendChild(e);
+      }());
+    </script>
+    <div class='wrapper' data-slidemenu='{&quot;headerFixedOnFocus&quot;: true}'>
+      <b:section class='navigation' id='navigation' showaddelement='yes'>
+        <b:widget id='PageList1' locked='true' title='Pages' type='PageList' version='1' visible='true'>
+          <b:includable id='main'>
+            <div class='container'>
+              <ul class='nav' data-collapse=''>
+                <b:loop values='data:links' var='link'>
+                  <b:if cond='data:link.isCurrentPage'>
+                    <li class='active'>
+                      <a expr:href='data:link.href'>
+                        <data:link.title/>
+                      </a>
+                    </li>
+                    <b:else/>
+                    <li>
+                      <a expr:href='data:link.href'>
+                        <data:link.title/>
+                      </a>
+                    </li>
+                  </b:if>
+                </b:loop>
+              </ul>
+              <b:include name='quickedit'/>
+            </div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+      <!-- End Left Navigation -->
+      <b:section class='right-navigation hidden-md-up' id='rightNavigation' showaddelement='yes'>
+        <b:widget id='Label3' locked='false' title='Right Navigation' type='Label' version='1' visible='true'>
+          <b:includable id='main'>
+            <div class='head-nav'>
+              <form action='/search' id='frmSearchMobile'>
+                <div class='custom-input'>
+                  <button class='button' id='btnSearchMobile' type='submit'><i class='icon-search'/></button>
+                  <span><input id='txtSearchMobile' name='q' type='text'/></span>
+                </div>
+              </form>
+            </div>
+            <div class='inner'>
+              <ul class='search-results'>
+                <b:loop values='data:labels' var='label'>
+                  <li>
+                    <b:if cond='data:blog.url == data:label.url'>
+                      <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+                    <b:else/>
+                      <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+                    </b:if>
+                    <b:if cond='data:showFreqNumbers'>
+                      <span dir='ltr'>(<data:label.count/>)</span>
+                    </b:if>
+                  </li>
+                </b:loop>
+              </ul>
+            </div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+      <!-- End Right Navigation -->
+      <div class='main-container'>
+        <div class='dummy-layer'/>
+        <b:section class='cHeader' id='header' showaddelement='yes'>
+          <b:widget id='Header1' locked='true' title='Demo (Header)' type='Header' version='1' visible='true'>
+            <b:includable id='main'>
+              <div class='container'>
+                <span class='hidden-md-up' data-nav='open-left-nav'><i class='icon-hamburger'></i> <i class='icon-close'></i></span>
+                <b:if cond='data:blog.url == data:blog.homepageUrl'>
+                  <h1 class='logo'>
+                    <a expr:href='data:blog.homepageUrl' expr:title='data:blog.pageTitle'>
+                      <img expr:alt='data:title' expr:src='data:sourceUrl'/>
+                    </a>
+                  </h1>
+                <b:else/>
+                  <div class='logo'>
+                    <a expr:href='data:blog.homepageUrl'>
+                      <img expr:alt='data:title' expr:src='data:sourceUrl'/>
+                    </a>
+                  </div>
+                </b:if>
+                <span class='hidden-md-up' data-nav='open-right-nav'><i class='icon-search'></i> <i class='icon-close'></i></span>
+                <form action='/search' id='frmSearch' class='hidden-sm-down'>
+                  <div class='custom-input'>
+                    <button class='button' id='btnSearch' type='submit'><i class='icon-search'/></button>
+                    <span><input id='txtSearch' name='q' type='text'/></span>
+                  </div>
+                </form>
+                <b:include name='quickedit'/>
+              </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+        <div class='inner'>
+          <div class='container'>
+            <div class='row'>
+              <!-- Main -->
+              <b:section class='main col-sm-7 col-md-8 col-lg-9' id='main' showaddelement='yes'>
+              </b:section>
+              <!-- End Main -->
+
+              <!-- Sidebar -->
+              <b:section class='sidebar col-sm-5 col-md-4 col-lg-3' id='sidebar' preferred='yes' showaddelement='yes'>
+                <!-- Danh Muc -->
+                <b:widget id='Label2' locked='false' title='Danh mục' type='Label' version='1' visible='true'>
+                  <b:includable id='main'>
+                    <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><data:title/></h2></b:if>
+                    <div expr:class='&quot;outer &quot; + data:display + &quot;-label-outer&quot;'>
+                      <b:if cond='data:display == &quot;list&quot;'>
+                        <ul class='links'>
+                          <b:loop values='data:labels' var='label'>
+                            <li>
+                              <b:if cond='data:blog.url == data:label.url'>
+                                <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+                              <b:else/>
+                                <a expr:dir='data:blog.languageDirection' expr:href='data:label.url' expr:data-hover='data:label.name'><data:label.name/></a>
+                              </b:if>
+                              <b:if cond='data:showFreqNumbers'>
+                                <span dir='ltr'>(<data:label.count/>)</span>
+                              </b:if>
+                            </li>
+                          </b:loop>
+                        </ul>
+                      <b:else/>
+                        <b:loop values='data:labels' var='label'>
+                          <span expr:class='&quot;label-size label-size-&quot; + data:label.cssSize'>
+                            <b:if cond='data:blog.url == data:label.url'>
+                              <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+                            <b:else/>
+                              <a expr:dir='data:blog.languageDirection' expr:href='data:label.url' expr:data-hover='data:label.name'><data:label.name/></a>
+                            </b:if>
+                            <b:if cond='data:showFreqNumbers'>
+                              <span class='label-count' dir='ltr'>(<data:label.count/>)</span>
+                            </b:if>
+                          </span>
+                        </b:loop>
+                      </b:if>
+                      <b:include name='quickedit'/>
+                    </div>
+                  </b:includable>
+                </b:widget>
+
+                <!-- Bài viết mới -->
+                <b:widget id='PopularPosts1' locked='false' title='Bài viết mới' type='PopularPosts' version='1' visible='true'>
+                  <b:includable id='main'>
+                    <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><data:title/></h2></b:if>
+                    <div class='outer clearfix'>
+                      <b:loop values='data:posts' var='post'>
+                        <b:include data='post' name='post'/>
+                      </b:loop>
+                    </div>
+                    <b:include name='quickedit'/>
+                  </b:includable>
+                  <b:includable id='post' var='post'>
+                    <div class='post'>
+                      <div class='inner'>
+                        <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+                          <div class='thumbnail'>
+                            <a expr:href='data:post.href' expr:title='data:post.title'>
+                              <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 300) : data:post.thumbnail' var='image'>
+                                <img expr:alt='data:post.title' expr:src='data:image' />
+                              </b:with>
+                            </a>
+                          </div>
+                        <b:else/>
+                          <div class='thumbnail'>
+                            <a expr:href='data:post.href' expr:title='data:post.title'>
+                              <img alt='' src='https://2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
+                            </a>
+                          </div>
+                        </b:if>
+                        <div class="content">
+                          <h3 class='title'><a expr:href='data:post.href' expr:title='data:post.title'><data:post.title/></a></h3>
+                          <p class='desc'><data:post.snippet/></p>
+                        </div>
+                      </div>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </div>
+          </div>
+          <div class='footer'>
+            <div class='inner'>
+              <div class='container'>
+                <p>Copyright &amp;copy; 2016 Phan Chinh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Main Container -->
+    </div>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/libs.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/collapse.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/cslider.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/gmap.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/scrollto.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sameheight.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slidemenu.js'></script>
+  </body>
+</html>
