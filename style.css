@@ -65,14 +65,15 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  font-size: 1.143rem;
-  text-transform: uppercase;
+  overflow: hidden;
   background-color: rgba(255,255,255,.7);
   transform: translateY(100%);
   transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 .post .title {
   padding: 10px;
+  font-size: 1.143rem;
+  text-transform: uppercase;
 }
 .post .desc {
   font-size: 0.929rem;
