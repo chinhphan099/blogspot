@@ -60,20 +60,23 @@ footer {
 .post .thumbnail a {
   display: block;
 }
-.post .title {
+.post .content {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 10px;
   font-size: 1.143rem;
   text-transform: uppercase;
   background-color: rgba(255,255,255,.7);
   transform: translateY(100%);
   transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
+.post .title {
+  padding: 10px;
+}
 .post .desc {
   font-size: 0.929rem;
+  padding: 10px;
 }
 /* Category Sidebar */
 .links li {
