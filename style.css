@@ -99,7 +99,7 @@ footer {
   border-top: 1px dashed #ccc;
 }
 .links a {
-  text-transform: capitalize;
+  text-transform: uppercase;
   position: relative;
   display: inline-block;
 }
