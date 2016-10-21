@@ -1,4 +1,9 @@
 /* Begin Slide Menu */
+@media (min-width: 545px) and (max-width: 767px) {
+  .post:nth-child(2n + 2) {
+    margin-top: 0;
+  }
+}
 @media (max-width: 767px) {
   .wrapper {
     position: relative;
