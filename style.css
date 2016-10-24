@@ -12,7 +12,7 @@
   transition: all .3s ease;
 }
 .widget:hover .sub-title {
-  background-color: red;
+  background-color: black;
 }
 .widget-item-control {
   position: absolute;
