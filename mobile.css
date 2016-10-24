@@ -155,6 +155,16 @@
     transform: translateY(-50%);
     cursor: pointer;
   }
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-navicon {
+    font-size: 2.308rem;
+  }
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-ios-close-empty,
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-close-empty {
+    font-size: 3rem;
+  }
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-search {
+    font-size: 2.308rem;
+  }
   .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-search,
   .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-close-empty {
     position: absolute;
