@@ -216,7 +216,7 @@ footer {
     display: none;
   }
   .socials a:hover i + i {
-    display: inline;
+    display: inline-block;
     transform: scale(1.6);
   }
 }
