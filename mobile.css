@@ -6,6 +6,11 @@
   .navigation .container {
     background-color: transparent;
   }
+  /* Header */
+  .logo {
+    width: 70px;
+    margin: 1px auto 0;
+  }
   .head-nav {
     position: relative;
     z-index: 1;
