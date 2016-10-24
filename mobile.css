@@ -241,7 +241,7 @@
   .open-left-nav .main-container .cHeader .temp-h1 {
     position: relative;
   }
-  .open-left-nav .main-container .inner {
+  .open-left-nav .main-container > .inner {
     position: absolute;
     top: 40px;
     bottom: 0;
@@ -263,7 +263,7 @@
   .open-right-nav .main-container .cHeader .temp-h1 {
     position: relative;
   }
-  .open-right-nav .main-container .inner {
+  .open-right-nav .main-container > .inner {
     position: absolute;
     top: 40px;
     bottom: 0;
