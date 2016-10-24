@@ -221,7 +221,7 @@ footer {
     font-size: 1.143rem;
     color: black;
   }
-  .socials a:first-child {
+  .socials li:first-child a {
     padding-left: 0;
   }
   .socials a i + i {
