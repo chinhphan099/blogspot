@@ -149,6 +149,12 @@ footer {
     border-top: 1px solid #dadada;
     border-bottom: 4px double #dadada;
   }
+  .nav-wrapper {
+    margin-bottom: 1px;
+    border-top: 1px dashed #dadada;
+    border-bottom: 1px dashed #dadada;
+    width: 100%;
+  }
   .nav {
     display: table-cell;
     height: 50px;
@@ -157,7 +163,7 @@ footer {
   .nav li {
     float: left;
   }
-  .nav li + li a {
+  .nav a {
     padding: 0 10px;
   }
   .nav a {
