@@ -143,13 +143,13 @@ footer {
     position: relative;
   }
   .logo {
-    width: 125px;
-    margin: -60px auto 0;
+    width: 110px;
+    margin: -55px auto 0;
   }
   .logo a {
     display: block;
     padding: 5px;
-    background-color: white;
+    background: white linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 35%, rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0.38) 100%);
     border-radius: 50%;
   }
   .navigation {
