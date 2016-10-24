@@ -2,6 +2,8 @@
 .navigation .container {
   position: relative;
   background-color: white;
+  border-top: 1px solid #dadada;
+  border-bottom: 4px double #dadada;
 }
 .main-container > .inner > .container,
 .footer > .inner > .container {
@@ -29,6 +31,7 @@
 .logo {
   width: 150px;
 }
+
 /* Begin Structure */
 .main {
 }
@@ -146,5 +149,18 @@ footer {
   color: #505050;
 }
 @media (min-width: 768px) {
-  
+  .nav {
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+  }
+  .nav li {
+    float: left;
+  }
+  .nav li + li a {
+    padding: 0 10px;
+  }
+  .nav a {
+    color: #4f4f4d;
+  }
 }
