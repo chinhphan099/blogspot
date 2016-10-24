@@ -138,8 +138,8 @@
     position: relative;
     z-index: 8;
   }
-  .main-container .cHeader [data-nav="open-left-nav"] .icon-hamburger,
-  .main-container .cHeader [data-nav="open-left-nav"] .icon-close {
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-navicon,
+  .main-container .cHeader [data-nav="open-left-nav"] .ion-ios-close-empty {
     position: absolute;
     top: 50%;
     left: 10px;
@@ -150,8 +150,8 @@
     transform: translateY(-50%);
     cursor: pointer;
   }
-  .main-container .cHeader [data-nav="open-right-nav"] .icon-search,
-  .main-container .cHeader [data-nav="open-right-nav"] .icon-close {
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-search,
+  .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-close-empty {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -162,7 +162,7 @@
     transform: translateY(-50%);
     cursor: pointer;
   }
-  .main-container .cHeader .icon-close {
+  .main-container .cHeader .ion-ios-close-empty {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity .25s ease, visibility .25s ease;
@@ -214,11 +214,11 @@
   .open-left-nav .navigation {
     position: absolute;
   }
-  .open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .icon-hamburger {
+  .open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .ion-navicon {
     opacity: 0;
     visibility: hidden;
   }
-  .open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .icon-close {
+  .open-left-nav .main-container .cHeader [data-nav="open-left-nav"] .ion-ios-close-empty {
     opacity: 1;
     visibility: visible;
   }
@@ -236,11 +236,11 @@
   .open-right-nav .right-navigation {
     position: absolute;
   }
-  .open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .icon-search {
+  .open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-search {
     opacity: 0;
     visibility: hidden;
   }
-  .open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .icon-close {
+  .open-right-nav .main-container .cHeader [data-nav="open-right-nav"] .ion-ios-close-empty {
     opacity: 1;
     visibility: visible;
   }
