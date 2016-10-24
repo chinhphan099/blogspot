@@ -3,6 +3,7 @@
 .cHeader .container,
 .main-container > .inner > .container,
 .footer > .inner > .container {
+  position: relative;
   background-color: white;
 }
 .sub-title {
