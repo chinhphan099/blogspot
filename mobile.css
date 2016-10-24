@@ -3,6 +3,9 @@
   .wrapper {
     position: relative;
   }
+  .navigation .container, .cHeader .container, .main-container > .inner > .container, .footer > .inner > .container {
+    background-color: transparent;
+  }
   .head-nav {
     position: relative;
     z-index: 1;
