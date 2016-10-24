@@ -81,6 +81,7 @@
     height: 100%;
     opacity: 0.5;
     z-index: 1;
+    background-color: white;
   }
   .right-navigation:before {
     content: "";
