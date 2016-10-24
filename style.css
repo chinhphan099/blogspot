@@ -1,10 +1,4 @@
 /* Common */
-.navigation .container {
-  position: relative;
-  background-color: white;
-  border-top: 1px solid #dadada;
-  border-bottom: 4px double #dadada;
-}
 .main-container > .inner > .container,
 .footer > .inner > .container {
   position: relative;
@@ -17,8 +11,6 @@
   text-transform: uppercase;
   transition: all .3s ease;
 }
-.widget {
-}
 .widget:hover .sub-title {
   background-color: red;
 }
@@ -28,9 +20,6 @@
   bottom: 0;
 }
 /* Header */
-.logo {
-  width: 150px;
-}
 
 /* Begin Structure */
 .main {
@@ -149,6 +138,17 @@ footer {
   color: #505050;
 }
 @media (min-width: 768px) {
+  /* Header */
+  .logo {
+    width: 150px;
+    opacity: 0;
+  }
+  .navigation .container {
+    position: relative;
+    background-color: white;
+    border-top: 1px solid #dadada;
+    border-bottom: 4px double #dadada;
+  }
   .nav {
     display: table-cell;
     height: 50px;
