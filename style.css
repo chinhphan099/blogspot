@@ -188,4 +188,16 @@ footer {
   .nav a:hover {
     color: black;
   }
+  .topbar {
+    background-color: white;
+    color: black;
+  }
+  .socials li {
+    display: inline-block;
+  }
+  .socials a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 15px;
+  }
 }
