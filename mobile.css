@@ -3,7 +3,7 @@
   .wrapper {
     position: relative;
   }
-  .navigation .container, .cHeader .container, .main-container > .inner > .container, .footer > .inner > .container {
+  .navigation .container {
     background-color: transparent;
   }
   .head-nav {
