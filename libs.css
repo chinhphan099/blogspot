@@ -1773,7 +1773,6 @@ label.label {
 }
 .custom-input button i {
   position: relative;
-  top: 2px;
 }
 .custom-input span {
   display: block;
