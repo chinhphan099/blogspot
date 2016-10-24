@@ -143,13 +143,13 @@ footer {
     width: 150px;
     opacity: 0;
   }
-  .navigation .container {
+  .navigation {
     position: relative;
     background-color: white;
     border-top: 1px solid #dadada;
     border-bottom: 4px double #dadada;
   }
-  .nav-wrapper {
+  .navigation .widget {
     margin-bottom: 1px;
     border-top: 1px dashed #dadada;
     border-bottom: 1px dashed #dadada;
