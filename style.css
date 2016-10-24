@@ -142,6 +142,9 @@ footer {
   .cHeader {
     position: relative;
   }
+  .cHeader .container {
+    background-color: white;
+  }
   .logo {
     width: 110px;
     margin: -90px auto 0;
