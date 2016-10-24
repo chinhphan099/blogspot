@@ -199,5 +199,15 @@ footer {
     display: block;
     padding: 5px 10px;
     font-size: 15px;
+    color: black;
+  }
+  .socials a i + i {
+    display: none;
+  }
+  .socials a:hover i {
+    display: none;
+  }
+  .socials a:hover i + i {
+    display: block;
   }
 }
