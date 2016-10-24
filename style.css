@@ -221,6 +221,9 @@ footer {
     font-size: 1.143rem;
     color: black;
   }
+  .socials a:first-child {
+    padding-left: 0;
+  }
   .socials a i + i {
     display: none;
   }
