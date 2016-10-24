@@ -1,6 +1,8 @@
 /* Common */
-.navigation .container,
-.cHeader .container,
+.navigation .container {
+  position: relative;
+  background-color: white;
+}
 .main-container > .inner > .container,
 .footer > .inner > .container {
   position: relative;
