@@ -213,5 +213,6 @@ footer {
   }
   .socials a:hover i + i {
     display: block;
+    transform: scale(1.6);
   }
 }
