@@ -471,11 +471,11 @@ input:-webkit-autofill:focus {
   -webkit-text-fill-color: #333;
 }
 a {
-  color: #2199e8;
+  color: #610000;
   text-decoration: none;
 }
 a:hover {
-  color: #ff0000;
+  color: #000;
 }
 :focus {
   outline: 0;
