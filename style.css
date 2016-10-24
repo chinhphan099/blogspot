@@ -153,6 +153,15 @@ footer {
     border-top: 1px dashed #dadada;
     border-bottom: 1px dashed #dadada;
   }
+  .nav-wrapper {
+    display: table;
+    width: 100%;
+  }
+  .nav-wrapper .frmSearch {
+    display: table-cell;
+    vertical-align: middle;
+    width: 20%;
+  }
   .nav {
     display: table-cell;
     height: 50px;
