@@ -2,7 +2,7 @@
 .main-container > .inner > .container,
 .footer > .inner > .container {
   position: relative;
-  background-color: #f8f8f8;
+  background-color: white;
 }
 .sub-title {
   padding: 10px;
