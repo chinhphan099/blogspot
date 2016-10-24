@@ -179,6 +179,7 @@ footer {
   .nav {
     display: table-cell;
     height: 50px;
+    padding-right: 10px;
     vertical-align: middle;
   }
   .nav li {
