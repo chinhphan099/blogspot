@@ -137,6 +137,14 @@ footer {
   font-size: 0.857rem;
   color: #505050;
 }
+.comment .thumbnail {
+  float: left;
+  width: 45px;
+  margin-right: 5px;
+}
+.comment .content {
+  overflow: hidden;
+}
 @media (min-width: 768px) {
   /* Header */
   .cHeader {
