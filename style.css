@@ -141,7 +141,6 @@ footer {
   /* Header */
   .logo {
     width: 150px;
-    opacity: 0;
   }
   .navigation {
     position: relative;
