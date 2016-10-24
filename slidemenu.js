@@ -232,7 +232,7 @@
     handler: '[data-nav]',
     mainContainer: '.main-container',
     header: '.cHeader',
-    inner: '.inner',
+    inner: '> .inner',
     lNav: '.navigation',
     rNav: '.right-navigation',
     dummyLayer: '.dummy-layer',
