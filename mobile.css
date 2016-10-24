@@ -8,8 +8,8 @@
   }
   /* Header */
   .logo {
-    width: 70px;
-    margin: 1px auto 0;
+    width: 80px;
+    margin: 0 auto;
   }
   .head-nav {
     position: relative;
@@ -143,6 +143,7 @@
     position: relative;
     z-index: 8;
     background-color: white;
+    border-bottom: 1px solid #333;
   }
   .main-container .cHeader [data-nav="open-left-nav"] .ion-navicon,
   .main-container .cHeader [data-nav="open-left-nav"] .ion-ios-close-empty {
