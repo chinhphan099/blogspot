@@ -196,6 +196,7 @@ footer {
   .topbar {
     background-color: white;
     color: black;
+    height: 33px;
   }
   .socials {
     text-align: right;
