@@ -173,13 +173,13 @@ footer {
   }
   .nav-wrapper .frmSearch {
     display: table-cell;
+    width: 23%;
+    padding-right: 10px;
     vertical-align: middle;
-    width: 20%;
   }
   .nav {
     display: table-cell;
     height: 50px;
-    padding-right: 10px;
     vertical-align: middle;
   }
   .nav li {
