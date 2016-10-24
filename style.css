@@ -164,8 +164,7 @@ footer {
   }
   .nav a {
     padding: 0 10px;
-  }
-  .nav a {
     color: #4f4f4d;
+    font-weight: bold;
   }
 }
