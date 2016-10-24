@@ -185,4 +185,7 @@ footer {
     color: #4f4f4d;
     font-weight: bold;
   }
+  .nav a:hover {
+    color: black;
+  }
 }
