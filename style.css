@@ -197,6 +197,9 @@ footer {
     background-color: white;
     color: black;
   }
+  .socials {
+    text-align: right;
+  }
   .socials li {
     display: inline-block;
   }
@@ -205,7 +208,6 @@ footer {
     padding: 8px 10px;
     font-size: 1.143rem;
     color: black;
-    text-align: right;
   }
   .socials a i + i {
     display: none;
