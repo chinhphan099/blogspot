@@ -143,7 +143,14 @@ footer {
     position: relative;
   }
   .logo {
-    width: 150px;
+    width: 125px;
+    margin: -60px auto 0;
+  }
+  .logo a {
+    display: block;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
   }
   .navigation {
     position: relative;
