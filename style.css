@@ -4,7 +4,7 @@
 .main-container > .inner > .container,
 .footer > .inner > .container {
   position: relative;
-  background-color: white;
+  background-color: #f8f8f8;
 }
 .sub-title {
   padding: 10px;
