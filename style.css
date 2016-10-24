@@ -204,6 +204,7 @@ footer {
     padding: 8px 10px;
     font-size: 1.143rem;
     color: black;
+    text-align: right;
   }
   .socials a i + i {
     display: none;
