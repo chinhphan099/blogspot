@@ -137,6 +137,9 @@ footer {
   font-size: 0.857rem;
   color: #505050;
 }
+.comment + .comment {
+  padding-top: 10px;
+}
 .comment .thumbnail {
   float: left;
   width: 45px;
