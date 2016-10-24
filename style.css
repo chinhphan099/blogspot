@@ -113,7 +113,7 @@ footer {
   display: inline-block;
 }
 .links a:before {
-  color: red;
+  color: black;
   content: attr(data-hover);
   position: absolute;
   opacity: 0;
