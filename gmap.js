@@ -1,16 +1,3 @@
-/**
- *  @name plugin
- *  @description description
- *  @version 1.0
- *  @options
- *    option
- *  @events
- *    event
- *  @methods
- *    init
- *    publicMethod
- *    destroy
- */
 ;(function($, window, undefined) {
   'use strict';
 
