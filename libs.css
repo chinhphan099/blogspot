@@ -1766,14 +1766,14 @@ label.label {
   background-color: #fff;
 }
 .selected.custom-select {
-  background-color: #fff !important;
+  background-color: #fff;
 }
 .selected.custom-select span {
-  color: #333 !important;
-  border-color: #333 !important;
+  color: #333;
+  border-color: #333;
 }
 .selected.custom-select i {
-  color: #333 !important;
+  color: #333;
 }
 .custom-select select {
   position: absolute;
