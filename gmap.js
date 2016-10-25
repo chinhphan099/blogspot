@@ -402,7 +402,7 @@
 
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]({
-      icon: 'images/pink-marker.png'
+      icon: '//rawgit.com/chinhphan099/blogspot/master/pink-marker.png'
     });
   });
 
