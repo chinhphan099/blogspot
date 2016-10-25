@@ -2955,11 +2955,11 @@ Copyright (c) 2015 Daniel Eden
 }
 .slick-prev {
   left: 10px;
-  background: url("../images/prev.png") no-repeat 50% 50%;
+  background: url("https://rawgit.com/chinhphan099/blogspot/master/prev.png") no-repeat 50% 50%;
 }
 .slick-next {
   right: 10px;
-  background: url("../images/next.png") no-repeat 50% 50%;
+  background: url("https://rawgit.com/chinhphan099/blogspot/master/next.png") no-repeat 50% 50%;
 }
 .slick-arrow {
   position: absolute;
