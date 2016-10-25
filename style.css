@@ -193,7 +193,11 @@ footer {
   }
   .logo {
     width: 100px;
-    margin: -90px auto 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -50px;
+    top: -50px;
   }
   .logo a {
     display: block;
