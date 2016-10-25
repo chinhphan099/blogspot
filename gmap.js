@@ -287,7 +287,7 @@
         zoomControl: true,
         zoomControlOptions: {
           style: google.maps.ZoomControlStyle.DEFAULT,
-          position: google.maps.ControlPosition.RIGHT_CENTER
+          position: google.maps.ControlPosition.RIGHT_BOTTOM
         },
         panControl: false,
         scrollwheel: false,
