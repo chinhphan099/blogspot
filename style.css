@@ -1,4 +1,22 @@
 /* Common */
+@keyframes arrow-movement {
+  0%   { 
+    opacity: 0;
+    top: 45%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+  }
+}
+.arrow-1 {
+    animation: arrow-movement 1.4s ease-in-out infinite;
+}
+.arrow-2 {
+    animation: arrow-movement 1.4s .7s ease-in-out infinite;
+}
 .main-container > .inner > .container,
 .footer > .inner > .container {
   position: relative;
