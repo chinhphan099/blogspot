@@ -274,11 +274,7 @@
     init: function() {
       this.vars = {};
       this.vars.marker = [],
-      this.vars.locations = [
-        {name: 'House', lat: 10.8305335, lng: 106.6353312, mess: '<div class="noscrollbar">Đây là mái nhà của Chinh nè.</div>'},
-        {name: 'Company', lat: 10.7903090, lng: 106.6991340, mess: '<div class="noscrollbar">Đây là nơi làm việc của Chinh nè.</div>', marker: 'images/turquoise-marker.png'},
-        {name: 'Kem Làm Trắng Răng AP24', lat: 10.798205, lng: 106.6899, mess: '<div class="noscrollbar">Kem Làm Trắng Răng AP24 <br />62 Hoa Cúc, P.7, Q.Phú Nhuận<br/><a href="https://www.facebook.com/KemLamTrangRangAP24/" target="_blank">Facebook</a></div>', marker: 'images/turquoise-marker.png'}
-      ];
+      this.vars.locations = locations;
       this.vars.optMap = {
         center: {lat: this.vars.locations[0].lat, lng: this.vars.locations[0].lng},
         zoom: this.options.zoom[0],
