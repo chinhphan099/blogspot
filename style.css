@@ -13,6 +13,9 @@
   transition: all .3s ease;
   border: none;
 }
+#sidebar .sub-title ~ .ion-ios-arrow-down {
+  color: white;
+}
 .widget:hover .sub-title {
   background-color: black;
 }
