@@ -4,8 +4,9 @@
   position: relative;
   background-color: white;
 }
-.sub-title {
+.widget .sub-title {
   padding: 10px;
+  font-size: 1.286rem;
   background-color: #333;
   color: white;
   text-transform: uppercase;
