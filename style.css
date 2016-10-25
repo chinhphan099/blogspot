@@ -59,6 +59,10 @@
 .main-slider {
   margin-bottom: 10px;
 }
+.img-banner {
+  display: block;
+  margin: 0 auto;
+}
 /* Sidebar */
 .sidebar {
 }
