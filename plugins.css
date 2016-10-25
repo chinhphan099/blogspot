@@ -4651,7 +4651,6 @@ yx-axis
 }
 /* Gmap */
 [data-gmap] {
-  padding-top: 30px;
   height: 400px;
 }
 [data-gmap] .controls {
