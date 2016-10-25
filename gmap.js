@@ -216,8 +216,8 @@
   var initAutocomplete = function() {
     var that = this;
     var input = document.getElementById(this.options.input);
-    var searchBox = new google.maps.places.SearchBox(input);
     if(input) {
+      var searchBox = new google.maps.places.SearchBox(input);
       this.vars.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
       this.vars.map.addListener('bounds_changed', function() {
@@ -318,7 +318,7 @@
     listener: function() {
       checkScrollMap.call(this);
       initAutocomplete.call(this);
-      this.changeLocation(this.vars.locations, this.options.initValue);
+      //this.changeLocation(this.vars.locations, this.options.initValue);
     },
     setMarkers: function() {
       var that = this,
