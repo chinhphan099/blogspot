@@ -1,3 +1,16 @@
+/**
+ *  @name plugin
+ *  @description description
+ *  @version 1.0
+ *  @options
+ *    option
+ *  @events
+ *    event
+ *  @methods
+ *    init
+ *    publicMethod
+ *    destroy
+ */
 ;(function($, window, undefined) {
   'use strict';
 
@@ -204,64 +217,66 @@
     var that = this;
     var input = document.getElementById(this.options.input);
     var searchBox = new google.maps.places.SearchBox(input);
-    this.vars.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    if(input) {
+      this.vars.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-    this.vars.map.addListener('bounds_changed', function() {
-      searchBox.setBounds(that.vars.map.getBounds());
-    });
-
-    var markers = [];
-    searchBox.addListener('places_changed', function() {
-      var places = searchBox.getPlaces();
-      var bounds = new google.maps.LatLngBounds();
-      var infos;
-
-      if (places.length === 0) {
-        return;
-      }
-
-      markers.forEach(function(marker) {
-        marker.setMap(null);
+      this.vars.map.addListener('bounds_changed', function() {
+        searchBox.setBounds(that.vars.map.getBounds());
       });
-      markers = [];
 
-      places.forEach(function(place, i) {
-        if (!place.geometry) {
-          console.log('Returned place contains no geometry');
+      var markers = [];
+      searchBox.addListener('places_changed', function() {
+        var places = searchBox.getPlaces();
+        var bounds = new google.maps.LatLngBounds();
+        var infos;
+
+        if (places.length === 0) {
           return;
         }
-        var icon = {
-          url: place.icon,
-          size: new google.maps.Size(71, 71),
-          origin: new google.maps.Point(0, 0),
-          anchoPoint: new google.maps.Point(17, 34),
-          scaledSize: new google.maps.Size(25, 25)
-        };
 
-        // Create a marker for each place.
-        markers.push(new google.maps.Marker({
-          map: that.vars.map,
-          icon: icon,
-          title: place.name,
-          position: place.geometry.location
-        }));
-
-        infos = '<strong style="display: block; text-align: center;">' + place.name + '</strong>' + place.formatted_address;
-
-        google.maps.event.addListener(markers[i], 'click', function() {
-          that.setCenter(markers[i]);
-          that.showInfoWindow(markers[i], '<div class="noscrollbar">' + infos + '</>');
+        markers.forEach(function(marker) {
+          marker.setMap(null);
         });
+        markers = [];
 
-        if (place.geometry.viewport) {
-          bounds.union(place.geometry.viewport);
-        } else {
-          bounds.extend(place.geometry.location);
-        }
+        places.forEach(function(place, i) {
+          if (!place.geometry) {
+            console.log('Returned place contains no geometry');
+            return;
+          }
+          var icon = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchoPoint: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+          };
+
+          // Create a marker for each place.
+          markers.push(new google.maps.Marker({
+            map: that.vars.map,
+            icon: icon,
+            title: place.name,
+            position: place.geometry.location
+          }));
+
+          infos = '<strong style="display: block; text-align: center;">' + place.name + '</strong>' + place.formatted_address;
+
+          google.maps.event.addListener(markers[i], 'click', function() {
+            that.setCenter(markers[i]);
+            that.showInfoWindow(markers[i], '<div class="noscrollbar">' + infos + '</>');
+          });
+
+          if (place.geometry.viewport) {
+            bounds.union(place.geometry.viewport);
+          } else {
+            bounds.extend(place.geometry.location);
+          }
+        });
+        changeZoom.call(that);
+        that.vars.map.fitBounds(bounds);
       });
-      changeZoom.call(that);
-      that.vars.map.fitBounds(bounds);
-    });
+    }
   };
 
   function Plugin(element, options) {
@@ -402,7 +417,7 @@
 
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]({
-      icon: '//rawgit.com/chinhphan099/blogspot/master/pink-marker.png'
+      icon: 'images/pink-marker.png'
     });
   });
 
