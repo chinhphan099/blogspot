@@ -417,7 +417,7 @@
 
   $(function() {
     $('[data-' + pluginName + ']')[pluginName]({
-      icon: '//raw.githubusercontent.com/chinhphan099/blogspot/master/images/pink-marker.png'
+      icon: 'https://raw.githubusercontent.com/chinhphan099/blogspot/master/images/pink-marker.png'
     });
   });
 
