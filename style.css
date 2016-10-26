@@ -304,6 +304,9 @@ footer {
   .autocomplete-suggestions .autocomplete-suggestion {
     padding: 5px 10px;
     cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .autocomplete-suggestions .autocomplete-suggestion + .autocomplete-suggestion {
     border-top: 1px solid #e7e7e7;
