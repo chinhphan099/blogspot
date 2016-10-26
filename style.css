@@ -297,4 +297,17 @@ footer {
     opacity: 1;
     transition: opacity .3s ease;
   }
+  .autocomplete-suggestions {
+    background-color: rgba(255,255,255,1);
+    padding: 5px 0;
+  }
+  .autocomplete-suggestions .autocomplete-suggestion {
+    padding: 5px 10px;
+  }
+  .autocomplete-suggestions .autocomplete-suggestion + .autocomplete-suggestion {
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+  }
 }
