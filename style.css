@@ -303,11 +303,15 @@ footer {
   }
   .autocomplete-suggestions .autocomplete-suggestion {
     padding: 5px 10px;
+    cursor: pointer;
   }
   .autocomplete-suggestions .autocomplete-suggestion + .autocomplete-suggestion {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #e7e7e7;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap
+    white-space: nowrap;
+  }
+  .autocomplete-suggestions .autocomplete-suggestion:hover {
+    background-color: #f7f7f7;
   }
 }
