@@ -23,6 +23,7 @@
   position: relative;
   background-color: white;
 }
+/* Sidebar */
 #sidebar .sub-title {
   padding: 10px;
   font-size: 1.286rem;
@@ -276,5 +277,19 @@ footer {
   .socials a:hover i + i {
     display: inline-block;
     transform: scale(1.6);
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 0;
+    background-color: rgba(0,0,0,.3);
+    transition: all .2s ease;
+  }
+  .showOverlay .overlay {
+    bottom: 0;
+    z-index: 1;
   }
 }
