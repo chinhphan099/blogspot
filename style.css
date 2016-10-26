@@ -287,12 +287,11 @@ footer {
     right: 0;
     bottom: 100%;
     left: 0;
-    z-index: 0;
+    z-index: 2;
     background-color: rgba(0,0,0,.3);
     transition: bottom .2s ease;
   }
   .showOverlay .overlay {
     bottom: 0;
-    z-index: 1;
   }
 }
