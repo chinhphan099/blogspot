@@ -1763,7 +1763,6 @@ label.label {
 }
 .custom-select {
   position: relative;
-  z-index: 2;
   background-color: #fff;
 }
 .selected.custom-select {
