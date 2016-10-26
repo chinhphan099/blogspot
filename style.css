@@ -286,7 +286,7 @@ footer {
     left: 0;
     z-index: 0;
     background-color: rgba(0,0,0,.3);
-    transition: all .2s ease;
+    transition: bottom .2s ease;
   }
   .showOverlay .overlay {
     bottom: 0;
