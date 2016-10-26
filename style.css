@@ -278,6 +278,9 @@ footer {
     display: inline-block;
     transform: scale(1.6);
   }
+  .frmSearch .custom-input {
+    z-index: 2;
+  }
   .overlay {
     position: fixed;
     top: 0;
