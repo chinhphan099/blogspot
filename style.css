@@ -285,13 +285,16 @@ footer {
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 100%;
+    bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: -2;
+    opacity: 0;
     background-color: rgba(0,0,0,.3);
-    transition: bottom .2s ease;
+    transition: opacity .3s ease, z-index .3s .3s ease;
   }
   .showOverlay .overlay {
-    bottom: 0;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity .3s ease;
   }
 }
