@@ -29,7 +29,7 @@
     init: function() {
       this.status = false;
       this.option = {
-        offset_top: $('.nav-container').height()
+        offset_top: 0
       };
       if(win.width() > 767) {
         this.initialized();
@@ -79,8 +79,6 @@
   };
 
   $(function() {
-    if($('body').hasClass('catalog-category-view') || $('body').hasClass('catalogsearch-result-index')) {
-      $('[data-' + pluginName + ']')[pluginName]();
-    }
+    $('[data-' + pluginName + ']')[pluginName]();
   });
 }(jQuery, window));
