@@ -329,11 +329,11 @@ footer {
   padding-top: 20px;
 }
 .footer .wrap {
-  border-top: 4px double #dadada;
+  border-top: 1px solid #696969;
 }
 .footer .inner {
   padding-bottom: 10px;
-  margin-top: 1px;
+  margin-top: 2px;
   border-top: 1px dashed #696969;
 }
 .fnav-wrap {
