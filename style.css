@@ -19,7 +19,7 @@
     animation: arrow-movement 1.4s .7s ease-in-out infinite;
 }
 .main-container > .inner > .container,
-.footer > .inner > .container {
+.footer > .container {
   position: relative;
   background-color: white;
 }
