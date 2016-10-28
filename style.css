@@ -18,9 +18,9 @@
 .arrow-2 {
     animation: arrow-movement 1.4s .7s ease-in-out infinite;
 }
-.main-container > .inner > .container,
-.footer > .container {
+.main-container > .inner > .container {
   position: relative;
+  padding-bottom: 20px;
   background-color: white;
 }
 /* Sidebar */
@@ -326,21 +326,24 @@ footer {
   color: white;
 }
 .footer .container {
-  padding-top: 20px;
 }
 .footer .wrap {
-  border-top: 1px solid #696969;
+  background-color: #696969;
 }
 .footer .inner {
   padding-bottom: 10px;
-  margin-top: 2px;
-  border-top: 1px dashed #696969;
 }
 .fnav-wrap {
+  background-color: white;
+  border-top: 1px solid #696969;
+}
+.fnav-wrap .outer {
+  margin-top: 1px;
+  border-top: 1px dashed #696969;
 }
 .fNav {
   text-align: center;
-  background-color: #f7f7f7;
+  background-color: #f9f9f9;
 }
 .fNav li {
   display: inline-block;
