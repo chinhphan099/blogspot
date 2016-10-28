@@ -329,10 +329,21 @@ footer {
   border-top: 4px double #dadada;
 }
 .footer .inner {
-  padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 1px;
   border-top: 1px dashed #dadada;
 }
-
+.fnav-wrap {
+}
+.fNav {
+  text-align: center;
+  background-color: white;
+}
+.fNav li {
+  display: inline-block;
+}
+.fNav a {
+  display: block;
+  padding: 10px;
+}
 
