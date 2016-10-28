@@ -320,3 +320,13 @@ footer {
     color: #610000;
   }
 }
+
+/* Footer */
+.footer .container {
+  padding-top: 20px;
+}
+.footer .wrap {
+  border-top: 4px double #dadada;
+}
+
+
