@@ -66,6 +66,7 @@
 }
 /* Sidebar */
 .sidebar {
+  position: static;
 }
 .sidebar .widget {
   position: relative;
