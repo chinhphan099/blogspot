@@ -328,5 +328,11 @@ footer {
 .footer .wrap {
   border-top: 4px double #dadada;
 }
+.footer .inner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 1px;
+  border-top: 1px dashed #dadada;
+}
 
 
