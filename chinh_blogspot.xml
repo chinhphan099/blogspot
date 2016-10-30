@@ -411,70 +411,75 @@
             </div>
           </div>
           <div class='footer'>
-            <div class='container'>
-              <div class='wrap row'>
-                <div class='inner clearfix'>
-                  <b:section class='fnav-wrap relative' id='helpLink' preferred='yes' showaddelement='yes'>
-                    <b:widget id='PageList2' locked='false' title='Pages' type='PageList' version='1' visible='true'>
-                      <b:includable id='main'>
-                        <div class="outer">
-                          <ul class='fNav'>
-                            <b:loop values='data:links' var='link'>
-                              <b:if cond='data:link.isCurrentPage'>
-                                <li class='active'>
-                                  <a expr:href='data:link.href'>
-                                    <data:link.title/>
-                                  </a>
-                                </li>
-                                <b:else/>
-                                <li>
-                                  <a expr:href='data:link.href'>
-                                    <data:link.title/>
-                                  </a>
-                                </li>
-                              </b:if>
-                            </b:loop>
-                          </ul>
-                        </div>
-                        <b:include name='quickedit'/>
-                      </b:includable>
-                    </b:widget>
-                  </b:section>
-                  <div class='col-md-6'>
-                    <div class='row'>
-                      <div class='col-sm-6'>1</div>
-                      <div class='col-sm-6'>2</div>
+            <b:section class='fnav-wrap relative' id='helpLink' preferred='yes' showaddelement='yes'>
+              <b:widget id='PageList2' locked='false' title='Pages' type='PageList' version='1' visible='true'>
+                <b:includable id='main'>
+                  <div class="container">
+                    <div class="outer">
+                      <ul class='fNav'>
+                        <b:loop values='data:links' var='link'>
+                          <b:if cond='data:link.isCurrentPage'>
+                            <li class='active'>
+                              <a expr:href='data:link.href'>
+                                <data:link.title/>
+                              </a>
+                            </li>
+                            <b:else/>
+                            <li>
+                              <a expr:href='data:link.href'>
+                                <data:link.title/>
+                              </a>
+                            </li>
+                          </b:if>
+                        </b:loop>
+                      </ul>
                     </div>
                   </div>
-                  <div class='col-md-6'>
-                    <div class='row'>
-                      <div class='col-sm-6'>3</div>
-                      <div class='col-sm-6'>
-                        <b:section id='subscribe' preferred='yes' showaddelement='yes'>
-                          <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' visible='true'>
-                            <b:includable id='main'>
-                              <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
-                              <div class='outer'>
-                                <div class='follow-by-email-inner'>
-                                  <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-                                    <div class="custom-input">
-                                      <button class="button" id="btnSearch" type="submit"><i class="ion-ios-arrow-right"></i></button>
-                                      <span><input name='email' placeholder='Nhập Email...' type='text'/></span>
-                                    </div>
-                                    <input expr:value='data:feedPath' name='uri' type='hidden'/>
-                                    <input name='loc' type='hidden' value='en_US'/>
-                                  </form>
-                                </div>
+                  <b:include name='quickedit'/>
+                </b:includable>
+              </b:widget>
+            </b:section>
+            <div class='container'>
+              <div class='row top-footer'>
+                <div class='col-md-6'>
+                  <div class='row'>
+                    <div class='col-sm-6'>1</div>
+                    <div class='col-sm-6'>2</div>
+                  </div>
+                </div>
+                <div class='col-md-6'>
+                  <div class='row'>
+                    <div class='col-sm-6'>3</div>
+                    <div class='col-sm-6'>
+                      <b:section id='subscribe' preferred='yes' showaddelement='yes'>
+                        <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' visible='true'>
+                          <b:includable id='main'>
+                            <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
+                            <div class='outer'>
+                              <div class='follow-by-email-inner'>
+                                <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+                                  <div class="custom-input">
+                                    <button class="button" id="btnSearch" type="submit"><i class="ion-ios-arrow-right"></i></button>
+                                    <span><input name='email' placeholder='Nhập Email...' type='text'/></span>
+                                  </div>
+                                  <input expr:value='data:feedPath' name='uri' type='hidden'/>
+                                  <input name='loc' type='hidden' value='en_US'/>
+                                </form>
                               </div>
-                              <b:include name='quickedit'/>
-                            </b:includable>
-                          </b:widget>
-                        </b:section>
-                      </div>
+                            </div>
+                            <b:include name='quickedit'/>
+                          </b:includable>
+                        </b:widget>
+                      </b:section>
                     </div>
                   </div>
                 </div>
-                <p>Copyright &amp;copy; 2016 Phan Chinh</p>
+              </div>
+              <div class='row bottom-footer'>
+                <div class='col-md-6'>
+                  <p>Copyright &amp;copy; 2016 Phan Chinh</p>
+                </div>
+                <div class='col-md-6'>Right</div>
               </div>
             </div>
           </div>
