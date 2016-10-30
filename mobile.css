@@ -138,6 +138,9 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
   .main-container .cHeader {
+    height: 40px;
+  }
+  .main-container .cHeader .Header {
     width: 100%;
     height: 40px;
     position: fixed;
