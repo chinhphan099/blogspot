@@ -327,22 +327,20 @@ footer {
 .footer .container {
 }
 .footer .wrap {
-  background-color: #f1f1f1;
 }
 .footer .inner {
   padding-bottom: 10px;
 }
 .fnav-wrap {
-  background-color: white;
   border-top: 1px solid #696969;
 }
 .fnav-wrap .outer {
   margin-top: 1px;
   border-top: 1px dashed #696969;
+  border-bottom: 1px dashed #696969;
 }
 .fNav {
   text-align: center;
-  background-color: #f9f9f9;
 }
 .fNav li {
   display: inline-block;
@@ -351,4 +349,9 @@ footer {
   display: block;
   padding: 10px;
 }
-
+.top-footer .section {
+  padding-top: 15px;
+}
+.top-footer .outer {
+  padding-top: 10px;
+}
