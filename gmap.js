@@ -276,7 +276,7 @@
     init: function() {
       this.vars = {};
       this.vars.marker = [],
-      this.vars.locations = locations;
+      this.vars.locations = this.options.locations;
       this.vars.optMap = {
         center: {lat: this.vars.locations[0].lat, lng: this.vars.locations[0].lng},
         zoom: this.options.zoom[0],
