@@ -323,12 +323,11 @@ footer {
 
 /* Footer */
 .footer {
-  color: white;
 }
 .footer .container {
 }
 .footer .wrap {
-  background-color: #696969;
+  background-color: #f1f1f1;
 }
 .footer .inner {
   padding-bottom: 10px;
