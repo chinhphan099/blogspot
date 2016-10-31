@@ -360,7 +360,9 @@ footer {
   padding-top: 10px;
 }
 .top-footer .fTitle {
+  padding-bottom: 5px;
   font-family: Georgia;
+  border-bottom: 1px dotted #999;
   text-shadow: 1px 1px 0px #F2F2F2, 2px 2px 0px rgb(192, 192, 192);
 }
 .bottom-footer {
