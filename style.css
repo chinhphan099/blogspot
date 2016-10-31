@@ -349,6 +349,10 @@ footer {
   display: block;
   padding: 10px;
 }
+.top-footer {
+  padding-bottom: 15px;
+  background-color: white;
+}
 .top-footer .section {
   padding-top: 15px;
 }
@@ -358,4 +362,8 @@ footer {
 .top-footer .fTitle {
   font-family: Georgia;
   text-shadow: 1px 1px 0px #F2F2F2, 2px 2px 0px rgb(192, 192, 192);
+}
+.bottom-footer {
+  padding-bottom: 15px;
+  background-color: white;
 }
