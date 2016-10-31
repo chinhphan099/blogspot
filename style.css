@@ -374,12 +374,12 @@ footer {
 }
 .bottom-footer .img-wrap {
   float: left;
-  width: 100px;
+  width: 70px;
   margin-right: 15px;
 }
 .bottom-footer .content {
   overflow: hidden;
-  height: 100px;
+  height: 70px;
   display: table-cell;
   vertical-align: middle;
 }
