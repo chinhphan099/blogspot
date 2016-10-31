@@ -369,6 +369,13 @@ footer {
   border-top: 1px solid #c1c1c1;
   background-color: white;
 }
+.bottom-footer .img-wrap {
+  float: left;
+  width: 100px;
+}
+.bottom-footer .content {
+  overflow: hidden;
+}
 .hotline li {
   display: block;
 }
