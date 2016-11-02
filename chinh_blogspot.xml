@@ -42,6 +42,44 @@
     <meta content='1812285465652183 ' property='fb:app_id'/>
     <meta content='http://www.facebook.com/chinhphan099' property='fb:admins'/>
     <meta content='article' property='og:type'/>
+    <script type='text/javascript'>
+      var thumbnail_mode = &quot;no-float&quot; ;
+      summary_noimg = 130;
+      summary_img = 130;
+      img_thumb_height = 0;
+      img_thumb_width = 0;
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+      function removeHtmlTag(strx,chop){
+        if(strx.indexOf("<")!=-1)
+        {
+          var s = strx.split("<");
+          for(var i=0;i<s.length;i++){
+            if(s[i].indexOf(">")!=-1){
+              s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length);
+            } }
+          strx = s.join("");
+        }
+        chop = (chop < strx.length-1) ? chop : strx.length-2;
+        while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++;
+        strx = strx.substring(0,chop-1);
+        return strx+'...';
+      }
+      function createSummaryAndThumb(pID){
+        var div = document.getElementById(pID);
+        var imgtag = "";
+        var img = div.getElementsByTagName("img");
+        var summ = summary_noimg;
+        if(img.length>=1) {
+          imgtag = '<span style="display:none;"><img src="'+img[0].src+'" width="'+img_thumb_width+'px" height="'+img_thumb_height +'px"/></span>';
+          summ = summary_img;
+        }
+        var summary = imgtag + '<div>' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+        div.innerHTML = summary;
+      }
+      //]]>
+    </script>
   </head>
 
   <body>
@@ -72,21 +110,21 @@
                   <a href='tel:+84977968386'>
                     <i class='ion-ios-telephone'></i>
                     <i class='ion-ios-telephone-outline'></i>
-                    <span class="text">0938.528.813</span>
+                    <span class='text'>0938.528.813</span>
                   </a>
                 </li>
                 <li>
                   <a href='tel:+84977968386'>
                     <i class='ion-ios-telephone'></i>
                     <i class='ion-ios-telephone-outline'></i>
-                    <span class="text">097.796.8386</span>
+                    <span class='text'>097.796.8386</span>
                   </a>
                 </li>
               </ul>
             </li>
             <li class='text-right col-sm-6'>
               <ul>
-                <li><a href="#!"><i class='ion-social-facebook'></i><i class='ion-social-facebook-outline'></i></a></li>
+                <li><a href='#!'><i class='ion-social-facebook'></i><i class='ion-social-facebook-outline'></i></a></li>
                 <li><a href='#!'><i class='ion-social-googleplus'></i><i class='ion-social-googleplus-outline'></i></a></li>
                 <li><a href='#!'><i class='ion-social-twitter'></i><i class='ion-social-twitter-outline'></i></a></li>
                 <li><a href='#!'><i class='ion-social-instagram'></i><i class='ion-social-instagram-outline'></i></a></li>
@@ -103,8 +141,8 @@
         <b:widget id='PageList1' locked='true' title='Pages' type='PageList' version='1' visible='true'>
           <b:includable id='main'>
             <div class='container'>
-              <div class="row">
-                <div class="nav-wrapper">
+              <div class='row'>
+                <div class='nav-wrapper'>
                   <ul class='nav' data-collapse=''>
                     <b:loop values='data:links' var='link'>
                       <b:if cond='data:link.isCurrentPage'>
@@ -154,8 +192,8 @@
       <b:section class='right-navigation hidden-md-up' id='rightNavigation' showaddelement='yes'>
         <b:widget id='Label3' locked='false' title='Right Navigation' type='Label' version='1' visible='true'>
           <b:includable id='main'>
-            <div class="container">
-              <div class="row">
+            <div class='container'>
+              <div class='row'>
                 <div class='head-nav'>
                   <form action='/search' id='frmSearchMobile'>
                     <div class='custom-input'>
@@ -213,7 +251,7 @@
           });
         };
       </script>
-      <script type='text/javascript' src='http://www.chinhdemo.blogspot.com/feeds/posts/default?alt=json-in-script&amp;callback=getTitles'></script>
+      <script type='text/javascript' src='http://www.kemtrangrangusa.blogspot.com/feeds/posts/default?alt=json-in-script&amp;callback=getTitles'></script>
       <!-- End Right Navigation -->
       <div class='main-container'>
         <div class='dummy-layer'/>
@@ -224,13 +262,13 @@
                 <span class='hidden-md-up' data-nav='open-left-nav'><i class='ion-navicon'></i> <i class='ion-ios-close-empty'></i></span>
                 <b:if cond='data:blog.url == data:blog.homepageUrl'>
                   <h1 class='logo'>
-                    <a expr:href='data:blog.homepageUrl' expr:title='data:blog.pageTitle'>
+                    <a expr:href='data:blog.homepageUrl' expr:title='data:title'>
                       <img expr:alt='data:title' expr:src='data:sourceUrl'/>
                     </a>
                   </h1>
                 <b:else/>
                   <div class='logo'>
-                    <a expr:href='data:blog.homepageUrl'>
+                    <a expr:href='data:blog.homepageUrl' expr:title='data:title'>
                       <img expr:alt='data:title' expr:src='data:sourceUrl'/>
                     </a>
                   </div>
@@ -244,7 +282,7 @@
         <div class='inner'>
           <!-- Main Slider -->
           <div class='container'>
-            <div class="row">
+            <div class='row'>
               <b:if cond='data:blog.pageType == "index"'>
                 <b:section class='main-banner' id='main-slider' preferred='yes' showaddelement='yes'>
                   <b:widget id='HTML4' locked='true' title='Main Slider' type='HTML' visible='true'>
@@ -284,10 +322,1192 @@
           <div class='container'>
             <div class='row'>
               <!-- Main -->
-              <b:section class='main col-md-8 col-lg-9' id='main' showaddelement='yes'>
-                <b:widget id='HTML5' locked='false' title='Main Content' type='HTML' visible='true'>
-                  <b:includable id='main'>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vitae atque vel, expedita quisquam id error repellendus, aliquam non cum maxime. Saepe molestiae eos placeat magnam consequatur et nulla autem odio illo aperiam iste aliquam dolorum libero obcaecati rerum expedita recusandae, deleniti sequi porro corrupti atque quibusdam dicta laboriosam, molestias eveniet. Fuga, laudantium? Dicta rerum eum earum at sapiente obcaecati adipisci necessitatibus. Facere quod sunt quae odio, fugit, quam quisquam consectetur, veritatis eos, nemo explicabo. Ratione illo distinctio quo quisquam! Voluptatibus, illo sequi ad quos facilis. Praesentium itaque molestias repudiandae laudantium, nam quaerat vitae ea, sed repellendus veritatis. Neque sapiente sit molestias laudantium tempore veritatis illo rerum autem et, laboriosam magni similique. Neque quisquam deleniti, magnam, aliquam voluptates porro ex dolorum alias quam, totam animi fuga. Ex quisquam explicabo voluptatibus eaque rerum debitis, aliquid fugiat deleniti possimus nulla incidunt assumenda consectetur optio magni itaque veritatis magnam quaerat vel cupiditate obcaecati dolorem, velit nihil porro! Commodi fugiat cumque fugit aut excepturi a consectetur nam labore impedit temporibus vero, quaerat, minus quis adipisci. Nam deserunt fugiat nemo ipsum rem quasi assumenda quam, dolor perferendis? Doloribus vitae nisi, voluptatum dolores fugit debitis, minima sint adipisci fuga! Praesentium eum iure temporibus nisi unde possimus, nostrum sint sed debitis saepe quaerat tenetur perferendis fuga aperiam cum aspernatur, facilis, ab animi! Nobis neque beatae voluptatum, earum at ipsa dicta, sed asperiores dolor sit eveniet. Quasi reprehenderit nam, culpa eveniet earum praesentium quae dolorem quod, quam sit ratione ipsa temporibus! Repellat saepe nesciunt ex eveniet aliquam accusamus tenetur? Quia dolor autem explicabo libero ab. Ab dolorum, vero quod odit veritatis sapiente sed error quos labore rem itaque a quasi asperiores, natus nisi similique modi aspernatur quidem! Esse ullam debitis veritatis sunt similique optio voluptas voluptatum ipsa magni, voluptatem tempore libero illo facere itaque possimus, temporibus eveniet unde distinctio necessitatibus! Fugiat ex cum, laboriosam quibusdam repudiandae pariatur accusantium totam explicabo suscipit perferendis consequuntur ab mollitia quia nemo soluta, consequatur ducimus. Neque doloribus culpa nesciunt voluptatum necessitatibus, magnam dolorum unde. Culpa consequuntur vitae suscipit animi reiciendis assumenda corporis enim error fugit blanditiis. Eum nemo, odio rem, laborum nesciunt eligendi ducimus unde consequatur nam rerum quas dolorum necessitatibus est ipsa alias, aut inventore itaque aliquam consequuntur. Cupiditate sed libero eius ipsa iste aspernatur sapiente dolorum consequatur nobis, odit quas perferendis! Repudiandae, quaerat, fugit. Veritatis, iste consequuntur dicta minima dolore, repellat unde odit quia! Sapiente totam nulla, voluptas quia fugiat perspiciatis, cumque ullam, adipisci magnam nesciunt necessitatibus assumenda dolorem. Aliquid fugit commodi minima doloribus nesciunt ad sit? Amet harum, libero, perferendis, asperiores, placeat eligendi quas dolorem natus culpa maiores iste esse a earum accusantium dolor ipsam illum et minus! Minus, autem consequatur at obcaecati rerum optio, ullam eligendi tempora pariatur reprehenderit quaerat laudantium cum explicabo enim quia atque maxime hic similique ut commodi dolorem porro! Accusamus libero repellat quo nulla eius nam dolore eum quis blanditiis ipsum consequuntur molestias odit, commodi, excepturi itaque maiores quisquam iure! Illo iusto incidunt sunt impedit, nemo, natus voluptates consectetur perferendis voluptate dignissimos rem nostrum libero mollitia doloribus ea magni quas delectus, deserunt atque laboriosam maxime, tempore ab cum? Sed, porro placeat, dolores aperiam quia minima. Ad ea nihil, ipsum facilis temporibus molestias commodi, praesentium, libero omnis quo cum dolor mollitia veniam. At, reprehenderit provident neque dignissimos natus, deleniti voluptatem quasi earum consequatur modi repellendus, aliquam? Quas atque vero delectus eligendi, est, molestiae aut dolores repellendus numquam, iste harum. Quos saepe optio officia deleniti mollitia dolorem, tempore maiores cum similique nesciunt accusamus sapiente, sit iste, velit ducimus. Suscipit tempore perspiciatis maxime, non necessitatibus et libero aliquam ipsum sapiente id tempora laboriosam fugit, debitis nihil officiis minus, laborum porro aspernatur natus dignissimos inventore ducimus iusto totam. Modi ab ipsum excepturi explicabo eius architecto neque, dolores distinctio consequuntur dolorem, accusantium voluptatem. Soluta neque totam autem voluptatem dolore, consectetur, illo, laudantium molestias placeat quas quidem. Ipsa excepturi amet quo optio, hic fugiat cupiditate! Ex asperiores assumenda sit eius, fugiat vitae deserunt aliquid porro eos amet earum corporis debitis ut repellat quis possimus facere vero temporibus eligendi voluptate animi sunt. Nam sint eos nemo nihil explicabo aut eius debitis quibusdam sunt blanditiis laborum, corporis eum a voluptatum quasi id ad quia praesentium, minus. Illum ea, repudiandae veniam. Reiciendis neque sapiente aliquam molestias quae exercitationem perferendis unde dolor eligendi, odio quisquam harum enim porro iste at. In consequatur repudiandae velit, consectetur deleniti eaque perferendis vitae quibusdam, mollitia et omnis illo veniam id necessitatibus cum magni nostrum perspiciatis molestiae tenetur placeat laborum ea recusandae beatae modi numquam? Quasi vitae ipsa adipisci a doloribus veritatis illum omnis quas tempora rerum, quaerat qui velit dignissimos esse praesentium, ex, porro repellat necessitatibus eligendi rem perspiciatis, voluptas culpa. Officia doloremque culpa incidunt magnam aperiam, repellat, tempora! Unde modi harum mollitia. A fuga voluptas quam obcaecati repellendus officiis consequuntur velit at, tempore quaerat maiores molestias accusantium sint recusandae rerum id hic incidunt quibusdam, sit pariatur odio dolores, tenetur! Maxime ex a sunt obcaecati perspiciatis quam autem, consequatur distinctio repellendus recusandae earum unde, cupiditate eveniet, quod sed facere officiis. Blanditiis inventore ipsam accusantium provident quae consequatur ex, placeat sint sit. Adipisci molestias, tempore numquam deserunt sed illum alias eligendi laudantium eos neque, libero. Soluta laboriosam, sit, placeat aut quos a cum. Pariatur earum ipsam asperiores, adipisci odit dolor vero modi voluptatibus mollitia et dolorum! Officiis accusantium, mollitia facilis laudantium! Reprehenderit cupiditate ratione ad dolore, necessitatibus, mollitia veniam eius dolorem amet, adipisci laboriosam quae, repellendus distinctio earum aut error quasi sit! Consectetur molestiae temporibus inventore adipisci saepe, vel ut? Fugiat eius incidunt fuga ab saepe dolor, voluptate molestias, reiciendis labore aut, inventore quae quidem et corrupti. Cumque incidunt unde consequuntur, ratione perferendis, necessitatibus iure reiciendis similique? Velit minima eveniet aliquam dignissimos numquam laboriosam atque, doloribus a et sapiente aut hic eos, eligendi repellat veniam. Veniam libero cupiditate laboriosam vel itaque officia magni quos iusto facere, amet, consectetur quod quibusdam suscipit, excepturi consequuntur eaque iure dignissimos, sed. Sit nihil, officiis, hic ipsa eos fuga. Aut iusto, quibusdam est, asperiores, nulla dolorem quidem molestiae sint eligendi aliquid perferendis soluta id sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vitae atque vel, expedita quisquam id error repellendus, aliquam non cum maxime. Saepe molestiae eos placeat magnam consequatur et nulla autem odio illo aperiam iste aliquam dolorum libero obcaecati rerum expedita recusandae, deleniti sequi porro corrupti atque quibusdam dicta laboriosam, molestias eveniet. Fuga, laudantium? Dicta rerum eum earum at sapiente obcaecati adipisci necessitatibus. Facere quod sunt quae odio, fugit, quam quisquam consectetur, veritatis eos, nemo explicabo. Ratione illo distinctio quo quisquam! Voluptatibus, illo sequi ad quos facilis. Praesentium itaque molestias repudiandae laudantium, nam quaerat vitae ea, sed repellendus veritatis. Neque sapiente sit molestias laudantium tempore veritatis illo rerum autem et, laboriosam magni similique. Neque quisquam deleniti, magnam, aliquam voluptates porro ex dolorum alias quam, totam animi fuga. Ex quisquam explicabo voluptatibus eaque rerum debitis, aliquid fugiat deleniti possimus nulla incidunt assumenda consectetur optio magni itaque veritatis magnam quaerat vel cupiditate obcaecati dolorem, velit nihil porro! Commodi fugiat cumque fugit aut excepturi a consectetur nam labore impedit temporibus vero, quaerat, minus quis adipisci. Nam deserunt fugiat nemo ipsum rem quasi assumenda quam, dolor perferendis? Doloribus vitae nisi, voluptatum dolores fugit debitis, minima sint adipisci fuga! Praesentium eum iure temporibus nisi unde possimus, nostrum sint sed debitis saepe quaerat tenetur perferendis fuga aperiam cum aspernatur, facilis, ab animi! Nobis neque beatae voluptatum, earum at ipsa dicta, sed asperiores dolor sit eveniet. Quasi reprehenderit nam, culpa eveniet earum praesentium quae dolorem quod, quam sit ratione ipsa temporibus! Repellat saepe nesciunt ex eveniet aliquam accusamus tenetur? Quia dolor autem explicabo libero ab. Ab dolorum, vero quod odit veritatis sapiente sed error quos labore rem itaque a quasi asperiores, natus nisi similique modi aspernatur quidem! Esse ullam debitis veritatis sunt similique optio voluptas voluptatum ipsa magni, voluptatem tempore libero illo facere itaque possimus, temporibus eveniet unde distinctio necessitatibus! Fugiat ex cum, laboriosam quibusdam repudiandae pariatur accusantium totam explicabo suscipit perferendis consequuntur ab mollitia quia nemo soluta, consequatur ducimus. Neque doloribus culpa nesciunt voluptatum necessitatibus, magnam dolorum unde. Culpa consequuntur vitae suscipit animi reiciendis assumenda corporis enim error fugit blanditiis. Eum nemo, odio rem, laborum nesciunt eligendi ducimus unde consequatur nam rerum quas dolorum necessitatibus est ipsa alias, aut inventore itaque aliquam consequuntur. Cupiditate sed libero eius ipsa iste aspernatur sapiente dolorum consequatur nobis, odit quas perferendis! Repudiandae, quaerat, fugit. Veritatis, iste consequuntur dicta minima dolore, repellat unde odit quia! Sapiente totam nulla, voluptas quia fugiat perspiciatis, cumque ullam, adipisci magnam nesciunt necessitatibus assumenda dolorem. Aliquid fugit commodi minima doloribus nesciunt ad sit? Amet harum, libero, perferendis, asperiores, placeat eligendi quas dolorem natus culpa maiores iste esse a earum accusantium dolor ipsam illum et minus! Minus, autem consequatur at obcaecati rerum optio, ullam eligendi tempora pariatur reprehenderit quaerat laudantium cum explicabo enim quia atque maxime hic similique ut commodi dolorem porro! Accusamus libero repellat quo nulla eius nam dolore eum quis blanditiis ipsum consequuntur molestias odit, commodi, excepturi itaque maiores quisquam iure! Illo iusto incidunt sunt impedit, nemo, natus voluptates consectetur perferendis voluptate dignissimos rem nostrum libero mollitia doloribus ea magni quas delectus, deserunt atque laboriosam maxime, tempore ab cum? Sed, porro placeat, dolores aperiam quia minima. Ad ea nihil, ipsum facilis temporibus molestias commodi, praesentium, libero omnis quo cum dolor mollitia veniam. At, reprehenderit provident neque dignissimos natus, deleniti voluptatem quasi earum consequatur modi repellendus, aliquam? Quas atque vero delectus eligendi, est, molestiae aut dolores repellendus numquam, iste harum. Quos saepe optio officia deleniti mollitia dolorem, tempore maiores cum similique nesciunt accusamus sapiente, sit iste, velit ducimus. Suscipit tempore perspiciatis maxime, non necessitatibus et libero aliquam ipsum sapiente id tempora laboriosam fugit, debitis nihil officiis minus, laborum porro aspernatur natus dignissimos inventore ducimus iusto totam. Modi ab ipsum excepturi explicabo eius architecto neque, dolores distinctio consequuntur dolorem, accusantium voluptatem. Soluta neque totam autem voluptatem dolore, consectetur, illo, laudantium molestias placeat quas quidem. Ipsa excepturi amet quo optio, hic fugiat cupiditate! Ex asperiores assumenda sit eius, fugiat vitae deserunt aliquid porro eos amet earum corporis debitis ut repellat quis possimus facere vero temporibus eligendi voluptate animi sunt. Nam sint eos nemo nihil explicabo aut eius debitis quibusdam sunt blanditiis laborum, corporis eum a voluptatum quasi id ad quia praesentium, minus. Illum ea, repudiandae veniam. Reiciendis neque sapiente aliquam molestias quae exercitationem perferendis unde dolor eligendi, odio quisquam harum enim porro iste at. In consequatur repudiandae velit, consectetur deleniti eaque perferendis vitae quibusdam, mollitia et omnis illo veniam id necessitatibus cum magni nostrum perspiciatis molestiae tenetur placeat laborum ea recusandae beatae modi numquam? Quasi vitae ipsa adipisci a doloribus veritatis illum omnis quas tempora rerum, quaerat qui velit dignissimos esse praesentium, ex, porro repellat necessitatibus eligendi rem perspiciatis, voluptas culpa. Officia doloremque culpa incidunt magnam aperiam, repellat, tempora! Unde modi harum mollitia. A fuga voluptas quam obcaecati repellendus officiis consequuntur velit at, tempore quaerat maiores molestias accusantium sint recusandae rerum id hic incidunt quibusdam, sit pariatur odio dolores, tenetur! Maxime ex a sunt obcaecati perspiciatis quam autem, consequatur distinctio repellendus recusandae earum unde, cupiditate eveniet, quod sed facere officiis. Blanditiis inventore ipsam accusantium provident quae consequatur ex, placeat sint sit. Adipisci molestias, tempore numquam deserunt sed illum alias eligendi laudantium eos neque, libero. Soluta laboriosam, sit, placeat aut quos a cum. Pariatur earum ipsam asperiores, adipisci odit dolor vero modi voluptatibus mollitia et dolorum! Officiis accusantium, mollitia facilis laudantium! Reprehenderit cupiditate ratione ad dolore, necessitatibus, mollitia veniam eius dolorem amet, adipisci laboriosam quae, repellendus distinctio earum aut error quasi sit! Consectetur molestiae temporibus inventore adipisci saepe, vel ut? Fugiat eius incidunt fuga ab saepe dolor, voluptate molestias, reiciendis labore aut, inventore quae quidem et corrupti. Cumque incidunt unde consequuntur, ratione perferendis, necessitatibus iure reiciendis similique? Velit minima eveniet aliquam dignissimos numquam laboriosam atque, doloribus a et sapiente aut hic eos, eligendi repellat veniam. Veniam libero cupiditate laboriosam vel itaque officia magni quos iusto facere, amet, consectetur quod quibusdam suscipit, excepturi consequuntur eaque iure dignissimos, sed. Sit nihil, officiis, hic ipsa eos fuga. Aut iusto, quibusdam est, asperiores, nulla dolorem quidem molestiae sint eligendi aliquid perferendis soluta id sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vitae atque vel, expedita quisquam id error repellendus, aliquam non cum maxime. Saepe molestiae eos placeat magnam consequatur et nulla autem odio illo aperiam iste aliquam dolorum libero obcaecati rerum expedita recusandae, deleniti sequi porro corrupti atque quibusdam dicta laboriosam, molestias eveniet. Fuga, laudantium? Dicta rerum eum earum at sapiente obcaecati adipisci necessitatibus. Facere quod sunt quae odio, fugit, quam quisquam consectetur, veritatis eos, nemo explicabo. Ratione illo distinctio quo quisquam! Voluptatibus, illo sequi ad quos facilis. Praesentium itaque molestias repudiandae laudantium, nam quaerat vitae ea, sed repellendus veritatis. Neque sapiente sit molestias laudantium tempore veritatis illo rerum autem et, laboriosam magni similique. Neque quisquam deleniti, magnam, aliquam voluptates porro ex dolorum alias quam, totam animi fuga. Ex quisquam explicabo voluptatibus eaque rerum debitis, aliquid fugiat deleniti possimus nulla incidunt assumenda consectetur optio magni itaque veritatis magnam quaerat vel cupiditate obcaecati dolorem, velit nihil porro! Commodi fugiat cumque fugit aut excepturi a consectetur nam labore impedit temporibus vero, quaerat, minus quis adipisci. Nam deserunt fugiat nemo ipsum rem quasi assumenda quam, dolor perferendis? Doloribus vitae nisi, voluptatum dolores fugit debitis, minima sint adipisci fuga! Praesentium eum iure temporibus nisi unde possimus, nostrum sint sed debitis saepe quaerat tenetur perferendis fuga aperiam cum aspernatur, facilis, ab animi! Nobis neque beatae voluptatum, earum at ipsa dicta, sed asperiores dolor sit eveniet. Quasi reprehenderit nam, culpa eveniet earum praesentium quae dolorem quod, quam sit ratione ipsa temporibus! Repellat saepe nesciunt ex eveniet aliquam accusamus tenetur? Quia dolor autem explicabo libero ab. Ab dolorum, vero quod odit veritatis sapiente sed error quos labore rem itaque a quasi asperiores, natus nisi similique modi aspernatur quidem! Esse ullam debitis veritatis sunt similique optio voluptas voluptatum ipsa magni, voluptatem tempore libero illo facere itaque possimus, temporibus eveniet unde distinctio necessitatibus! Fugiat ex cum, laboriosam quibusdam repudiandae pariatur accusantium totam explicabo suscipit perferendis consequuntur ab mollitia quia nemo soluta, consequatur ducimus. Neque doloribus culpa nesciunt voluptatum necessitatibus, magnam dolorum unde. Culpa consequuntur vitae suscipit animi reiciendis assumenda corporis enim error fugit blanditiis. Eum nemo, odio rem, laborum nesciunt eligendi ducimus unde consequatur nam rerum quas dolorum necessitatibus est ipsa alias, aut inventore itaque aliquam consequuntur. Cupiditate sed libero eius ipsa iste aspernatur sapiente dolorum consequatur nobis, odit quas perferendis! Repudiandae, quaerat, fugit. Veritatis, iste consequuntur dicta minima dolore, repellat unde odit quia! Sapiente totam nulla, voluptas quia fugiat perspiciatis, cumque ullam, adipisci magnam nesciunt necessitatibus assumenda dolorem. Aliquid fugit commodi minima doloribus nesciunt ad sit? Amet harum, libero, perferendis, asperiores, placeat eligendi quas dolorem natus culpa maiores iste esse a earum accusantium dolor ipsam illum et minus! Minus, autem consequatur at obcaecati rerum optio, ullam eligendi tempora pariatur reprehenderit quaerat laudantium cum explicabo enim quia atque maxime hic similique ut commodi dolorem porro! Accusamus libero repellat quo nulla eius nam dolore eum quis blanditiis ipsum consequuntur molestias odit, commodi, excepturi itaque maiores quisquam iure! Illo iusto incidunt sunt impedit, nemo, natus voluptates consectetur perferendis voluptate dignissimos rem nostrum libero mollitia doloribus ea magni quas delectus, deserunt atque laboriosam maxime, tempore ab cum? Sed, porro placeat, dolores aperiam quia minima. Ad ea nihil, ipsum facilis temporibus molestias commodi, praesentium, libero omnis quo cum dolor mollitia veniam. At, reprehenderit provident neque dignissimos natus, deleniti voluptatem quasi earum consequatur modi repellendus, aliquam? Quas atque vero delectus eligendi, est, molestiae aut dolores repellendus numquam, iste harum. Quos saepe optio officia deleniti mollitia dolorem, tempore maiores cum similique nesciunt accusamus sapiente, sit iste, velit ducimus. Suscipit tempore perspiciatis maxime, non necessitatibus et libero aliquam ipsum sapiente id tempora laboriosam fugit, debitis nihil officiis minus, laborum porro aspernatur natus dignissimos inventore ducimus iusto totam. Modi ab ipsum excepturi explicabo eius architecto neque, dolores distinctio consequuntur dolorem, accusantium voluptatem. Soluta neque totam autem voluptatem dolore, consectetur, illo, laudantium molestias placeat quas quidem. Ipsa excepturi amet quo optio, hic fugiat cupiditate! Ex asperiores assumenda sit eius, fugiat vitae deserunt aliquid porro eos amet earum corporis debitis ut repellat quis possimus facere vero temporibus eligendi voluptate animi sunt. Nam sint eos nemo nihil explicabo aut eius debitis quibusdam sunt blanditiis laborum, corporis eum a voluptatum quasi id ad quia praesentium, minus. Illum ea, repudiandae veniam. Reiciendis neque sapiente aliquam molestias quae exercitationem perferendis unde dolor eligendi, odio quisquam harum enim porro iste at. In consequatur repudiandae velit, consectetur deleniti eaque perferendis vitae quibusdam, mollitia et omnis illo veniam id necessitatibus cum magni nostrum perspiciatis molestiae tenetur placeat laborum ea recusandae beatae modi numquam? Quasi vitae ipsa adipisci a doloribus veritatis illum omnis quas tempora rerum, quaerat qui velit dignissimos esse praesentium, ex, porro repellat necessitatibus eligendi rem perspiciatis, voluptas culpa. Officia doloremque culpa incidunt magnam aperiam, repellat, tempora! Unde modi harum mollitia. A fuga voluptas quam obcaecati repellendus officiis consequuntur velit at, tempore quaerat maiores molestias accusantium sint recusandae rerum id hic incidunt quibusdam, sit pariatur odio dolores, tenetur! Maxime ex a sunt obcaecati perspiciatis quam autem, consequatur distinctio repellendus recusandae earum unde, cupiditate eveniet, quod sed facere officiis. Blanditiis inventore ipsam accusantium provident quae consequatur ex, placeat sint sit. Adipisci molestias, tempore numquam deserunt sed illum alias eligendi laudantium eos neque, libero. Soluta laboriosam, sit, placeat aut quos a cum. Pariatur earum ipsam asperiores, adipisci odit dolor vero modi voluptatibus mollitia et dolorum! Officiis accusantium, mollitia facilis laudantium! Reprehenderit cupiditate ratione ad dolore, necessitatibus, mollitia veniam eius dolorem amet, adipisci laboriosam quae, repellendus distinctio earum aut error quasi sit! Consectetur molestiae temporibus inventore adipisci saepe, vel ut? Fugiat eius incidunt fuga ab saepe dolor, voluptate molestias, reiciendis labore aut, inventore quae quidem et corrupti. Cumque incidunt unde consequuntur, ratione perferendis, necessitatibus iure reiciendis similique? Velit minima eveniet aliquam dignissimos numquam laboriosam atque, doloribus a et sapiente aut hic eos, eligendi repellat veniam. Veniam libero cupiditate laboriosam vel itaque officia magni quos iusto facere, amet, consectetur quod quibusdam suscipit, excepturi consequuntur eaque iure dignissimos, sed. Sit nihil, officiis, hic ipsa eos fuga. Aut iusto, quibusdam est, asperiores, nulla dolorem quidem molestiae sint eligendi aliquid perferendis soluta id sed! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea vitae atque vel, expedita quisquam id error repellendus, aliquam non cum maxime. Saepe molestiae eos placeat magnam consequatur et nulla autem odio illo aperiam iste aliquam dolorum libero obcaecati rerum expedita recusandae, deleniti sequi porro corrupti atque quibusdam dicta laboriosam, molestias eveniet. Fuga, laudantium? Dicta rerum eum earum at sapiente obcaecati adipisci necessitatibus. Facere quod sunt quae odio, fugit, quam quisquam consectetur, veritatis eos, nemo explicabo. Ratione illo distinctio quo quisquam! Voluptatibus, illo sequi ad quos facilis. Praesentium itaque molestias repudiandae laudantium, nam quaerat vitae ea, sed repellendus veritatis. Neque sapiente sit molestias laudantium tempore veritatis illo rerum autem et, laboriosam magni similique. Neque quisquam deleniti, magnam, aliquam voluptates porro ex dolorum alias quam, totam animi fuga. Ex quisquam explicabo voluptatibus eaque rerum debitis, aliquid fugiat deleniti possimus nulla incidunt assumenda consectetur optio magni itaque veritatis magnam quaerat vel cupiditate obcaecati dolorem, velit nihil porro! Commodi fugiat cumque fugit aut excepturi a consectetur nam labore impedit temporibus vero, quaerat, minus quis adipisci. Nam deserunt fugiat nemo ipsum rem quasi assumenda quam, dolor perferendis? Doloribus vitae nisi, voluptatum dolores fugit debitis, minima sint adipisci fuga! Praesentium eum iure temporibus nisi unde possimus, nostrum sint sed debitis saepe quaerat tenetur perferendis fuga aperiam cum aspernatur, facilis, ab animi! Nobis neque beatae voluptatum, earum at ipsa dicta, sed asperiores dolor sit eveniet. Quasi reprehenderit nam, culpa eveniet earum praesentium quae dolorem quod, quam sit ratione ipsa temporibus! Repellat saepe nesciunt ex eveniet aliquam accusamus tenetur? Quia dolor autem explicabo libero ab. Ab dolorum, vero quod odit veritatis sapiente sed error quos labore rem itaque a quasi asperiores, natus nisi similique modi aspernatur quidem! Esse ullam debitis veritatis sunt similique optio voluptas voluptatum ipsa magni, voluptatem tempore libero illo facere itaque possimus, temporibus eveniet unde distinctio necessitatibus! Fugiat ex cum, laboriosam quibusdam repudiandae pariatur accusantium totam explicabo suscipit perferendis consequuntur ab mollitia quia nemo soluta, consequatur ducimus. Neque doloribus culpa nesciunt voluptatum necessitatibus, magnam dolorum unde. Culpa consequuntur vitae suscipit animi reiciendis assumenda corporis enim error fugit blanditiis. Eum nemo, odio rem, laborum nesciunt eligendi ducimus unde consequatur nam rerum quas dolorum necessitatibus est ipsa alias, aut inventore itaque aliquam consequuntur. Cupiditate sed libero eius ipsa iste aspernatur sapiente dolorum consequatur nobis, odit quas perferendis! Repudiandae, quaerat, fugit. Veritatis, iste consequuntur dicta minima dolore, repellat unde odit quia! Sapiente totam nulla, voluptas quia fugiat perspiciatis, cumque ullam, adipisci magnam nesciunt necessitatibus assumenda dolorem. Aliquid fugit commodi minima doloribus nesciunt ad sit? Amet harum, libero, perferendis, asperiores, placeat eligendi quas dolorem natus culpa maiores iste esse a earum accusantium dolor ipsam illum et minus! Minus, autem consequatur at obcaecati rerum optio, ullam eligendi tempora pariatur reprehenderit quaerat laudantium cum explicabo enim quia atque maxime hic similique ut commodi dolorem porro! Accusamus libero repellat quo nulla eius nam dolore eum quis blanditiis ipsum consequuntur molestias odit, commodi, excepturi itaque maiores quisquam iure! Illo iusto incidunt sunt impedit, nemo, natus voluptates consectetur perferendis voluptate dignissimos rem nostrum libero mollitia doloribus ea magni quas delectus, deserunt atque laboriosam maxime, tempore ab cum? Sed, porro placeat, dolores aperiam quia minima. Ad ea nihil, ipsum facilis temporibus molestias commodi, praesentium, libero omnis quo cum dolor mollitia veniam. At, reprehenderit provident neque dignissimos natus, deleniti voluptatem quasi earum consequatur modi repellendus, aliquam? Quas atque vero delectus eligendi, est, molestiae aut dolores repellendus numquam, iste harum. Quos saepe optio officia deleniti mollitia dolorem, tempore maiores cum similique nesciunt accusamus sapiente, sit iste, velit ducimus. Suscipit tempore perspiciatis maxime, non necessitatibus et libero aliquam ipsum sapiente id tempora laboriosam fugit, debitis nihil officiis minus, laborum porro aspernatur natus dignissimos inventore ducimus iusto totam. Modi ab ipsum excepturi explicabo eius architecto neque, dolores distinctio consequuntur dolorem, accusantium voluptatem. Soluta neque totam autem voluptatem dolore, consectetur, illo, laudantium molestias placeat quas quidem. Ipsa excepturi amet quo optio, hic fugiat cupiditate! Ex asperiores assumenda sit eius, fugiat vitae deserunt aliquid porro eos amet earum corporis debitis ut repellat quis possimus facere vero temporibus eligendi voluptate animi sunt. Nam sint eos nemo nihil explicabo aut eius debitis quibusdam sunt blanditiis laborum, corporis eum a voluptatum quasi id ad quia praesentium, minus. Illum ea, repudiandae veniam. Reiciendis neque sapiente aliquam molestias quae exercitationem perferendis unde dolor eligendi, odio quisquam harum enim porro iste at. In consequatur repudiandae velit, consectetur deleniti eaque perferendis vitae quibusdam, mollitia et omnis illo veniam id necessitatibus cum magni nostrum perspiciatis molestiae tenetur placeat laborum ea recusandae beatae modi numquam? Quasi vitae ipsa adipisci a doloribus veritatis illum omnis quas tempora rerum, quaerat qui velit dignissimos esse praesentium, ex, porro repellat necessitatibus eligendi rem perspiciatis, voluptas culpa. Officia doloremque culpa incidunt magnam aperiam, repellat, tempora! Unde modi harum mollitia. A fuga voluptas quam obcaecati repellendus officiis consequuntur velit at, tempore quaerat maiores molestias accusantium sint recusandae rerum id hic incidunt quibusdam, sit pariatur odio dolores, tenetur! Maxime ex a sunt obcaecati perspiciatis quam autem, consequatur distinctio repellendus recusandae earum unde, cupiditate eveniet, quod sed facere officiis. Blanditiis inventore ipsam accusantium provident quae consequatur ex, placeat sint sit. Adipisci molestias, tempore numquam deserunt sed illum alias eligendi laudantium eos neque, libero. Soluta laboriosam, sit, placeat aut quos a cum. Pariatur earum ipsam asperiores, adipisci odit dolor vero modi voluptatibus mollitia et dolorum! Officiis accusantium, mollitia facilis laudantium! Reprehenderit cupiditate ratione ad dolore, necessitatibus, mollitia veniam eius dolorem amet, adipisci laboriosam quae, repellendus distinctio earum aut error quasi sit! Consectetur molestiae temporibus inventore adipisci saepe, vel ut? Fugiat eius incidunt fuga ab saepe dolor, voluptate molestias, reiciendis labore aut, inventore quae quidem et corrupti. Cumque incidunt unde consequuntur, ratione perferendis, necessitatibus iure reiciendis similique? Velit minima eveniet aliquam dignissimos numquam laboriosam atque, doloribus a et sapiente aut hic eos, eligendi repellat veniam. Veniam libero cupiditate laboriosam vel itaque officia magni quos iusto facere, amet, consectetur quod quibusdam suscipit, excepturi consequuntur eaque iure dignissimos, sed. Sit nihil, officiis, hic ipsa eos fuga. Aut iusto, quibusdam est, asperiores, nulla dolorem quidem molestiae sint eligendi aliquid perferendis soluta id sed!
+              <b:section class='main col-md-8 col-lg-9' id='main' preferred='yes' showaddelement='no'>
+                <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+                  <b:includable id='main' var='top'>
+                    <b:if cond='data:mobile == &quot;false&quot;'>
+                      <!-- posts -->
+                      <div class='blog-posts hfeed'>
+                        <b:include data='top' name='status-message'/>
+                        <data:defaultAdStart/>
+                        <b:loop values='data:posts' var='post'>
+                          <b:if cond='data:post.isDateStart'>
+                            <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
+                              &lt;/div&gt;&lt;/div&gt;
+                            </b:if>
+                          </b:if>
+                          <b:if cond='data:post.isDateStart'>
+                            &lt;div class=&quot;date-outer&quot;&gt;
+                          </b:if>
+                          <b:if cond='data:post.dateHeader'>
+                            <div class='date-header'>
+                              <data:post.dateHeader/>
+                            </div>
+                          </b:if>
+                          <b:if cond='data:post.isDateStart'>
+                            &lt;div class=&quot;date-posts&quot;&gt;
+                          </b:if>
+                          <div class='post-outer'>
+                            <b:include data='post' name='post'/>
+                            <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                              <b:if cond='data:post.showThreadedComments'>
+                                <b:include data='post' name='threaded_comments'/>
+                                <b:else/>
+                                <b:include data='post' name='comments'/>
+                              </b:if>
+                            </b:if>
+                            <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                              <b:if cond='data:post.showThreadedComments'>
+                                <b:include data='post' name='threaded_comments'/>
+                                <b:else/>
+                                <b:include data='post' name='comments'/>
+                              </b:if>
+                            </b:if>
+                          </div>
+                          <b:if cond='data:post.includeAd'>
+                            <b:if cond='data:post.isFirstPost'>
+                              <data:defaultAdEnd/>
+                              <b:else/>
+                              <data:adEnd/>
+                            </b:if>
+                            <div class='inline-ad'>
+                              <data:adCode/>
+                            </div>
+                            <data:adStart/>
+                          </b:if>
+                        </b:loop>
+                        <b:if cond='data:numPosts != 0'>
+                          &lt;/div&gt;&lt;/div&gt;
+                        </b:if>
+                        <data:adEnd/>
+                      </div>
+                      <!-- navigation -->
+                      <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                          <!-- navigation -->
+                          <b:include name='nextprev'/>
+                        </b:if>
+                      </b:if>
+                      <!-- feed links -->
+                      <b:include name='feedLinks'/>
+                      <b:else/>
+                      <b:include name='mobile-main'/>
+                    </b:if>
+                    <b:if cond='data:top.showDummy'>
+                      <data:top.dummyBootstrap/>
+                    </b:if>
+                    <b:include name='quickedit'/>
+                  </b:includable>
+                  <b:includable id='backlinkDeleteIcon' var='backlink'>
+                    <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
+                      <a expr:href='data:backlink.deleteUrl' expr:title='data:top.deleteBacklinkMsg'>
+                        <img src='//www.blogger.com/img/icon_delete13.gif'/>
+                      </a>
+                    </span>
+                  </b:includable>
+                  <b:includable id='backlinks' var='post'>
+                    <a name='links'/>
+                    <h4>
+                      <data:post.backlinksLabel/>
+                    </h4>
+                    <b:if cond='data:post.numBacklinks != 0'>
+                      <dl class='comments-block' id='comments-block'>
+                        <b:loop values='data:post.backlinks' var='backlink'>
+                          <div class='collapsed-backlink backlink-control'>
+                            <dt class='comment-title'>
+                              <span class='backlink-toggle-zippy'>
+                                &#160;
+                              </span>
+                              <a expr:href='data:backlink.url' rel='nofollow'>
+                                <data:backlink.title/>
+                              </a>
+                              <b:include data='backlink' name='backlinkDeleteIcon'/>
+                            </dt>
+                            <dd class='comment-body collapseable'>
+                              <data:backlink.snippet/>
+                            </dd>
+                            <dd class='comment-footer collapseable'>
+                              <span class='comment-author'>
+                                <data:post.authorLabel/>
+                                <data:backlink.author/>
+                              </span>
+                              <span class='comment-timestamp'>
+                                <data:post.timestampLabel/>
+                                <data:backlink.timestamp/>
+                              </span>
+                            </dd>
+                          </div>
+                        </b:loop>
+                      </dl>
+                    </b:if>
+                    <p class='comment-footer'>
+                      <a class='comment-link' expr:href='data:post.createLinkUrl' expr:id='data:widget.instanceId + &quot;_backlinks-create-link&quot;' target='_blank'>
+                        <data:post.createLinkLabel/>
+                      </a>
+                    </p>
+                  </b:includable>
+                  <b:includable id='comment-form' var='post'>
+                    <p>
+                      <data:blogCommentMessage/>
+                    </p>
+                    <p>
+                      <data:blogTeamBlogMessage/>
+                    </p>
+                    <p>
+                      <iframe allowtransparency='true' expr:src='data:post.commentFormIframeSrc' frameborder='0' height='275' id='comment-editor' scrolling='auto' width='100%'/>
+                    </p>
+                  </b:includable>
+                  <b:includable id='commentDeleteIcon' var='comment'>
+                    <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+                      <a expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
+                        <img src='http://www.blogger.com/img/icon_delete13.gif'/>
+                      </a>
+                    </span>
+                  </b:includable>
+                  <b:includable id='comment_count_picker' var='post'>
+                    <b:if cond='data:post.commentSource == 1'>
+                      <span class='cmt_count_iframe_holder' expr:data-count='data:post.numComments' expr:data-onclick='data:post.addCommentOnclick' expr:data-post-url='data:post.url' expr:data-url='data:post.canonicalUrl'>
+                      </span>
+                      <b:else/>
+                      <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                        <data:post.commentLabelFull/>
+                        :
+                      </a>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='comment_picker' var='post'>
+                    <b:if cond='data:post.commentSource == 1'>
+                      <b:include data='post' name='iframe_comments'/>
+                      <b:else/>
+                      <b:if cond='data:post.showThreadedComments'>
+                        <b:include data='post' name='threaded_comments'/>
+                        <b:else/>
+                        <b:if cond='data:post.showThreadedComments'>
+                          <b:include data='post' name='threaded_comments'/>
+                          <b:else/>
+                          <b:include data='post' name='comments'/>
+                        </b:if>
+                      </b:if>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='comments' var='post'>
+                    <div class='allcomments'>
+                      <b:if cond='data:post.allowComments'>
+                        <h3 id='comments'>
+                          <b:if cond='data:post.numComments == 1'>
+                            1 
+                            <data:commentLabel/>
+                            <b:else/>
+                            <data:post.numComments/>
+                            <data:commentLabelPlural/>
+                          </b:if>
+                        </h3>
+                        <ol class='commentlist'>
+                          <b:loop values='data:post.comments' var='comment'>
+                            <li class='comment odd alt thread-odd thread-alt depth-1'>
+                              <div class='comment-body'>
+                                <div class='comment-author vcard'>
+                                  <data:comment.authorAvatarImage/>
+                                  <cite class='fn'>
+                                    <b:if cond='data:comment.authorUrl'>
+                                      <a expr:href='data:comment.authorUrl' rel='nofollow'>
+                                        <data:comment.author/>
+                                      </a>
+                                      <b:else/>
+                                      <data:comment.author/>
+                                    </b:if>
+                                  </cite>
+                                  <span class='says'>
+                                    says:
+                                  </span>
+                                </div>
+                                <div class='comment-meta commentmetadata'>
+                                  <a expr:href='data:comment.url' title='comment permalink'>
+                                    <data:comment.timestamp/>
+                                  </a>
+                                </div>
+                                <p>
+                                  <b:if cond='data:comment.isDeleted'>
+                                    <span class='deleted-comment'>
+                                      <data:comment.body/>
+                                    </span>
+                                    <b:else/>
+                                    <p>
+                                      <data:comment.body/>
+                                    </p>
+                                  </b:if>
+                                </p>
+                                <b:include data='comment' name='commentDeleteIcon'/>
+                              </div>
+                            </li>
+                          </b:loop>
+                        </ol>
+                        <b:if cond='data:post.commentPagingRequired'>
+                          <div class='comments-navigation clearfix'>
+                            <div class='alignleft'>
+                              <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+                                <data:post.oldestLinkText/>
+                              </a>
+                              <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+                                <data:post.olderLinkText/>
+                              </a>
+                            </div>
+                            &#160;
+                            <data:post.commentRangeText/>
+                            &#160;
+                            <div class='alignright'>
+                              <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+                                <data:post.newerLinkText/>
+                              </a>
+                              <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+                                <data:post.newestLinkText/>
+                              </a>
+                            </div>
+                          </div>
+                        </b:if>
+                      </b:if>
+                    </div>
+                    <div id='respond'>
+                      <b:if cond='data:post.embedCommentForm'>
+                        <b:if cond='data:post.allowNewComments'>
+                          <b:include data='post' name='comment-form'/>
+                          <b:else/>
+                          <data:post.noNewCommentsText/>
+                        </b:if>
+                        <b:else/>
+                        <b:if cond='data:post.allowComments'>
+                          <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                            <data:postCommentMsg/>
+                          </a>
+                        </b:if>
+                      </b:if>
+                    </div>
+                  </b:includable>
+                  <b:includable id='feedLinks'>
+                    <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                      <!-- Blog feed links -->
+                      <b:if cond='data:feedLinks'>
+                        <div class='blog-feeds'>
+                          <b:include data='feedLinks' name='feedLinksBody'/>
+                        </div>
+                      </b:if>
+                      <b:else/>
+                      <!--Post feed links -->
+                      <div class='post-feeds'>
+                        <b:loop values='data:posts' var='post'>
+                          <b:if cond='data:post.allowComments'>
+                            <b:if cond='data:post.feedLinks'>
+                              <b:include data='post.feedLinks' name='feedLinksBody'/>
+                            </b:if>
+                          </b:if>
+                        </b:loop>
+                      </div>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='feedLinksBody' var='links'>
+                    <div class='feed-links'>
+                      <data:feedLinksMsg/>
+                      <b:loop values='data:links' var='f'>
+                        <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'>
+                          <data:f.name/>
+                          (
+                          <data:f.feedType/>
+                          )
+                        </a>
+                      </b:loop>
+                    </div>
+                  </b:includable>
+                  <b:includable id='iframe_comments' var='post'>
+                    <b:if cond='data:post.allowIframeComments'>
+                      <script expr:src='data:post.iframeCommentSrc' type='text/javascript'/>
+                      <div class='cmt_iframe_holder'/>
+                      <b:if cond='data:post.embedCommentForm == &quot;false&quot;'>
+                        <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                          <data:postCommentMsg/>
+                        </a>
+                      </b:if>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='mobile-index-post' var='post'>
+                    <div class='mobile-date-outer date-outer'>
+                      <b:if cond='data:post.dateHeader'>
+                        <div class='date-header'>
+                          <data:post.dateHeader/>
+                        </div>
+                      </b:if>
+                      <div class='mobile-post-outer'>
+                        <a expr:href='data:post.url'>
+                          <h3 class='mobile-index-title entry-title'>
+                            <data:post.title/>
+                          </h3>
+                          <div class='mobile-index-arrow'>
+                            &amp;rsaquo;
+                          </div>
+                          <div class='mobile-index-contents'>
+                            <b:if cond='data:post.thumbnailUrl'>
+                              <div class='mobile-index-thumbnail'>
+                                <div class='Image'>
+                                  <img expr:src='data:post.thumbnailUrl'/>
+                                </div>
+                              </div>
+                            </b:if>
+                            <div class='post-body'>
+                              <b:if cond='data:post.snippet'>
+                                <data:post.snippet/>
+                              </b:if>
+                            </div>
+                          </div>
+                          <div style='clear: both;'/>
+                        </a>
+                        <div class='mobile-index-comment'>
+                          <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                            <b:if cond='data:post.allowComments'>
+                              <b:if cond='data:post.numComments != 0'>
+                                <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                                  <b:if cond='data:post.numComments == 1'>
+                                    1 
+                                    <data:top.commentLabel/>
+                                    <b:else/>
+                                    <data:post.numComments/>
+                                    <data:top.commentLabelPlural/>
+                                  </b:if>
+                                </a>
+                              </b:if>
+                            </b:if>
+                          </b:if>
+                        </div>
+                      </div>
+                    </div>
+                  </b:includable>
+                  <b:includable id='mobile-main' var='top'>
+                    <!-- posts -->
+                    <div class='blog-posts hfeed'>
+                      <b:include data='top' name='status-message'/>
+                      <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                        <b:loop values='data:posts' var='post'>
+                          <b:include data='post' name='mobile-index-post'/>
+                        </b:loop>
+                        <b:else/>
+                        <b:loop values='data:posts' var='post'>
+                          <b:include data='post' name='mobile-post'/>
+                        </b:loop>
+                      </b:if>
+                    </div>
+                    <b:include name='mobile-nextprev'/>
+                  </b:includable>
+                  <b:includable id='mobile-nextprev'>
+                    <div class='blog-pager' id='blog-pager'>
+                      <b:if cond='data:newerPageUrl'>
+                        <div class='mobile-link-button' id='blog-pager-newer-link'>
+                          <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
+                            &amp;lsaquo;
+                          </a>
+                        </div>
+                      </b:if>
+                      <b:if cond='data:olderPageUrl'>
+                        <div class='mobile-link-button' id='blog-pager-older-link'>
+                          <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
+                            &amp;rsaquo;
+                          </a>
+                        </div>
+                      </b:if>
+                      <div class='mobile-link-button' id='blog-pager-home-link'>
+                        <a class='home-link' expr:href='data:blog.homepageUrl'>
+                          <data:homeMsg/>
+                        </a>
+                      </div>
+                      <div class='mobile-desktop-link'>
+                        <a class='home-link' expr:href='data:desktopLinkUrl'>
+                          <data:desktopLinkMsg/>
+                        </a>
+                      </div>
+                    </div>
+                    <div class='clear'/>
+                  </b:includable>
+                  <b:includable id='mobile-post' var='post'>
+                    <div class='date-outer'>
+                      <b:if cond='data:post.dateHeader'>
+                        <div class='date-header'>
+                          <data:post.dateHeader/>
+                        </div>
+                      </b:if>
+                      <div class='date-posts'>
+                        <div class='post-outer'>
+                          <div class='post hentry uncustomized-post-template'>
+                            <a expr:name='data:post.id'/>
+                            <b:if cond='data:post.title'>
+                              <h3 class='post-title entry-title'>
+                                <b:if cond='data:post.link'>
+                                  <a expr:href='data:post.link'>
+                                    <data:post.title/>
+                                  </a>
+                                  <b:else/>
+                                  <b:if cond='data:post.url'>
+                                    <b:if cond='data:blog.url != data:post.url'>
+                                      <a expr:href='data:post.url'>
+                                        <data:post.title/>
+                                      </a>
+                                      <b:else/>
+                                      <data:post.title/>
+                                    </b:if>
+                                    <b:else/>
+                                    <data:post.title/>
+                                  </b:if>
+                                </b:if>
+                              </h3>
+                            </b:if>
+                            <div class='post-header' style='position:absolute;left:-9999px'>
+                              <div class='post-header-line-1'/>
+                            </div>
+                            <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
+                              <data:post.body/>
+                              <div style='clear: both;'/>
+                              <!-- clear for photos floats -->
+                            </div>
+                            <div class='post-footer'>
+                              <div class='post-footer-line post-footer-line-1'>
+                                <span class='post-author vcard'>
+                                  <b:if cond='data:top.showAuthor'>
+                                    <b:if cond='data:post.authorProfileUrl'>
+                                      <span class='fn'>
+                                        <a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
+                                          <data:post.author/>
+                                        </a>
+                                      </span>
+                                      <b:else/>
+                                      <span class='fn'>
+                                        <data:post.author/>
+                                      </span>
+                                    </b:if>
+                                  </b:if>
+                                </span>
+                                <span class='post-timestamp'>
+                                  <b:if cond='data:top.showTimestamp'>
+                                    <data:top.timestampLabel/>
+                                    <b:if cond='data:post.url'>
+                                      <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
+                                        <abbr class='updated published' expr:title='data:post.timestampISO8601'>
+                                          <data:post.timestamp/>
+                                        </abbr>
+                                      </a>
+                                    </b:if>
+                                  </b:if>
+                                </span>
+                                <span class='post-comment-link'>
+                                  <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                                    <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                                      <b:if cond='data:post.allowComments'>
+                                        <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                                          <b:if cond='data:post.numComments == 1'>
+                                            1 
+                                            <data:top.commentLabel/>
+                                            <b:else/>
+                                            <data:post.numComments/>
+                                            <data:top.commentLabelPlural/>
+                                          </b:if>
+                                        </a>
+                                      </b:if>
+                                    </b:if>
+                                  </b:if>
+                                </span>
+                              </div>
+                              <div class='post-footer-line post-footer-line-2'>
+                                <b:if cond='data:top.showMobileShare'>
+                                  <div class='mobile-link-button goog-inline-block' id='mobile-share-button'>
+                                    <a href='javascript:void(0);'>
+                                      <data:shareMsg/>
+                                    </a>
+                                  </div>
+                                </b:if>
+                                <b:if cond='data:top.showDummy'>
+                                  <div class='goog-inline-block dummy-container'>
+                                    <data:post.dummyTag/>
+                                  </div>
+                                </b:if>
+                              </div>
+                            </div>
+                          </div>
+                          <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                            <b:if cond='data:post.showThreadedComments'>
+                              <b:include data='post' name='threaded_comments'/>
+                              <b:else/>
+                              <b:include data='post' name='comments'/>
+                            </b:if>
+                          </b:if>
+                          <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                            <b:if cond='data:post.showThreadedComments'>
+                              <b:include data='post' name='threaded_comments'/>
+                              <b:else/>
+                              <b:include data='post' name='comments'/>
+                            </b:if>
+                          </b:if>
+                        </div>
+                      </div>
+                    </div>
+                  </b:includable>
+                  <b:includable id='nextprev'>
+                    <div class='blog-pager' id='blog-pager'>
+                      <b:if cond='data:newerPageUrl'>
+                        <span id='blog-pager-newer-link'>
+                          <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
+                            <data:newerPageTitle/>
+                          </a>
+                        </span>
+                      </b:if>
+                      <b:if cond='data:olderPageUrl'>
+                        <span id='blog-pager-older-link'>
+                          <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
+                            <data:olderPageTitle/>
+                          </a>
+                        </span>
+                      </b:if>
+                      <b:if cond='data:mobileLinkUrl'>
+                        <div class='blog-mobile-link'>
+                          <a expr:href='data:mobileLinkUrl'>
+                            <data:mobileLinkMsg/>
+                          </a>
+                        </div>
+                      </b:if>
+                    </div>
+                    <div class='clear'/>
+                  </b:includable>
+                  <b:includable id='post' var='post'>
+                    <article class='main-post' expr:id='data:post.id' id='post-60' itemscope='' itemtype='http://schema.org/BlogPosting'>
+                      <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                          <b:if cond='data:post.thumbnailUrl'>
+                            <a class='entry-thumb hover-image-alt1 ' expr:href='data:post.url' expr:title='data:post.title' style='background-image: url();'>
+                              <img class='' expr:alt='data:post.title' expr:src='data:post.thumbnailUrl' itemprop='image'/>
+                            </a>
+                            <b:else/>
+                            <a class='thumbx' expr:href='data:post.url' expr:title='data:post.title'>
+                              <img alt='no image' class='' src='http://2.bp.blogspot.com/-wZtyEwTWviE/UUvGgxDgGII/AAAAAAAABw8/mqb6pEkMbkE/s000/grey.png'/>
+                            </a>
+                          </b:if>
+                        </b:if>
+                      </b:if>
+                      <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <b:if cond='data:post.title'>
+                          <h3 class='entry-title' itemprop='name headline'>
+                            <b:if cond='data:post.link'>
+                              <a expr:href='data:post.link' itemprop='url'>
+                                <data:post.title/>
+                              </a>
+                              <b:else/>
+                              <b:if cond='data:post.url'>
+                                <a expr:href='data:post.url' itemprop='url'>
+                                  <data:post.title/>
+                                </a>
+                                <b:else/>
+                                <data:post.title/>
+                              </b:if>
+                            </b:if>
+                          </h3>
+                        </b:if>
+                        <b:else/>
+                        <h1 class='post-title entry-title' itemprop='name headline'>
+                          <b:if cond='data:post.link'>
+                            <a expr:href='data:post.link' itemprop='url'>
+                              <data:post.title/>
+                            </a>
+                            <b:else/>
+                            <b:if cond='data:post.url'>
+                              <a expr:href='data:post.url' itemprop='url'>
+                                <data:post.title/>
+                              </a>
+                              <b:else/>
+                              <data:post.title/>
+                            </b:if>
+                          </b:if>
+                        </h1>
+                        <ul class='entry-meta'>
+                          <li class=''>
+                            <img src='http://3.bp.blogspot.com/-4LNV9IgnYRg/Ujr7crKK_UI/AAAAAAAABdY/FB3BRdVzclI/s1600/user.png' style='display: inline;width: 14px;margin-right: 1px;margin-top: -3px;'/>
+                            By 
+                            <a class='tooltip'>
+                              <data:post.author/>
+                            </a>
+                          </li>
+                          <li class=''>
+                            <img src='http://4.bp.blogspot.com/-Zvz7OCzeUEc/Ujr9DwHJ_1I/AAAAAAAABdk/rOv0N5r0XvI/s1600/date.png' style='display: inline;width: 14px;margin-right: 1px;margin-top: -3px;'/>
+                            <data:post.timestamp/>
+                          </li>
+                          <li class=''>
+                            <img src='http://4.bp.blogspot.com/-xtxIqXWYuqQ/Ujr9LT4va5I/AAAAAAAABds/mdXWR4KxNhk/s1600/comments.png' style='display: inline;width: 14px;margin-right: 1px;margin-top: -3px;'/>
+                            <a>
+                              <b:if cond='data:post.allowComments'>
+                                <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                                  <b:if cond='data:post.numComments == 1'>
+                                    1
+                                    <b:else/>
+                                    <data:post.numComments/>
+                                    comments
+                                  </b:if>
+                                </a>
+                              </b:if>
+                            </a>
+                          </li>
+                          <li class=''>
+                            <img src='http://3.bp.blogspot.com/-DydYuQGpSfI/Ujr9LRFmjnI/AAAAAAAABdw/JEo7bFd33NU/s1600/tungs.png' style='display: inline;width: 14px;margin-right: 1px;margin-top: -3px;'/>
+                            <b:if cond='data:post.labels'>
+                              <b:loop values='data:post.labels' var='label'>
+                                <a expr:href='data:label.url' rel='tag'>
+                                  <data:label.name/>
+                                </a>
+                                <b:if cond='data:label.isLast != &quot;true&quot;'>
+                                  , 
+                                </b:if>
+                              </b:loop>
+                            </b:if>
+                          </li>
+                        </ul>
+                      </b:if>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <b:else/>
+                        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                          <b:else/>
+                          <ul class='entry-meta'>
+                            <li class=''>
+                              <img src='http://4.bp.blogspot.com/-Zvz7OCzeUEc/Ujr9DwHJ_1I/AAAAAAAABdk/rOv0N5r0XvI/s1600/date.png' style='display: inline-block;margin-top: -4px; width: 14px;margin-right: 3px;' width='0'/>
+                              <data:post.timestamp/>
+                            </li>
+                            <li class='bdsd'>
+                              <img src='http://4.bp.blogspot.com/-xtxIqXWYuqQ/Ujr9LT4va5I/AAAAAAAABds/mdXWR4KxNhk/s1600/comments.png' style='display: inline-block;margin-right: -4px;width: 14px;margin-right: 3px;' width='0'/>
+                              <b:if cond='data:post.allowComments'>
+                                <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+                                  <b:if cond='data:post.numComments == 1'>
+                                    1
+                                  <b:else/>
+                                    <data:post.numComments/>
+                                    comments
+                                  </b:if>
+                                </a>
+                              </b:if>
+                            </li>
+                          </ul>
+                          <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                            <div expr:id='&quot;summary&quot; + data:post.id'>
+                              <data:post.body/>
+                            </div>
+                            <script type='text/javascript'>createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);</script>
+                          </b:if>
+                        </b:if>
+                        <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                          <b:else/>
+                          <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                            <div class='post-header'>
+                              <a class='readmore' expr:href='data:post.url'>Read more</a>
+                            </div>
+                          </b:if>
+                        </b:if>
+                      </b:if>
+                      <div class='post-header'>
+                        <div class='post-header-line-1'/>
+                      </div>
+                      <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                          <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                            <b:else/>
+                            <data:post.body/>
+                          </b:if>
+                          <b:else/>
+                          <data:post.body/>
+                        </b:if>
+                        <div style='clear: both;'/>
+                        <!-- clear for photos floats -->
+                      </div>
+                      <b:if cond='data:post.hasJumpLink'>
+                        <div class='jump-link' style='display:none'>
+                          <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'>
+                            <data:post.jumpText/>
+                          </a>
+                        </div>
+                      </b:if>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <div class='author-bio'>
+                          <div class='author-info'>
+                            <h5>Written by Chinh Phan</h5>
+                          </div>
+                        </div>
+                      </b:if>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <div id='related-post'>
+                          <script type='text/javascript'>
+                            //<![CDATA[
+var ry = '<h3 class="third-title"><span>Related Posts</span></h3>',
+  rcomment = 'comments',
+  rdisable = 'disable comments',
+  commentYN = 'yes',
+  dw = '',
+  titles = [],
+  titlesNum = 0,
+  urls = [],
+  timeR = [],
+  thumb = [],
+  commentsNum = [],
+  comments = [];
+
+function related_results_labels(c) {
+  for (var b = 0; b < c.feed.entry.length; b++) {
+    var d = c.feed.entry[b];
+    titles[titlesNum] = d.title.$t;
+    for (var a = 0; a < d.link.length; a++) {
+      if ('thr$total' in d) { commentsNum[titlesNum] = d.thr$total.$t + ' ' + rcomment } else { commentsNum[titlesNum] = rdisable };
+      if (d.link[a].rel == "alternate") {
+        urls[titlesNum] = d.link[a].href;
+        timeR[titlesNum] = d.published.$t;
+        if ('media$thumbnail' in d) {
+          thumb[titlesNum] = d.media$thumbnail.url;
+        }
+        else {
+          thumb[titlesNum] = 'http://3.bp.blogspot.com/-ZRo8fwgs65M/UZC2jMJpcLI/AAAAAAAAC5Y/EfoFQsr1wzU/s1600/BS+No+Image.gif'
+        }
+        titlesNum++;
+        break;
+      }
+    }
+  }
+}
+
+function removeRelatedDuplicates() {
+  var b = new Array(0);
+  c = new Array(0);
+  e = new Array(0);
+  f = new Array(0);
+  g = new Array(0);
+  for (var a = 0; a < urls.length; a++) {
+    if (!contains(b, urls[a])) {
+      b.length += 1;
+      b[b.length - 1] = urls[a];
+      c.length += 1;
+      c[c.length - 1] = titles[a];
+      e.length += 1;
+      e[e.length - 1] = timeR[a];
+      f.length += 1;
+      f[f.length - 1] = thumb[a];
+      g.length += 1;
+      g[g.length - 1] = commentsNum[a];
+    }
+  }
+  urls = b;
+  titles = c;
+  timeR = e;
+  thumb = f;
+  commentsNum = g;
+}
+
+function contains(b, d) {
+  for (var c = 0; c < b.length; c++) {
+    if (b[c] == d) {
+      return true;
+    }
+   }
+  return false;
+}
+
+function printRelatedLabels(a) {
+  var y = a.indexOf('?m=0');
+  if (y != -1) {
+    a = a.replace(/\?m=0/g, '');
+  }
+  for (var b = 0; b < urls.length; b++) {
+    if (urls[b] == a) { urls.splice(b, 1);
+      titles.splice(b, 1);
+      timeR.splice(b, 1);
+      thumb.splice(b, 1);
+      commentsNum.splice(b, 1);
+    }
+  }
+  var c = Math.floor((titles.length - 1) * Math.random());
+  var b = 0;
+  if (titles.length > 0) {
+    dw += ry;
+    dw += '<div class="outer">';
+    while (b < titles.length && b < 20 && b < maxresults) {
+      if (y != -1) {
+        urls[c] = urls[c] + '?m=0';
+      }
+      if (commentYN == 'yes') {
+        comments[c] = ' - ' + commentsNum[c];
+      }
+      else {
+        comments[c] = '';
+      }
+      dw += '<div class="post">' +
+              '<div class="inner">' +
+                '<div class="thumbnail">' +
+                  '<a href="' + urls[c] + '" rel="nofollow">' +
+                    '<img alt="' + titles[c] + '" src="' + thumb[c].replace("/s72-c/", "/s300/") + '"/>' +
+                  '</a>' +
+                '</div>' +
+                '<div class="content"><h3 class="title"><a href="' + urls[c] + '" rel="nofollow">' + titles[c] + '</a></h3></div>' +
+              '</div>' +
+            '</div>';
+      if (c < titles.length - 1) {
+        c++;
+      }
+      else {
+        c = 0;
+      }
+      b++;
+    }
+    dw += '</div>'
+  }
+  urls.splice(0, urls.length);
+  titles.splice(0, titles.length);
+  document.getElementById('related-post').innerHTML = dw;
+}
+                            //]]></script>
+                          <b:loop values='data:post.labels' var='label'>
+                            <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&quot;' type='text/javascript'/>
+                          </b:loop>
+                          <script type='text/javascript'>
+                            var maxresults=3;removeRelatedDuplicates();printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
+                        </div>
+                        <div class='clear'/>
+                      </b:if>
+                      <div class='post-footer'>
+                        <div class='post-footer-line post-footer-line-1'>
+                          <div class='post-item '>
+                            <div class='post-meta-bot clearfix'>
+                            </div>
+                          </div>
+                        </div>
+                        <div class='post-footer-line post-footer-line-3'>
+                          <span class='post-location'>
+                            <b:if cond='data:top.showLocation'>
+                              <b:if cond='data:post.location'>
+                                <data:postLocationLabel/>
+                                <a expr:href='data:post.location.mapsUrl' target='_blank'>
+                                  <data:post.location.name/>
+                                </a>
+                              </b:if>
+                            </b:if>
+                          </span>
+                        </div>
+                      </div>
+                    </article>
+                    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                      <div class='blog-pager' id='blog-pager'>
+                        <div class='pager-isi'>
+                          <b:if cond='data:newerPageUrl'>
+                            <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
+                              <data:newerPageTitle/>
+                            </a>
+                            <b:else/>
+                            <span class='linkgrey left'>
+                              <h5 style='text-align: right; width: 429px; float: left; margin-top: 4px;'>
+                                This is the most recent post.
+                              </h5>
+                            </span>
+                          </b:if>
+                          <b:if cond='data:olderPageUrl'>
+                            <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
+                              <data:olderPageTitle/>
+                            </a>
+                            <b:else/>
+                            <span class='linkgrey right'>
+                              <h5>
+                                This is the last post.
+                              </h5>
+                            </span>
+                          </b:if>
+                        </div>
+                      </div>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='postQuickEdit' var='post'>
+                    <b:if cond='data:post.editUrl'>
+                      <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
+                        <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
+                          <img alt='' class='icon-action' height='18' src='http://img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+                        </a>
+                      </span>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='shareButtons' var='post'>
+                    <b:if cond='data:top.showEmailButton'>
+                      <a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.emailThisMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showBlogThisButton'>
+                      <a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.blogThisMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showTwitterButton'>
+                      <a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.shareToTwitterMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showFacebookButton'>
+                      <a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.shareToFacebookMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showOrkutButton'>
+                      <a class='goog-inline-block share-button sb-orkut' expr:href='data:post.sharePostUrl + &quot;&amp;target=orkut&quot;' expr:title='data:top.shareToOrkutMsg' target='_blank'>
+                        <span class='share-button-link-text'>
+                          <data:top.shareToOrkutMsg/>
+                        </span>
+                      </a>
+                    </b:if>
+                    <b:if cond='data:top.showDummy'>
+                      <div class='goog-inline-block dummy-container'>
+                        <data:post.dummyTag/>
+                      </div>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='status-message'>
+                    <b:if cond='data:navMessage'>
+                      <div class='status-msg-wrap'>
+                        <div class='status-msg-body'>
+                          <data:navMessage/>
+                        </div>
+                      </div>
+                      <div style='clear: both;'/>
+                    </b:if>
+                  </b:includable>
+                  <b:includable id='threaded-comment-form' var='post'>
+                    <div class='comment-form'>
+                      <a name='comment-form'/>
+                      <b:if cond='data:mobile'>
+                        <p>
+                          <data:blogCommentMessage/>
+                        </p>
+                        <data:blogTeamBlogMessage/>
+                        <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                        <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+                        <b:else/>
+                        <p>
+                          <data:blogCommentMessage/>
+                        </p>
+                        <data:blogTeamBlogMessage/>
+                        <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                        <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'/>
+                      </b:if>
+                      <data:post.friendConnectJs/>
+                      <data:post.cmtfpIframe/>
+                      <script type='text/javascript'>
+                        BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;, &#39;<data:post.communityId/>&#39;);
+                      </script>
+                    </div>
+                  </b:includable>
+                  <b:includable id='threaded_comment_js' var='post'>
+                    <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+                    <script type='text/javascript'>
+                      (function() {
+                        var items = <data:post.commentJso/>;
+                        var msgs = <data:post.commentMsgs/>;
+                        var config = <data:post.commentConfig/>;
+                        // <![CDATA[
+                        var cursor = null;
+                        if (items && items.length > 0) {
+                          cursor = parseInt(items[items.length - 1].timestamp) + 1;
+                        }
+                        var bodyFromEntry = function(entry) {
+                          if (entry.gd$extendedProperty) {
+                            for (var k in entry.gd$extendedProperty) {
+                              if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+                                return '<span class="deleted-comment">' + entry.content.$t + '</span>';
+                              }
+                            }
+                          }
+                          return entry.content.$t;
+                        }
+                        var parse = function(data) {
+                          cursor = null;
+                          var comments = [];
+                          if (data && data.feed && data.feed.entry) {
+                            for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+                              var comment = {};
+                              // comment ID, parsed out of the original id format
+                              var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+                              comment.id = id ? id[2] : null;
+                              comment.body = bodyFromEntry(entry);
+                              comment.timestamp = Date.parse(entry.published.$t) + '';
+                              if (entry.author && entry.author.constructor === Array) {
+                                var auth = entry.author[0];
+                                if (auth) {
+                                  comment.author = {
+                                    name: (auth.name ? auth.name.$t : undefined),
+                                    profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                                    avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                                  };
+                                }
+                              }
+                              if (entry.link) {
+                                if (entry.link[2]) {
+                                  comment.link = comment.permalink = entry.link[2].href;
+                                }
+                                if (entry.link[3]) {
+                                  var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                                  if (pid && pid[1]) {
+                                    comment.parentId = pid[1];
+                                  }
+                                }
+                              }
+                              comment.deleteclass = 'item-control blog-admin';
+                              if (entry.gd$extendedProperty) {
+                                for (var k in entry.gd$extendedProperty) {
+                                  if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                                    comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                                  } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                                    comment.displayTime = entry.gd$extendedProperty[k].value;
+                                  }
+                                }
+                              }
+                              comments.push(comment);
+                            }
+                          }
+                          return comments;
+                        };
+                        var paginator = function(callback) {
+                          if (hasMore()) {
+                            var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+                            if (cursor) {
+                              url += '&published-min=' + new Date(cursor).toISOString();
+                            }
+                            window.bloggercomments = function(data) {
+                              var parsed = parse(data);
+                              cursor = parsed.length < 50 ? null
+                              : parseInt(parsed[parsed.length - 1].timestamp) + 1
+                              callback(parsed);
+                              window.bloggercomments = null;
+                            }
+                            url += '&callback=bloggercomments';
+                            var script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.src = url;
+                            document.getElementsByTagName('head')[0].appendChild(script);
+                          }
+                        };
+                        var hasMore = function() {
+                          return !!cursor;
+                        };
+                        var getMeta = function(key, comment) {
+                          if ('iswriter' == key) {
+                            var matches = !!comment.author
+                            && comment.author.name == config.authorName
+                            && comment.author.profileUrl == config.authorUrl;
+                            return matches ? 'true' : '';
+                          } else if ('deletelink' == key) {
+                            return config.baseUri + '/delete-comment.g?blogID='
+                            + config.blogId + '&postID=' + comment.id;
+                          } else if ('deleteclass' == key) {
+                            return comment.deleteclass;
+                          }
+                          return '';
+                        };
+                        var replybox = null;
+                        var replyUrlParts = null;
+                        var replyParent = undefined;
+                        var onReply = function(commentId, domId) {
+                          if (replybox == null) {
+                            // lazily cache replybox, and adjust to suit this style:
+                            replybox = document.getElementById('comment-editor');
+                            if (replybox != null) {
+                              replybox.height = '250px';
+                              replybox.style.display = 'block';
+                              replyUrlParts = replybox.src.split('#');
+                            }
+                          }
+                          if (replybox && (commentId !== replyParent)) {
+                            document.getElementById(domId).insertBefore(replybox, null);
+                            replybox.src = replyUrlParts[0]
+                            + (commentId ? '&parentID=' + commentId : '')
+                            + '#' + replyUrlParts[1];
+                            replyParent = commentId;
+                          }
+                        };
+                        var hash = (window.location.hash || '#').substring(1);
+                        var startThread, targetComment;
+                        if (/^comment-form_/.test(hash)) {
+                          startThread = hash.substring('comment-form_'.length);
+                        } else if (/^c[0-9]+$/.test(hash)) {
+                          targetComment = hash.substring(1);
+                        }
+                        // Configure commenting API:
+                        var configJso = {
+                          'maxDepth': config.maxThreadDepth
+                        };
+                        var provider = {
+                          'id': config.postId,
+                          'data': items,
+                          'loadNext': paginator,
+                          'hasMore': hasMore,
+                          'getMeta': getMeta,
+                          'onReply': onReply,
+                          'rendered': true,
+                          'initComment': targetComment,
+                          'initReplyThread': startThread,
+                          'config': configJso,
+                          'messages': msgs
+                        };
+                        var render = function() {
+                          if (window.goog && window.goog.comments) {
+                            var holder = document.getElementById('comment-holder');
+                            window.goog.comments.render(holder, provider);
+                          }
+                        };
+                        // render now, or queue to render when library loads:
+                        if (window.goog && window.goog.comments) {
+                          render();
+                        } else {
+                          window.goog = window.goog || {};
+                          window.goog.comments = window.goog.comments || {};
+                          window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+                          window.goog.comments.loadQueue.push(render);
+                        }
+                      })();
+                      // ]]>
+                    </script>
+                  </b:includable>
+                  <b:includable id='threaded_comments' var='post'>
+                    <div class='comments' id='comments'>
+                      <a name='comments'/>
+                      <h4>
+                        <data:post.commentLabelFull/>
+                        :
+                      </h4>
+                      <div class='comments-content'>
+                        <b:if cond='data:post.embedCommentForm'>
+                          <b:include data='post' name='threaded_comment_js'/>
+                        </b:if>
+                        <div id='comment-holder'>
+                          <data:post.commentHtml/>
+                        </div>
+                      </div>
+                      <p class='comment-footer'>
+                        <b:if cond='data:post.allowNewComments'>
+                          <b:include data='post' name='threaded-comment-form'/>
+                          <b:else/>
+                          <data:post.noNewCommentsText/>
+                        </b:if>
+                      </p>
+                      <b:if cond='data:showCmtPopup'>
+                        <div id='comment-popup'>
+                          <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+                          </iframe>
+                        </div>
+                      </b:if>
+                      <div id='backlinks-container'>
+                        <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
+                          <b:if cond='data:post.showBacklinks'>
+                            <b:include data='post' name='backlinks'/>
+                          </b:if>
+                        </div>
+                      </div>
+                    </div>
                   </b:includable>
                 </b:widget>
               </b:section>
@@ -299,11 +1519,13 @@
                   <!-- Chi nhanh -->
                   <b:widget id='HTML3' locked='false' title='Bản đồ' type='HTML' visible='true'>
                     <b:includable id='main'>
-                      <fieldset><div data-select="" class='custom-select'><span class='sub-title'>Tất cả chi nhánh</span><select name='selectlocation' id='selectlocation'><option value=''>Tất cả chi nhánh</option></select><i class='ion-ios-arrow-down arrow-1'></i><i class='ion-ios-arrow-down arrow-2'></i></div></fieldset>
-                      <div class='outer clearfix'>
-                        <data:content/>
-                      </div>
-                      <b:include name='quickedit'/>
+                      <b:if cond='data:blog.pageType !== "map"'>
+                        <fieldset><div data-select='' class='custom-select'><span class='sub-title'>Tất cả chi nhánh</span><select name='selectlocation' id='selectlocation'><option value=''>Tất cả chi nhánh</option></select><i class='ion-ios-arrow-down arrow-1'></i><i class='ion-ios-arrow-down arrow-2'></i></div></fieldset>
+                        <div class='outer clearfix'>
+                          <data:content/>
+                        </div>
+                        <b:include name='quickedit'/>
+                      </b:if>
                     </b:includable>
                   </b:widget>
 
@@ -375,7 +1597,7 @@
                               </a>
                             </div>
                           </b:if>
-                          <div class="content">
+                          <div class='content'>
                             <h3 class='title'><a expr:href='data:post.href' expr:title='data:post.title' class='text-truncate'><data:post.title/></a></h3>
                             <p class='desc'><data:post.snippet/></p>
                           </div>
@@ -414,8 +1636,8 @@
             <b:section class='fnav-wrap relative' id='helpLink' preferred='yes' showaddelement='yes'>
               <b:widget id='PageList2' locked='false' title='Pages' type='PageList' version='1' visible='true'>
                 <b:includable id='main'>
-                  <div class="outer">
-                    <div class="container">
+                  <div class='outer'>
+                    <div class='container'>
                       <ul class='fNav'>
                         <b:loop values='data:links' var='link'>
                           <b:if cond='data:link.isCurrentPage'>
@@ -494,8 +1716,8 @@
                             <div class='outer'>
                               <div class='follow-by-email-inner'>
                                 <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-                                  <div class="custom-input">
-                                    <button class="button" id="btnSearch" type="submit"><i class="ion-ios-arrow-right"></i></button>
+                                  <div class='custom-input'>
+                                    <button class='button' id='btnSearch' type='submit'><i class='ion-ios-arrow-right'></i></button>
                                     <span><input name='email' placeholder='Nhập Email...' type='text'/></span>
                                   </div>
                                   <input expr:value='data:feedPath' name='uri' type='hidden'/>
@@ -513,9 +1735,54 @@
               </div>
               <div class='row bottom-footer'>
                 <div class='col-md-6'>
-                  <p>Copyright &amp;copy; 2016 Phan Chinh</p>
+                  <b:section class='fLogoWrap' id='fLogoWrap' preferred='yes' showaddelement='yes'>
+                    <b:widget id='Image2' locked='false' title='Kem Trang Rang USA' type='Image' visible='true'>
+                      <b:includable id='main'>
+                        <div class='img-wrap'>
+                          <a expr:href='data:blog.homepageUrl' expr:alt='data:title'>
+                            <img expr:alt='data:title' expr:src='data:sourceUrl' />
+                          </a>
+                        </div>
+                        <div class='content'>
+                          <ul class="hotline">
+                            <li>
+                              <a href="tel:+84977968386">
+                                <i class="ion-ios-telephone-outline"></i>
+                                <span class="text">0938.528.813</span>
+                              </a>
+                              <span class="name"> - Hoàng Yến</span>
+                            </li>
+                            <li>
+                              <a href="tel:+84977968386">
+                                <i class="ion-ios-telephone-outline"></i>
+                                <span class="text">097.796.8386</span>
+                              </a>
+                              <span class="name"> - Hoàng Nam</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <b:include name='quickedit'/>
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
                 </div>
-                <div class='col-md-6'>Right</div>
+                <div class='col-md-6'>
+                  <b:section class='copyrightWrap' id='copyrightWrap' preferred='yes' showaddelement='yes'>
+                    <b:widget id='Image3' locked='false' title='Chinh Phan' type='Image' visible='true'>
+                      <b:includable id='main'>
+                        <div class='img-wrap'>
+                          <a expr:href='data:link' expr:title='data:title'>
+                            <img expr:alt='data:title' expr:src='data:sourceUrl' />
+                          </a>
+                        </div>
+                        <div class='content'>
+                          <p class="copyright">Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
+                        </div>
+                        <b:include name='quickedit'/>
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
               </div>
             </div>
           </div>
