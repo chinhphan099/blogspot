@@ -1162,7 +1162,8 @@ function printRelatedLabels(a) {
                             <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&quot;' type='text/javascript'/>
                           </b:loop>
                           <script type='text/javascript'>
-                            var maxresults=3;removeRelatedDuplicates();printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
+                            var maxresults=3;removeRelatedDuplicates();printRelatedLabels(&#39;<data:post.url/>&#39;);
+                          </script>
                         </div>
                         <div class='clear'/>
                       </b:if>
@@ -1194,22 +1195,18 @@ function printRelatedLabels(a) {
                             <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
                               <data:newerPageTitle/>
                             </a>
-                            <b:else/>
+                          <b:else/>
                             <span class='linkgrey left'>
-                              <h5 style='text-align: right; width: 429px; float: left; margin-top: 4px;'>
-                                This is the most recent post.
-                              </h5>
+                              <h5>This is the most recent post.</h5>
                             </span>
                           </b:if>
                           <b:if cond='data:olderPageUrl'>
                             <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
                               <data:olderPageTitle/>
                             </a>
-                            <b:else/>
+                          <b:else/>
                             <span class='linkgrey right'>
-                              <h5>
-                                This is the last post.
-                              </h5>
+                              <h5>This is the last post.</h5>
                             </span>
                           </b:if>
                         </div>
