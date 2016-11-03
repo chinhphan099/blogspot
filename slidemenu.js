@@ -238,7 +238,7 @@
     dummyLayer: '.dummy-layer',
     leftNavCls: 'open-left-nav',
     rightNavCls: 'open-right-nav',
-    duration: 800,
+    duration: 300,
     sizePull: 50,
     beforeOpen: $.noop,
     afterClose: $.noop
