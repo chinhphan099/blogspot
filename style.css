@@ -20,6 +20,8 @@
 }
 .main-container > .inner > .container {
   position: relative;
+}
+.main-container > .inner > .main-content {
   padding-bottom: 20px;
   background-color: white;
 }
