@@ -1,6 +1,6 @@
 /* Common */
 @keyframes arrow-movement {
-  0%   {
+  0% {
     opacity: 0;
     top: 35%;
   }
@@ -8,15 +8,15 @@
     opacity: 1;
     top: 60%;
   }
-  100% { 
+  100% {
     opacity: 0;
   }
 }
 .arrow-1 {
-    animation: arrow-movement 1.4s ease-in-out infinite;
+  animation: arrow-movement 1.4s ease-in-out infinite;
 }
 .arrow-2 {
-    animation: arrow-movement 1.4s .7s ease-in-out infinite;
+  animation: arrow-movement 1.4s .7s ease-in-out infinite;
 }
 .main-container > .inner > .container {
   position: relative;
@@ -31,6 +31,17 @@
   font-size: 1.857rem;
   text-transform: capitalize;
   text-shadow: 1px 1px 0px #F2F2F2, 2px 2px 0px rgb(192, 192, 192);
+}
+.entry-meta {
+  border-bottom: 2px dotted #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.entry-meta li {
+  display: inline-block;
+}
+.entry-meta li + li {
+  padding-left:  15px;
 }
 /* Sidebar */
 #sidebar .sub-title {
