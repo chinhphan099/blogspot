@@ -32,6 +32,11 @@
   text-transform: capitalize;
   text-shadow: 1px 1px 0px #F2F2F2, 2px 2px 0px rgb(192, 192, 192);
 }
+.post-title {
+  font-family: Georgia;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 0px #F2F2F2, 2px 2px 0px rgb(192, 192, 192);
+}
 .entry-meta {
   border-bottom: 2px dotted #ddd;
   padding-bottom: 5px;
