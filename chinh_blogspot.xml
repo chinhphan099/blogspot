@@ -619,7 +619,7 @@
                             <!-- Static page -->
                             <h1 class='main-title' itemprop='name headline'><data:post.title/></h1>
                           <b:else/>
-                            <h3 class='post-title' itemprop='name headline'>
+                            <h2 class='post-title' itemprop='name headline'>
                               <b:if cond='data:post.link'>
                                 <a expr:href='data:post.link' itemprop='url'>
                                   <data:post.title/>
@@ -633,7 +633,7 @@
                                   <data:post.title/>
                                 </b:if>
                               </b:if>
-                            </h3>
+                            </h2>
                           </b:if>
                         </b:if>
                       <b:else/>

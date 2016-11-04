@@ -134,13 +134,14 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Georgia;
   font-weight: normal;
 }
 h1 {
-  font-size: 1.429rem;
+  font-size: 1.857rem;
 }
 h2 {
-  font-size: 1.286rem;
+  font-size: 1.429rem;
 }
 h3 {
   font-size: 1.143rem;
