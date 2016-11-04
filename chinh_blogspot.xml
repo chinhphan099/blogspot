@@ -272,7 +272,7 @@
         </b:section>
         <div class='inner'>
           <!-- Main Slider -->
-          <div class='container'>
+          <div class='container main-slider'>
             <div class='row'>
               <b:if cond='data:blog.pageType == "index"'>
                 <b:section class='main-banner' id='main-slider' preferred='yes' showaddelement='yes'>
@@ -440,8 +440,7 @@
                       </span>
                       <b:else/>
                       <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
-                        <data:post.commentLabelFull/>
-                        :
+                        <data:post.commentLabelFull/>:
                       </a>
                     </b:if>
                   </b:includable>
