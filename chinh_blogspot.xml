@@ -47,7 +47,7 @@
     </script>
     <script type='text/javascript'>
       //<![CDATA[
-      function removeHtmlTag(strx,chop){
+      function renderDescription(strx,chop){
         if(strx.indexOf("<")!=-1)
         {
           var s = strx.split("<");
@@ -64,10 +64,9 @@
       }
       function createSummaryAndThumb(pID){
         var div = document.getElementById(pID);
-        var imgtag = "";
         var img = div.getElementsByTagName("img");
         var summ = summary_noimg;
-        var summary = imgtag + '<div class="desc">' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+        var summary = renderDescription(div.innerHTML,summ);
         div.innerHTML = summary;
       }
       //]]>
@@ -317,77 +316,57 @@
               <b:section class='main col-md-8 col-lg-9' id='main' preferred='yes' showaddelement='no'>
                 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
                   <b:includable id='main' var='top'>
-                    <b:if cond='data:mobile == &quot;false&quot;'>
-                      <!-- posts -->
-                      <div class='blog-posts hfeed'>
-                        <b:include data='top' name='status-message'/>
-                        <data:defaultAdStart/>
-                        <b:loop values='data:posts' var='post'>
-                          <b:if cond='data:post.isDateStart'>
-                            <b:if cond='data:post.isFirstPost == &quot;false&quot;'>
-                              &lt;/div&gt;&lt;/div&gt;
-                            </b:if>
-                          </b:if>
-                          <b:if cond='data:post.isDateStart'>
-                            &lt;div class=&quot;date-outer&quot;&gt;
-                          </b:if>
-                          <b:if cond='data:post.dateHeader'>
-                            <div class='date-header'>
-                              <data:post.dateHeader/>
-                            </div>
-                          </b:if>
-                          <b:if cond='data:post.isDateStart'>
-                            &lt;div class=&quot;date-posts&quot;&gt;
-                          </b:if>
-                          <div class='post-outer'>
-                            <b:include data='post' name='post'/>
-                            <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-                              <b:if cond='data:post.showThreadedComments'>
-                                <b:include data='post' name='threaded_comments'/>
-                                <b:else/>
-                                <b:include data='post' name='comments'/>
-                              </b:if>
-                            </b:if>
-                            <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                              <b:if cond='data:post.showThreadedComments'>
-                                <b:include data='post' name='threaded_comments'/>
-                                <b:else/>
-                                <b:include data='post' name='comments'/>
-                              </b:if>
-                            </b:if>
-                          </div>
-                          <b:if cond='data:post.includeAd'>
-                            <b:if cond='data:post.isFirstPost'>
-                              <data:defaultAdEnd/>
+                    <!-- posts -->
+                    <div class='blog-posts hfeed'>
+                      <b:include data='top' name='status-message'/>
+                      <data:defaultAdStart/>
+                      <b:loop values='data:posts' var='post'>
+                        <div class='post-outer'>
+                          <b:include data='post' name='post'/>
+                          <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                            <b:if cond='data:post.showThreadedComments'>
+                              <b:include data='post' name='threaded_comments'/>
                               <b:else/>
-                              <data:adEnd/>
+                              <b:include data='post' name='comments'/>
                             </b:if>
-                            <div class='inline-ad'>
-                              <data:adCode/>
-                            </div>
-                            <data:adStart/>
                           </b:if>
-                        </b:loop>
-                        <b:if cond='data:numPosts != 0'>
-                          &lt;/div&gt;&lt;/div&gt;
+                          <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                            <b:if cond='data:post.showThreadedComments'>
+                              <b:include data='post' name='threaded_comments'/>
+                              <b:else/>
+                              <b:include data='post' name='comments'/>
+                            </b:if>
+                          </b:if>
+                        </div>
+
+                        <b:if cond='data:post.includeAd'>
+                          <b:if cond='data:post.isFirstPost'>
+                            <data:defaultAdEnd/>
+                          <b:else/>
+                            <data:adEnd/>
+                          </b:if>
+                          <div class='inline-ad'>
+                            <data:adCode/>
+                          </div>
+                          <data:adStart/>
                         </b:if>
-                        <data:adEnd/>
-                      </div>
-                      <!-- navigation -->
-                      <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                          <!-- navigation -->
-                          <b:include name='nextprev'/>
-                        </b:if>
+                      </b:loop>
+                      <data:adEnd/>
+                    </div>
+                    <!-- End Post -->
+                    <!-- navigation -->
+                    <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                      <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <b:include name='nextprev'/>
                       </b:if>
-                      <!-- feed links -->
-                      <b:include name='feedLinks'/>
-                      <b:else/>
-                      <b:include name='mobile-main'/>
                     </b:if>
-                    <b:if cond='data:top.showDummy'>
-                      <data:top.dummyBootstrap/>
-                    </b:if>
+                    <!-- End navigation -->
+                    <!-- feed links -->
+                    <b:include name='feedLinks'/>
+
+                    <!-- Đây là đoạn mã khi chúng ta xem trước bài viết trong khi viết bài, cái ngăn cản chúng ta không thể click chọn vào bài viết là đây -->
+                    <b:if cond='data:top.showDummy'><data:top.dummyBootstrap/></b:if>
+                    <!-- posts -->
                     <b:include name='quickedit'/>
                   </b:includable>
                   <b:includable id='backlinkDeleteIcon' var='backlink'>
@@ -601,11 +580,11 @@
                       <b:if cond='data:blog.pageType != &quot;item&quot;'>
                         <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
                           <b:if cond='data:post.thumbnailUrl'>
-                            <a class='entry-thumb' expr:href='data:post.url' expr:title='data:post.title'>
+                            <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'>
                               <img expr:alt='data:post.title' expr:src='data:post.thumbnailUrl' itemprop='image'/>
                             </a>
                           <b:else/>
-                            <a class='thumbx' expr:href='data:post.url' expr:title='data:post.title'>
+                            <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'>
                               <img alt='no image' src='https://2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
                             </a>
                           </b:if>
@@ -681,7 +660,7 @@
                             </b:if>
                           </ul>
                           <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <div expr:id='&quot;summary&quot; + data:post.id'>
+                            <div class="desc" expr:id='&quot;summary&quot; + data:post.id'>
                               <data:post.body/>
                             </div>
                             <script type='text/javascript'>createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);</script>
