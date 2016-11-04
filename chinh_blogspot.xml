@@ -460,74 +460,78 @@
                     </b:if>
                   </b:includable>
                   <b:includable id='comments' var='post'>
-                    <div class='allcomments'>
-                      <b:if cond='data:post.allowComments'>
-                        <h3 id='comments'><i class="ion-chatbubbles"></i><data:post.numComments/><data:commentLabelPlural/></h3>
-                        <ol class='commentlist'>
-                          <b:loop values='data:post.comments' var='comment'>
-                            <li class='comment odd alt thread-odd thread-alt depth-1'>
-                              <div class='comment-body'>
-                                <div class='comment-author vcard'>
-                                  <data:comment.authorAvatarImage/>
-                                  <cite class='fn'>
-                                    <b:if cond='data:comment.authorUrl'>
-                                      <a expr:href='data:comment.authorUrl' rel='nofollow'>
+                    <!-- <b:if cond='data:post.comments'> -->
+                      <div class='allcomments'>
+                        <b:if cond='data:post.allowComments'>
+                          <h3 id='comments'><i class="ion-chatbubbles"></i><data:post.numComments/><data:commentLabelPlural/></h3>
+                          <ol class='commentlist'>
+                            <b:loop values='data:post.comments' var='comment'>
+                              <li class='comment odd alt thread-odd thread-alt depth-1'>
+                                <div class='comment-body'>
+                                  <div class='comment-author vcard'>
+                                    <data:comment.authorAvatarImage/>
+                                    <cite class='fn'>
+                                      <b:if cond='data:comment.authorUrl'>
+                                        <a expr:href='data:comment.authorUrl' rel='nofollow'>
+                                          <data:comment.author/>
+                                        </a>
+                                        <b:else/>
                                         <data:comment.author/>
-                                      </a>
-                                      <b:else/>
-                                      <data:comment.author/>
-                                    </b:if>
-                                  </cite>
-                                  <span class='says'>
-                                    says:
-                                  </span>
-                                </div>
-                                <div class='comment-meta commentmetadata'>
-                                  <a expr:href='data:comment.url' title='comment permalink'>
-                                    <data:comment.timestamp/>
-                                  </a>
-                                </div>
-                                <p>
-                                  <b:if cond='data:comment.isDeleted'>
-                                    <span class='deleted-comment'>
-                                      <data:comment.body/>
+                                      </b:if>
+                                    </cite>
+                                    <span class='says'>
+                                      says:
                                     </span>
-                                    <b:else/>
-                                    <p>
-                                      <data:comment.body/>
-                                    </p>
-                                  </b:if>
-                                </p>
-                                <b:include data='comment' name='commentDeleteIcon'/>
+                                  </div>
+                                  <div class='comment-meta commentmetadata'>
+                                    <a expr:href='data:comment.url' title='comment permalink'>
+                                      <data:comment.timestamp/>
+                                    </a>
+                                  </div>
+                                  <p>
+                                    <b:if cond='data:comment.isDeleted'>
+                                      <span class='deleted-comment'>
+                                        <data:comment.body/>
+                                      </span>
+                                      <b:else/>
+                                      <p>
+                                        <data:comment.body/>
+                                      </p>
+                                    </b:if>
+                                  </p>
+                                  <b:include data='comment' name='commentDeleteIcon'/>
+                                </div>
+                              </li>
+                            </b:loop>
+                          </ol>
+                          <b:if cond='data:post.commentPagingRequired'>
+                            <div class='comments-navigation clearfix'>
+                              <div class='alignleft'>
+                                <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+                                  <data:post.oldestLinkText/>
+                                </a>
+                                <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+                                  <data:post.olderLinkText/>
+                                </a>
                               </div>
-                            </li>
-                          </b:loop>
-                        </ol>
-                        <b:if cond='data:post.commentPagingRequired'>
-                          <div class='comments-navigation clearfix'>
-                            <div class='alignleft'>
-                              <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
-                                <data:post.oldestLinkText/>
-                              </a>
-                              <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
-                                <data:post.olderLinkText/>
-                              </a>
+                              &#160;
+                              <data:post.commentRangeText/>
+                              &#160;
+                              <div class='alignright'>
+                                <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+                                  <data:post.newerLinkText/>
+                                </a>
+                                <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+                                  <data:post.newestLinkText/>
+                                </a>
+                              </div>
                             </div>
-                            &#160;
-                            <data:post.commentRangeText/>
-                            &#160;
-                            <div class='alignright'>
-                              <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
-                                <data:post.newerLinkText/>
-                              </a>
-                              <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
-                                <data:post.newestLinkText/>
-                              </a>
-                            </div>
-                          </div>
+                          </b:if>
                         </b:if>
-                      </b:if>
-                    </div>
+                      </div>
+                    <!-- </b:if> -->
+
+                    <!-- Iframe Comment -->
                     <div id='respond'>
                       <b:if cond='data:post.embedCommentForm'>
                         <b:if cond='data:post.allowNewComments'>
@@ -543,6 +547,7 @@
                         </b:if>
                       </b:if>
                     </div>
+                    <!-- End Iframe Comment -->
                   </b:includable>
                   <b:includable id='feedLinksBody' var='links'></b:includable>
                   <b:includable id='iframe_comments' var='post'>
@@ -643,19 +648,23 @@
                               <i class="ion-clock"></i>
                               <span class="text"><data:post.timestamp/></span>
                             </li>
-                            <li>
-                              <b:if cond='data:post.allowComments'>
-                                <i class="ion-chatbubbles"></i>
-                                <span class="text"><data:post.numComments/></span>
-                              </b:if>
-                            </li>
-                            <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                            <b:if cond='data:post.numComments &gt; 0'>
                               <li>
-                                <i class="ion-ios-pricetags"></i>
-                                <b:loop values='data:post.labels' var='label'>
-                                  <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'>, </b:if>
-                                </b:loop>
+                                <b:if cond='data:post.allowComments'>
+                                  <i class="ion-chatbubbles"></i>
+                                  <span class="text"><data:post.numComments/></span>
+                                </b:if>
                               </li>
+                            </b:if>
+                            <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                              <b:if cond='data:post.labels'>
+                                <li>
+                                  <i class="ion-ios-pricetags"></i>
+                                  <b:loop values='data:post.labels' var='label'>
+                                    <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='data:label.isLast != &quot;true&quot;'>, </b:if>
+                                  </b:loop>
+                                </li>
+                              </b:if>
                             </b:if>
                           </ul>
                           <b:if cond='data:blog.pageType != &quot;item&quot;'>
