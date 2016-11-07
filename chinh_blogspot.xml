@@ -43,7 +43,7 @@
     <meta content='http://www.facebook.com/chinhphan099' property='fb:admins'/>
     <meta content='article' property='og:type'/>
     <script type='text/javascript'>
-      var summary_noimg = 200;
+      var summary_noimg = 500;
     </script>
     <script type='text/javascript'>
       //<![CDATA[
@@ -325,14 +325,14 @@
                           <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
                             <b:if cond='data:post.showThreadedComments'>
                               <b:include data='post' name='threaded_comments'/>
-                              <b:else/>
+                            <b:else/>
                               <b:include data='post' name='comments'/>
                             </b:if>
                           </b:if>
                           <b:if cond='data:blog.pageType == &quot;item&quot;'>
                             <b:if cond='data:post.showThreadedComments'>
                               <b:include data='post' name='threaded_comments'/>
-                              <b:else/>
+                            <b:else/>
                               <b:include data='post' name='comments'/>
                             </b:if>
                           </b:if>
@@ -579,7 +579,7 @@
                         </b:if>
                       </b:if>
 
-                      <!-- List pages -->
+                      <!-- ! List pages -->
                       <b:if cond='data:blog.pageType != "item"'>
                         <b:if cond='data:post.title'>
                           <b:if cond='data:blog.pageType == "static_page"'>
@@ -615,7 +615,7 @@
                         </b:if>
                       <b:else/>
                         <h1 class='main-title' itemprop='name headline'><data:post.title/></h1>
-                        <ul class='entry-meta'>
+                        <ul class='entry-meta postPage'>
                           <li>
                             <i class="ion-android-contact"></i>
                             <span class='text'><data:post.author/></span>
