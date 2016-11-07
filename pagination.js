@@ -1,4 +1,4 @@
-var perPage = 10;
+var perPage = 2;
 var numPages = 5;
 var firstText = 'First';
 var lastText = 'Last';
@@ -25,7 +25,6 @@ function looppagecurrentg(pageInfo) {
   if (lastPageNo - 1 == pageInfo / perPage) lastPageNo = lastPageNo - 1;
   pageEnd = pageStart + numPages - 1;
   if (pageEnd > lastPageNo) pageEnd = lastPageNo;
-  html += "<span class='showpageOf'>Page " + currentPageNo + ' of ' + lastPageNo + "</span>";
   var prevNumber = parseInt(currentPageNo) - 1;
   if (currentPageNo > 1) {
     if (currentPage == "page") { html += '<span class="showpage firstpage"><a href="' + home_page + '">' + firstText + '</a></span>' } else { html += '<span class="displaypageNum firstpage"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + firstText + '</a></span>' }

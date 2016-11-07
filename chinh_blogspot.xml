@@ -563,20 +563,6 @@
                   </b:includable>
                   <b:includable id='nextprev'>
                     <div id="main-pagination"></div>
-                    <div class='blog-pager clearfix home' id='blog-pager'>
-                      <b:if cond='data:newerPageUrl'>
-                        <a class='newer-post' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'>
-                          <i class='ion-ios-undo-outline'></i>
-                          <span class='text'><data:newerPageTitle/></span>
-                        </a>
-                      </b:if>
-                      <b:if cond='data:olderPageUrl'>
-                        <a class='older-post' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'>
-                          <span class='text'><data:olderPageTitle/></span>
-                          <i class='ion-ios-redo-outline'></i>
-                        </a>
-                      </b:if>
-                    </div>
                   </b:includable>
                   <b:includable id='post' var='post'>
                     <article class='main-post' expr:id='data:post.id' id='post-60' itemscope='' itemtype='//schema.org/BlogPosting'>
@@ -1472,5 +1458,6 @@
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slidemenu.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/select.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/pagination.js'></script>
   </body>
 </html>
