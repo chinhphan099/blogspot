@@ -741,7 +741,7 @@
                                       thumb[titlesNum] = d.media$thumbnail.url;
                                     }
                                     else {
-                                      thumb[titlesNum] = '//3.bp.blogspot.com/-ZRo8fwgs65M/UZC2jMJpcLI/AAAAAAAAC5Y/EfoFQsr1wzU/s1600/BS+No+Image.gif'
+                                      thumb[titlesNum] = '//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'
                                     }
                                     titlesNum++;
                                     break;
