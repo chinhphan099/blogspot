@@ -1,9 +1,9 @@
 var perPage = 2;
 var numPages = 5;
-var firstText = 'First';
-var lastText = 'Last';
-var prevText = '« Previous';
-var nextText = 'Next »';
+var firstText = '<i class="ion-ios-skipbackward-outline"></i>';
+var lastText = '<i class="ion-ios-skipforward-outline"></i>';
+var prevText = '<i class="ion-ios-arrow-left"></i>';
+var nextText = '<i class="ion-ios-arrow-right"></i>';
 var urlactivepage = location.href;
 var home_page = "/";
 
@@ -27,36 +27,36 @@ function looppagecurrentg(pageInfo) {
   if (pageEnd > lastPageNo) pageEnd = lastPageNo;
   var prevNumber = parseInt(currentPageNo) - 1;
   if (currentPageNo > 1) {
-    if (currentPage == "page") { html += '<span class="showpage firstpage"><a href="' + home_page + '">' + firstText + '</a></span>' } else { html += '<span class="displaypageNum firstpage"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + firstText + '</a></span>' }
+    if (currentPage == "page") { html += '<span class="pageNum firstpage"><a href="' + home_page + '">' + firstText + '</a></span>' } else { html += '<span class="pageNum firstpage"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + firstText + '</a></span>' }
   }
   if (currentPageNo > 2) {
     if (currentPageNo == 3) {
-      if (currentPage == "page") { html += '<span class="showpage"><a href="' + home_page + '">' + prevText + '</a></span>' } else { html += '<span class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + prevText + '</a></span>' }
+      if (currentPage == "page") { html += '<span class="showpage"><a href="' + home_page + '">' + prevText + '</a></span>' } else { html += '<span class="pageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">' + prevText + '</a></span>' }
     } else {
-      if (currentPage == "page") { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + prevNumber + ');return false">' + prevText + '</a></span>' } else { html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + prevNumber + ');return false">' + prevText + '</a></span>' }
+      if (currentPage == "page") { html += '<span class="pageNum"><a href="#" onclick="redirectpage(' + prevNumber + ');return false">' + prevText + '</a></span>' } else { html += '<span class="pageNum"><a href="#" onclick="redirectlabel(' + prevNumber + ');return false">' + prevText + '</a></span>' }
     }
   }
   if (pageStart > 1) {
-    if (currentPage == "page") { html += '<span class="displaypageNum"><a href="' + home_page + '">1</a></span>' } else { html += '<span class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></span>' }
+    if (currentPage == "page") { html += '<span class="pageNum"><a href="' + home_page + '">1</a></span>' } else { html += '<span class="pageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></span>' }
   }
   if (pageStart > 2) { html += ' ... ' }
   for (var jj = pageStart; jj <= pageEnd; jj++) {
-    if (currentPageNo == jj) { html += '<span class="pagecurrent">' + jj + '</span>' } else if (jj == 1) {
-      if (currentPage == "page") { html += '<span class="displaypageNum"><a href="' + home_page + '">1</a></span>' } else { html += '<span class="displaypageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></span>' }
+    if (currentPageNo == jj) { html += '<span class="current">' + jj + '</span>' } else if (jj == 1) {
+      if (currentPage == "page") { html += '<span class="pageNum"><a href="' + home_page + '">1</a></span>' } else { html += '<span class="pageNum"><a href="/search/label/' + postLabel + '?&max-results=' + perPage + '">1</a></span>' }
     } else {
-      if (currentPage == "page") { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + jj + ');return false">' + jj + '</a></span>' } else { html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + jj + ');return false">' + jj + '</a></span>' }
+      if (currentPage == "page") { html += '<span class="pageNum"><a href="#" onclick="redirectpage(' + jj + ');return false">' + jj + '</a></span>' } else { html += '<span class="pageNum"><a href="#" onclick="redirectlabel(' + jj + ');return false">' + jj + '</a></span>' }
     }
   }
   if (pageEnd < lastPageNo - 1) { html += '...' }
   if (pageEnd < lastPageNo) {
-    if (currentPage == "page") { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastPageNo + '</a></span>' } else { html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastPageNo + '</a></span>' }
+    if (currentPage == "page") { html += '<span class="pageNum"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastPageNo + '</a></span>' } else { html += '<span class="pageNum"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastPageNo + '</a></span>' }
   }
   var nextnumber = parseInt(currentPageNo) + 1;
   if (currentPageNo < (lastPageNo - 1)) {
-    if (currentPage == "page") { html += '<span class="displaypageNum"><a href="#" onclick="redirectpage(' + nextnumber + ');return false">' + nextText + '</a></span>' } else { html += '<span class="displaypageNum"><a href="#" onclick="redirectlabel(' + nextnumber + ');return false">' + nextText + '</a></span>' }
+    if (currentPage == "page") { html += '<span class="pageNum"><a href="#" onclick="redirectpage(' + nextnumber + ');return false">' + nextText + '</a></span>' } else { html += '<span class="pageNum"><a href="#" onclick="redirectlabel(' + nextnumber + ');return false">' + nextText + '</a></span>' }
   }
   if (currentPageNo < lastPageNo) {
-    if (currentPage == "page") { html += '<span class="displaypageNum lastpage"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastText + '</a></span>' } else { html += '<span class="displaypageNum lastpage"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastText + '</a></span>' }
+    if (currentPage == "page") { html += '<span class="pageNum lastpage"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastText + '</a></span>' } else { html += '<span class="pageNum lastpage"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastText + '</a></span>' }
   }
   var pageArea = document.getElementsByName("pageArea");
   var blogPager = document.getElementById("main-pagination");
