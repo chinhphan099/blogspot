@@ -1,4 +1,4 @@
-var perPage = 2;
+var perPage = 10;
 var numPages = 5;
 var firstText = '<i class="ion-ios-skipbackward-outline"></i>';
 var lastText = '<i class="ion-ios-skipforward-outline"></i>';
