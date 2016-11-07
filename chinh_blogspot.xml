@@ -679,17 +679,19 @@
                       <!-- <div class='post-header'>
                         <div class='post-header-line-1'/>
                       </div> -->
-                      <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
-                        <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                          <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                            <b:else/>
+                      <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                        <b:else/>
+                          <div class='post-body' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
                             <data:post.body/>
-                          </b:if>
-                          <b:else/>
-                          <data:post.body/>
+                          </div>
                         </b:if>
-                        <!-- clear for photos floats -->
-                      </div>
+                      <b:else/>
+                        <div class='post-body' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+                          <data:post.body/>
+                        </div>
+                      </b:if>
+                      <!-- clear for photos floats -->
                       <b:if cond='data:post.labels'>
                         <b:if cond='data:blog.pageType == &quot;item&quot;'>
                           <p class='tags'>
@@ -848,26 +850,6 @@
                           </script>
                         </div>
                       </b:if>
-                      <div class='post-footer'>
-                        <div class='post-footer-line post-footer-line-1'>
-                          <div class='post-item '>
-                            <div class='post-meta-bot clearfix'>
-                            </div>
-                          </div>
-                        </div>
-                        <div class='post-footer-line post-footer-line-3'>
-                          <span class='post-location'>
-                            <b:if cond='data:top.showLocation'>
-                              <b:if cond='data:post.location'>
-                                <data:postLocationLabel/>
-                                <a expr:href='data:post.location.mapsUrl' target='_blank'>
-                                  <data:post.location.name/>
-                                </a>
-                              </b:if>
-                            </b:if>
-                          </span>
-                        </div>
-                      </div>
                     </article>
                     <b:if cond='data:blog.pageType == &quot;item&quot;'>
                       <div class='blog-pager clearfix' id='blog-pager'>

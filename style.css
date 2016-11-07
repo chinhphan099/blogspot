@@ -90,6 +90,9 @@
   display: block;
   margin: 0 auto;
 }
+.post-body {
+  line-height: 1.35;
+}
 /* Sidebar */
 .sidebar {
   position: static;
@@ -192,7 +195,6 @@ footer {
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
-  font-weight: bold;
 }
 .links a:hover:before {
   -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
@@ -219,6 +221,7 @@ footer {
   text-align: center;
 }
 #main-pagination .pageNum {
+  display: inline-block;
   padding: 5px 10px;
   margin: 0 4px;
   background-color: #f1f1f1;
