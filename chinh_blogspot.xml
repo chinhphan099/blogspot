@@ -567,10 +567,8 @@
                     <article class='main-post' expr:id='data:post.id' id='post-60' itemscope='' itemtype='//schema.org/BlogPosting'>
                       <b:if cond='data:blog.pageType != &quot;item&quot;'>
                         <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                          <b:if cond='data:post.thumbnailUrl'>
-                            <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'>
-                              <img expr:alt='data:post.title' expr:src='data:post.thumbnailUrl' itemprop='image'/>
-                            </a>
+                          <b:if cond='data:post.firstImageUrl'>
+                            <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'><img expr:src='data:post.firstImageUrl' expr:alt='data:post.title'/></a>
                           <b:else/>
                             <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'>
                               <img alt='no image' src='//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
