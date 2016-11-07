@@ -217,6 +217,7 @@ footer {
 .comment .content {
   overflow: hidden;
 }
+
 #main-pagination {
   text-align: center;
 }
@@ -225,6 +226,13 @@ footer {
   padding: 5px 10px;
   margin: 0 4px;
   background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+#main-pagination .current {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 4px;
+  border: 1px solid #333;
 }
 @media (min-width: 768px) {
   /* Header */
