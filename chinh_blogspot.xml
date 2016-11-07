@@ -127,73 +127,91 @@
           </ul>
         </div>
       </div>
-      <b:section class='navigation' id='navigation' showaddelement='yes'>
-        <b:widget id='PageList1' locked='true' title='Pages' type='PageList' version='1' visible='true'>
-          <b:includable id='main'>
-            <div class='container'>
-              <div class='row'>
-                <div class='nav-wrapper'>
-                  <ul class='nav' data-collapse=''>
-                    <b:loop values='data:links' var='link'>
-                      <b:if cond='data:link.isCurrentPage'>
-                        <li class='active'><a expr:href='data:link.href'><data:link.title/></a></li>
-                      <b:else/>
-                        <li><a expr:href='data:link.href' expr:title='data:link.title'><data:link.title/></a></li>
-                      </b:if>
-                    </b:loop>
-                    <b:loop values='data:labels' var='label'>
-                      <li><a expr:href='data:label.url' expr:title='data:label.name'><data:label.name/></a></li>
-                    </b:loop>
-                  </ul>
-                  <form action='/search' id='frmSearch' class='frmSearch hidden-sm-down'>
-                    <div class='custom-input'>
-                      <button class='button' id='btnSearch' type='submit'><i class='ion-ios-search'/></button>
-                      <span><input id='txtSearch' name='q' placeholder='Tìm kiếm...' type='text'/></span>
-                    </div>
-                    <div class='overlay hidden-sm-down'></div>
-                  </form>
-                  <script type='text/javascript'>
-                    (function ($) {
-                      var focusSearch = function() {
-                        if(!$('html').hasClass('showOverlay')) {
-                          $('html').addClass('showOverlay');
-                        }
-                      };
-                      var blurSearch = function() {
-                        $('html').removeClass('showOverlay');
-                      };
-                      $('input', '#frmSearch').off('focus.focusSearch', focusSearch).on('focus.focusSearch', focusSearch);
-                      $('.overlay').off('click.blurSearch', blurSearch).on('click.focusSearch', blurSearch);
-                    })(jQuery);
-                  </script>
+      <div class="navigation" id="navigation">
+        <div class='container'>
+          <div class='row'>
+            <div class='nav-wrapper'>
+              <b:section id='navigation1' showaddelement='yes'>
+                <b:widget id='PageList1' locked='true' title='Pages' type='PageList' version='1' visible='true'>
+                  <b:includable id='main'>
+                    <ul class='nav' data-collapse=''>
+                      <b:loop values='data:links' var='link'>
+                        <b:if cond='data:link.isCurrentPage'>
+                          <li class='active'><a expr:href='data:link.href'><data:link.title/></a></li>
+                        <b:else/>
+                          <li><a expr:href='data:link.href' expr:title='data:link.title'><data:link.title/></a></li>
+                        </b:if>
+                      </b:loop>
+                      <b:loop values='data:labels' var='label'>
+                        <li><a expr:href='data:label.url' expr:title='data:label.name'><data:label.name/></a></li>
+                      </b:loop>
+                    </ul>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+              <b:section id='rightNavigation1' showaddelement='yes'>
+                <b:widget id='Label3' locked='false' title='Right Navigation' type='Label' version='1' visible='true'>
+                  <b:includable id='main'>
+                    <ul class='nav'>
+                      <b:loop values='data:labels' var='label'>
+                        <li>
+                          <b:if cond='data:blog.url == data:label.url'>
+                            <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
+                          <b:else/>
+                            <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
+                          </b:if>
+                          <b:if cond='data:showFreqNumbers'>
+                            <span dir='ltr'>(<data:label.count/>)</span>
+                          </b:if>
+                        </li>
+                      </b:loop>
+                    </ul>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+              <form action='/search' id='frmSearch' class='frmSearch hidden-sm-down'>
+                <div class='custom-input'>
+                  <button class='button' id='btnSearch' type='submit'><i class='ion-ios-search'/></button>
+                  <span><input id='txtSearch' name='q' placeholder='Tìm kiếm...' type='text'/></span>
                 </div>
-              </div>
-              <b:include name='quickedit'/>
+                <div class='overlay hidden-sm-down'></div>
+              </form>
+              <script type='text/javascript'>
+                (function ($) {
+                  var focusSearch = function() {
+                    if(!$('html').hasClass('showOverlay')) {
+                      $('html').addClass('showOverlay');
+                    }
+                  };
+                  var blurSearch = function() {
+                    $('html').removeClass('showOverlay');
+                  };
+                  $('input', '#frmSearch').off('focus.focusSearch', focusSearch).on('focus.focusSearch', focusSearch);
+                  $('.overlay').off('click.blurSearch', blurSearch).on('click.focusSearch', blurSearch);
+                })(jQuery);
+              </script>
             </div>
-          </b:includable>
-        </b:widget>
-      </b:section>
+          </div>
+          <b:include name='quickedit'/>
+        </div>
+      </div>
       <!-- End Left Navigation -->
-      <b:section class='right-navigation hidden-md-up' id='rightNavigation' showaddelement='yes'>
-        <b:widget id='Label3' locked='false' title='Right Navigation' type='Label' version='1' visible='true'>
-          <b:includable id='main'>
-            <div class='container'>
-              <div class='row'>
-                <div class='head-nav'>
-                  <form action='/search' id='frmSearchMobile'>
-                    <div class='custom-input'>
-                      <button class='button' id='btnSearchMobile' type='submit'><i class='ion-ios-search'/></button>
-                      <span><input id='txtSearchMobile' name='q' placeholder='Tìm kiếm' type='text'/></span>
-                    </div>
-                  </form>
+      <div class="right-navigation hidden-md-up" id="rightNavigation">
+        <div class='container'>
+          <div class='row'>
+            <div class='head-nav'>
+              <form action='/search' id='frmSearchMobile'>
+                <div class='custom-input'>
+                  <button class='button' id='btnSearchMobile' type='submit'><i class='ion-ios-search'/></button>
+                  <span><input id='txtSearchMobile' name='q' placeholder='Tìm kiếm' type='text'/></span>
                 </div>
-                <div class='inner'>
-                </div>
-              </div>
+              </form>
             </div>
-          </b:includable>
-        </b:widget>
-      </b:section>
+            <div class='inner'>
+            </div>
+          </div>
+        </div>
+      </div>
       <script type='text/javascript'>
         var getTitles = function(e) {
           var n = e.feed.entry.length;
