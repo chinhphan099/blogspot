@@ -85,7 +85,7 @@
       };
       (function() {
         var e = document.createElement(&#39;script&#39;);
-        e.src = document.location.protocol + &#39;//connect.facebook.net/en_US/all.js&#39;; 
+        e.src = document.location.protocol + &#39;//connect.facebook.net/en_US/all.js&#39;;
         e.async = true;
         document.getElementById(&#39;fb-root&#39;).appendChild(e);
       }());
@@ -234,6 +234,7 @@
           });
           $('#txtSearchMobile').autocomplete({
             lookup: title,
+            appendTo: $('.inner', '.right-navigation'),
             onSelect: function(suggestion) {
               //console.log(suggestion);
               window.location.href = suggestion.href;
@@ -698,7 +699,7 @@
                                 <data:label.name/>
                               </a>
                               <b:if cond='data:label.isLast != &quot;true&quot;'>
-                                , 
+                                ,
                               </b:if>
                             </b:loop>
                           </p>

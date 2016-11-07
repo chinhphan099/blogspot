@@ -28,12 +28,19 @@
     color: #333;
     font-size: 1.429rem;
   }
+  .autocomplete-suggestions {
+    width: 100% !important;
+    position: static !important;
+    max-height: inherit !important;
+  }
+  .autocomplete-suggestions .autocomplete-suggestion,
   .search-results a {
     display: block;
     padding: .7em;
     font-size: 1rem;
     color: #333;
     border-bottom: 1px solid #ddd;
+    text-transform: capitalize;
   }
   .search-results a:hover {
     color: #333;
