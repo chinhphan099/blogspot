@@ -53,7 +53,12 @@ function looppagecurrentg(pageInfo) {
   }
   var nextnumber = parseInt(currentPageNo) + 1;
   if (currentPageNo < (lastPageNo - 1)) {
-    if (currentPage == "page") { html += '<span class="pageNum"><a href="#" onclick="redirectpage(' + nextnumber + ');return false">' + nextText + '</a></span>' } else { html += '<span class="pageNum"><a href="#" onclick="redirectlabel(' + nextnumber + ');return false">' + nextText + '</a></span>' }
+    if (currentPage == "page") {
+      html += '<span class="pageNum"><a href="#" onclick="redirectpage(' + nextnumber + ');return false">' + nextText + '</a></span>';
+    }
+    else {
+      html += '<span class="pageNum"><a href="#" onclick="redirectlabel(' + nextnumber + ');return false">' + nextText + '</a></span>';
+    }
   }
   if (currentPageNo < lastPageNo) {
     if (currentPage == "page") { html += '<span class="pageNum lastpage"><a href="#" onclick="redirectpage(' + lastPageNo + ');return false">' + lastText + '</a></span>' } else { html += '<span class="pageNum lastpage"><a href="#" onclick="redirectlabel(' + lastPageNo + ');return false">' + lastText + '</a></span>' }

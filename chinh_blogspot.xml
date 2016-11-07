@@ -72,8 +72,7 @@
       //]]>
     </script>
   </head>
-
-  <body>
+  <body class="abc">
     <div id='fb-root'/>
     <script>
       window.fbAsyncInit = function() {
@@ -586,7 +585,7 @@
                           <b:if cond='data:blog.pageType == "static_page"'>
                             <!-- Static page -->
                             <h1 class='main-title' itemprop='name headline'><data:post.title/></h1>
-                            <ul class='entry-meta'>
+                            <ul class='entry-meta postPage'>
                               <li>
                                 <i class="ion-android-contact"></i>
                                 <span class='text'><data:post.author/></span>
