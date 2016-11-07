@@ -218,8 +218,9 @@ footer {
 #main-pagination {
   text-align: center;
 }
-#main-pagination span {
-  padding: 5px;
+#main-pagination .pageNum {
+  padding: 5px 10px;
+  margin: 0 4px;
   background-color: #f1f1f1;
 }
 @media (min-width: 768px) {
