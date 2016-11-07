@@ -136,18 +136,13 @@
                   <ul class='nav' data-collapse=''>
                     <b:loop values='data:links' var='link'>
                       <b:if cond='data:link.isCurrentPage'>
-                        <li class='active'>
-                          <a expr:href='data:link.href'>
-                            <data:link.title/>
-                          </a>
-                        </li>
-                        <b:else/>
-                        <li>
-                          <a expr:href='data:link.href'>
-                            <data:link.title/>
-                          </a>
-                        </li>
+                        <li class='active'><a expr:href='data:link.href'><data:link.title/></a></li>
+                      <b:else/>
+                        <li><a expr:href='data:link.href' expr:title='data:link.title'><data:link.title/></a></li>
                       </b:if>
+                    </b:loop>
+                    <b:loop values='data:labels' var='label'>
+                      <li><a expr:href='data:label.url' expr:title='data:label.name'><data:label.name/></a></li>
                     </b:loop>
                   </ul>
                   <form action='/search' id='frmSearch' class='frmSearch hidden-sm-down'>
@@ -193,20 +188,6 @@
                   </form>
                 </div>
                 <div class='inner'>
-                  <ul class='search-results'>
-                    <b:loop values='data:labels' var='label'>
-                      <li>
-                        <b:if cond='data:blog.url == data:label.url'>
-                          <span expr:dir='data:blog.languageDirection'><data:label.name/></span>
-                        <b:else/>
-                          <a expr:dir='data:blog.languageDirection' expr:href='data:label.url'><data:label.name/></a>
-                        </b:if>
-                        <b:if cond='data:showFreqNumbers'>
-                          <span dir='ltr'>(<data:label.count/>)</span>
-                        </b:if>
-                      </li>
-                    </b:loop>
-                  </ul>
                 </div>
               </div>
             </div>
