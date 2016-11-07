@@ -271,6 +271,7 @@ footer {
     padding: 0 10px;
     color: #4f4f4d;
     font-weight: bold;
+    text-transform: capitalize;
   }
   .nav a:hover {
     color: black;

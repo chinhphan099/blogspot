@@ -242,7 +242,7 @@
           });
         };
       </script>
-      <script type='text/javascript' src='//www.kemtrangrangusa.blogspot.com/feeds/posts/default?alt=json-in-script&amp;callback=getTitles'></script>
+      <script type='text/javascript' src='//kemtrangrangusa.blogspot.com/feeds/posts/default?alt=json-in-script&amp;callback=getTitles'></script>
       <!-- End Right Navigation -->
       <div class='main-container'>
         <div class='dummy-layer'/>
@@ -430,7 +430,7 @@
                   <b:includable id='commentDeleteIcon' var='comment'>
                     <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
                       <a expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
-                        <img src='http://www.blogger.com/img/icon_delete13.gif'/>
+                        <img src='//www.blogger.com/img/icon_delete13.gif'/>
                       </a>
                     </span>
                   </b:includable>
@@ -562,25 +562,24 @@
                     </b:if>
                   </b:includable>
                   <b:includable id='nextprev'>
-                    <div class='blog-pager' id='blog-pager'>
+                    <div id="main-pagination"></div>
+                    <div class='blog-pager clearfix home' id='blog-pager'>
                       <b:if cond='data:newerPageUrl'>
-                        <span id='blog-pager-newer-link'>
-                          <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
-                            <data:newerPageTitle/>
-                          </a>
-                        </span>
+                        <a class='newer-post' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'>
+                          <i class='ion-ios-undo-outline'></i>
+                          <span class='text'><data:newerPageTitle/></span>
+                        </a>
                       </b:if>
                       <b:if cond='data:olderPageUrl'>
-                        <span id='blog-pager-older-link'>
-                          <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
-                            <data:olderPageTitle/>
-                          </a>
-                        </span>
+                        <a class='older-post' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'>
+                          <span class='text'><data:olderPageTitle/></span>
+                          <i class='ion-ios-redo-outline'></i>
+                        </a>
                       </b:if>
                     </div>
                   </b:includable>
                   <b:includable id='post' var='post'>
-                    <article class='main-post' expr:id='data:post.id' id='post-60' itemscope='' itemtype='http://schema.org/BlogPosting'>
+                    <article class='main-post' expr:id='data:post.id' id='post-60' itemscope='' itemtype='//schema.org/BlogPosting'>
                       <b:if cond='data:blog.pageType != &quot;item&quot;'>
                         <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
                           <b:if cond='data:post.thumbnailUrl'>
@@ -589,7 +588,7 @@
                             </a>
                           <b:else/>
                             <a class='thumbnail' expr:href='data:post.url' expr:title='data:post.title'>
-                              <img alt='no image' src='https://2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
+                              <img alt='no image' src='//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
                             </a>
                           </b:if>
                         </b:if>
@@ -601,6 +600,16 @@
                           <b:if cond='data:blog.pageType == "static_page"'>
                             <!-- Static page -->
                             <h1 class='main-title' itemprop='name headline'><data:post.title/></h1>
+                            <ul class='entry-meta'>
+                              <li>
+                                <i class="ion-android-contact"></i>
+                                <span class='text'><data:post.author/></span>
+                              </li>
+                              <li>
+                                <i class="ion-clock"></i>
+                                <span class='text'><data:post.timestamp/></span>
+                              </li>
+                            </ul>
                           <b:else/>
                             <h2 class='post-title' itemprop='name headline'>
                               <b:if cond='data:post.link'>
@@ -620,17 +629,15 @@
                           </b:if>
                         </b:if>
                       <b:else/>
-                        <h1 class='main-title' itemprop='name headline'>
-                          <data:post.title/>
-                        </h1>
+                        <h1 class='main-title' itemprop='name headline'><data:post.title/></h1>
                         <ul class='entry-meta'>
                           <li>
                             <i class="ion-android-contact"></i>
-                            <span class="text"><data:post.author/></span>
+                            <span class='text'><data:post.author/></span>
                           </li>
                           <li>
                             <i class="ion-clock"></i>
-                            <span class="text"><data:post.timestamp/></span>
+                            <span class='text'><data:post.timestamp/></span>
                           </li>
                         </ul>
                       </b:if>
@@ -642,17 +649,17 @@
                           <ul class='entry-meta'>
                             <li>
                               <i class="ion-android-contact"></i>
-                              <span class="text"><data:post.author/></span>
+                              <span class='text'><data:post.author/></span>
                             </li>
                             <li>
                               <i class="ion-clock"></i>
-                              <span class="text"><data:post.timestamp/></span>
+                              <span class='text'><data:post.timestamp/></span>
                             </li>
                             <b:if cond='data:post.numComments &gt; 0'>
                               <li>
                                 <b:if cond='data:post.allowComments'>
                                   <i class="ion-chatbubbles"></i>
-                                  <span class="text"><data:post.numComments/></span>
+                                  <span class='text'><data:post.numComments/></span>
                                 </b:if>
                               </li>
                             </b:if>
@@ -749,7 +756,7 @@
                                       thumb[titlesNum] = d.media$thumbnail.url;
                                     }
                                     else {
-                                      thumb[titlesNum] = 'http://3.bp.blogspot.com/-ZRo8fwgs65M/UZC2jMJpcLI/AAAAAAAAC5Y/EfoFQsr1wzU/s1600/BS+No+Image.gif'
+                                      thumb[titlesNum] = '//3.bp.blogspot.com/-ZRo8fwgs65M/UZC2jMJpcLI/AAAAAAAAC5Y/EfoFQsr1wzU/s1600/BS+No+Image.gif'
                                     }
                                     titlesNum++;
                                     break;
@@ -877,19 +884,39 @@
                       </div>
                     </article>
                     <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                      <div class='blog-pager' id='blog-pager'>
-                        <div class='pager-isi'>
-                          <b:if cond='data:newerPageUrl'>
-                            <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>
-                              <data:newerPageTitle/>
-                            </a>
-                          </b:if>
-                          <b:if cond='data:olderPageUrl'>
-                            <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>
-                              <data:olderPageTitle/>
-                            </a>
-                          </b:if>
-                        </div>
+                      <div class='blog-pager clearfix' id='blog-pager'>
+                        <b:if cond='data:newerPageUrl'>
+                          <a class='newer-post' expr:href='data:newerPageUrl' id='newerPost'>
+                            <i class='ion-ios-undo-outline'></i>
+                            <span class='text'></span>
+                          </a>
+                          <script type='text/javascript'>
+                            (function ($) {
+                              var newerPost = $('#newerPost').attr('href');
+                              newerPost = newerPost.split('/');
+                              newerPost = newerPost[newerPost.length - 1].split('.html')[0].replace('-', ' ');
+                              $('.text', '#newerPost')
+                                .attr('title', newerPost)
+                                .html(newerPost);
+                            })(jQuery);
+                          </script>
+                        </b:if>
+                        <b:if cond='data:olderPageUrl'>
+                          <a class='older-post' expr:href='data:olderPageUrl' id='olderPost'>
+                            <span class='text'></span>
+                            <i class='ion-ios-redo-outline'></i>
+                          </a>
+                          <script type='text/javascript'>
+                            (function ($) {
+                              var olderPost = $('#olderPost').attr('href');
+                              olderPost = olderPost.split('/');
+                              olderPost = olderPost[olderPost.length - 1].split('.html')[0].replace('-', ' ');
+                              $('.text', '#olderPost')
+                                .attr('title', olderPost)
+                                .html(olderPost);
+                            })(jQuery);
+                          </script>
+                        </b:if>
                       </div>
                     </b:if>
                   </b:includable>
@@ -897,7 +924,7 @@
                     <b:if cond='data:post.editUrl'>
                       <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
                         <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
-                          <img alt='' class='icon-action' height='18' src='http://img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+                          <img alt='' class='icon-action' height='18' src='//img2.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
                         </a>
                       </span>
                     </b:if>
@@ -1239,7 +1266,7 @@
                           <b:else/>
                             <div class='thumbnail'>
                               <a expr:href='data:post.href' expr:title='data:post.title'>
-                                <img alt='' src='https://2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
+                                <img alt='' src='//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
                               </a>
                             </div>
                           </b:if>
@@ -1361,7 +1388,7 @@
                             <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
                             <div class='outer'>
                               <div class='follow-by-email-inner'>
-                                <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+                                <form action='//feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;//feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
                                   <div class='custom-input'>
                                     <button class='button' id='btnSearch' type='submit'><i class='ion-ios-arrow-right'></i></button>
                                     <span><input name='email' placeholder='Nhập Email...' type='text'/></span>
@@ -1394,14 +1421,14 @@
                             <li>
                               <a href="tel:+84977968386">
                                 <i class="ion-ios-telephone-outline"></i>
-                                <span class="text">0938.528.813</span>
+                                <span class='text'>0938.528.813</span>
                               </a>
                               <span class="name"> - Hoàng Yến</span>
                             </li>
                             <li>
                               <a href="tel:+84977968386">
                                 <i class="ion-ios-telephone-outline"></i>
-                                <span class="text">097.796.8386</span>
+                                <span class='text'>097.796.8386</span>
                               </a>
                               <span class="name"> - Hoàng Nam</span>
                             </li>
