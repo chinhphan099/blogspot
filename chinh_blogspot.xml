@@ -72,7 +72,7 @@
       //]]>
     </script>
   </head>
-  <body class="abc">
+  <body>
     <div id='fb-root'/>
     <script>
       window.fbAsyncInit = function() {
