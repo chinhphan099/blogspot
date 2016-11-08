@@ -2895,7 +2895,6 @@ Copyright (c) 2015 Daniel Eden
 .slick .item {
   float: left;
   width: 200px;
-  background-color: #f7f7f7;
   text-align: center;
   opacity: 0.4;
   -webkit-transition: opacity 2s ease;
