@@ -886,17 +886,6 @@
                       </div>
                     </b:includable>
                   </b:widget>
-
-                  <!-- Fanpage -->
-                  <b:widget id='HTML1' locked='false' title='Tư Vấn / Đặt Hàng' type='HTML' visible='true'>
-                    <b:includable id='main'>
-                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><span><data:title/></span></h2></b:if>
-                      <div class='outer clearfix'>
-                        <data:content/>
-                      </div>
-                      <!-- <b:include name='quickedit'/> -->
-                    </b:includable>
-                  </b:widget>
                 </b:section>
               </div>
             </div>
@@ -1034,8 +1023,6 @@
                       </b:includable>
                     </b:widget>
                   </b:section>
-                </div>
-                <div class='col-md-6'>
                   <b:section class='copyrightWrap' id='copyrightWrap' preferred='yes' showaddelement='yes'>
                     <b:widget id='Image3' locked='false' title='Chinh Phan' type='Image' visible='true'>
                       <b:includable id='main'>
@@ -1046,6 +1033,20 @@
                         </div>
                         <div class='content'>
                           <p class="copyright">Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
+                <div class='col-md-3 col-md-offset-3'>
+                  <!-- Fanpage -->
+                  <b:section id='fanpage' preferred='yes' showaddelement='yes'>
+                    <b:widget id='HTML1' locked='false' title='Tư Vấn / Đặt Hàng' type='HTML' visible='true'>
+                      <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
+                        <div class='outer clearfix'>
+                          <data:content/>
                         </div>
                         <!-- <b:include name='quickedit'/> -->
                       </b:includable>
