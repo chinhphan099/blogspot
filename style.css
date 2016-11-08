@@ -38,7 +38,11 @@
 }
 .post-outer {
   padding-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+.post-outer + .post-outer {
+  padding-top: 30px;
+  border-top: 1px solid #ebebeb;
 }
 .post-title {
   padding-bottom: 10px;
