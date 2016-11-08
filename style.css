@@ -418,6 +418,7 @@ footer {
 .fNav a {
   display: block;
   padding: 10px;
+  text-transform: capitalize;
 }
 .top-footer {
   padding-bottom: 30px;
