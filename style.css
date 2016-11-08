@@ -36,6 +36,7 @@
   margin: 0 auto;
 }
 .post-body {
+  padding-bottom: 20px;
   line-height: 1.35;
 }
 /* Sidebar */
@@ -124,9 +125,6 @@ footer {
 }
 #related-post .outer {
   padding-top: 10px;
-}
-.post-body {
-  padding-bottom: 20px;
 }
 .tags {
   padding-bottom: 20px;
@@ -439,6 +437,7 @@ footer {
   margin-top: 1px;
   border-top: 1px dashed #696969;
   border-bottom: 1px dashed #696969;
+  background: url("//rawgit.com/chinhphan099/blogspot/master/bgdot.png");
 }
 .fNav {
   text-align: center;
