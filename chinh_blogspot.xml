@@ -551,7 +551,7 @@
                         <div id='related-post'>
                           <script type='text/javascript'>
                             //<![CDATA[
-                            var ry = '<h3 class="third-title"><span>Related Posts</span></h3>',
+                            var ry = '<h3 class="sub-title"><span>Related Posts</span></h3>',
                               rcomment = 'comments',
                               rdisable = 'disable comments',
                               commentYN = 'yes',
