@@ -18,7 +18,7 @@
 .arrow-2 {
   animation: arrow-movement 1.4s .7s ease-in-out infinite;
 }
-/* Structure */
+/* Begin Structure */
 .main-container > .inner > .container {
   position: relative;
 }
@@ -26,6 +26,37 @@
   padding-bottom: 20px;
   background-color: white;
 }
+.main {
+}
+.main-banner {
+  margin-bottom: 10px;
+}
+.img-banner {
+  display: block;
+  margin: 0 auto;
+}
+.post-body {
+  line-height: 1.35;
+}
+/* Sidebar */
+.sidebar {
+  position: static;
+}
+.sidebar .widget {
+  position: relative;
+}
+.sidebar .widget + .widget {
+  margin-top: 15px;
+}
+.sidebar .widget .outer {
+  position: relative;
+  padding: 10px;
+}
+/* Footer */
+footer {
+  padding: 10px;
+}
+/* End Structure */
 /* Main */
 .main-post .thumbnail {
   display: block;
@@ -106,38 +137,6 @@
 }
 /* Header */
 
-/* Begin Structure */
-.main {
-}
-.main-banner {
-  margin-bottom: 10px;
-}
-.img-banner {
-  display: block;
-  margin: 0 auto;
-}
-.post-body {
-  line-height: 1.35;
-}
-/* Sidebar */
-.sidebar {
-  position: static;
-}
-.sidebar .widget {
-  position: relative;
-}
-.sidebar .widget + .widget {
-  margin-top: 15px;
-}
-.sidebar .widget .outer {
-  position: relative;
-  padding: 10px;
-}
-/* Footer */
-footer {
-  padding: 10px;
-}
-/* End Structure */
 
 /* Post */
 .post {
