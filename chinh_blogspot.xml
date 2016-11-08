@@ -799,12 +799,13 @@
                   <!-- Chi nhanh -->
                   <b:widget id='HTML3' locked='false' title='Bản đồ' type='HTML' visible='true'>
                     <b:includable id='main'>
-                      <b:if cond='data:blog.url !== "https://kemtrangrangusa.blogspot.com/p/map.html"'>
+                      <b:if cond='data:blog.url != "https://kemtrangrangusa.blogspot.com/p/map.html"'>
                         <fieldset><div data-select='' class='custom-select'><span class='sub-title'>Tất cả chi nhánh</span><select name='selectlocation' id='selectlocation'><option value=''>Tất cả chi nhánh</option></select><i class='ion-ios-arrow-down arrow-1'></i><i class='ion-ios-arrow-down arrow-2'></i></div></fieldset>
                         <div class='outer clearfix'>
                           <data:content/>
                         </div>
                         <!-- <b:include name='quickedit'/> -->
+                      <b:else/>
                       </b:if>
                     </b:includable>
                   </b:widget>

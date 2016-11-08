@@ -58,7 +58,7 @@ function looppagecurrentg(pageInfo) {
     html += ' ... ' }
   for (var jj = pageStart; jj <= pageEnd; jj++) {
     if (currentPageNo == jj) {
-      html += '<span class="current">' + jj + '</span>' }
+      html += '<span class="current">' + jj + '<span class="hidden-md-up"> / ' + lastPageNo + '</span>' + '</span>' }
     else if (jj == 1) {
       if (currentPage == "page") {
         html += '<span class="pageNum"><a href="' + home_page + '">1' + '<span class="hidden-md-up"> / ' + lastPageNo + '</span>' +'</a></span>' }
