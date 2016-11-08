@@ -208,6 +208,7 @@
     singleSlider: {
       arrows: true,
       infinite: true,
+      autoplay: true,
       speed: 600,
       slidesToShow: 1,
       accessibility: false, // Disable Slide to to top on after change
