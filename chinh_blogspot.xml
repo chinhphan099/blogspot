@@ -1002,7 +1002,7 @@
                             <img expr:alt='data:title' expr:src='data:sourceUrl' />
                           </a>
                         </div>
-                        <div class='content'>
+                        <div class='content hidden'>
                           <ul class="hotline">
                             <li>
                               <a href="tel:+84977968386">
