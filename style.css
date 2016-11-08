@@ -71,6 +71,7 @@ footer {
   padding-bottom: 10px;
   font-family: Georgia;
   font-size: 1.857rem;
+  line-height: 1.35;
   text-transform: capitalize;
   text-shadow: 1px 1px 0px #F2F2F2, 2px 2px 0px rgb(192, 192, 192);
 }
