@@ -172,6 +172,7 @@ footer {
   margin-top: 10px;
 }
 .post .thumbnail img {
+  width: 100%;
   opacity: 1;
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
