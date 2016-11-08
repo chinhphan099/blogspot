@@ -24,6 +24,7 @@
 
     <title><data:blog.pageTitle/></title>
     &lt;style&gt;&lt;!--/*<b:skin><![CDATA[*/]]></b:skin>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=vietnamese" rel="stylesheet">
     <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/libs.css' />
     <link rel='stylesheet' href='//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' />
     <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/plugins.css' />
