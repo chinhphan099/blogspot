@@ -479,3 +479,7 @@ footer {
 .flogo {
   width: 100px;
 }
+.copyright {
+  padding-top: 30px;
+  text-align: center;
+}

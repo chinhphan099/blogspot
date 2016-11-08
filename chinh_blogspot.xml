@@ -993,7 +993,7 @@
                 </div>
               </div>
               <div class='row bottom-footer'>
-                <div class='col-md-6'>
+                <div class='col-md-3'>
                   <b:section class='fLogoWrap' id='fLogoWrap' preferred='yes' showaddelement='yes'>
                     <b:widget id='Image2' locked='false' title='Kem Trang Rang USA' type='Image' visible='true'>
                       <b:includable id='main'>
@@ -1002,45 +1002,12 @@
                             <img expr:alt='data:title' expr:src='data:sourceUrl' />
                           </a>
                         </div>
-                        <div class='content hidden'>
-                          <ul class="hotline">
-                            <li>
-                              <a href="tel:+84977968386">
-                                <i class="ion-ios-telephone-outline"></i>
-                                <span class='text'>0938.528.813</span>
-                              </a>
-                              <span class="name"> - Hoàng Yến</span>
-                            </li>
-                            <li>
-                              <a href="tel:+84977968386">
-                                <i class="ion-ios-telephone-outline"></i>
-                                <span class='text'>097.796.8386</span>
-                              </a>
-                              <span class="name"> - Hoàng Nam</span>
-                            </li>
-                          </ul>
-                        </div>
-                        <!-- <b:include name='quickedit'/> -->
-                      </b:includable>
-                    </b:widget>
-                  </b:section>
-                  <b:section class='copyrightWrap' id='copyrightWrap' preferred='yes' showaddelement='yes'>
-                    <b:widget id='Image3' locked='false' title='Chinh Phan' type='Image' visible='true'>
-                      <b:includable id='main'>
-                        <div class='img-wrap'>
-                          <a expr:href='data:link' expr:title='data:title'>
-                            <img expr:alt='data:title' expr:src='data:sourceUrl' />
-                          </a>
-                        </div>
-                        <div class='content'>
-                          <p class="copyright">Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
-                        </div>
                         <!-- <b:include name='quickedit'/> -->
                       </b:includable>
                     </b:widget>
                   </b:section>
                 </div>
-                <div class='col-md-3 col-md-offset-3'>
+                <div class='col-md-3 col-md-offset-6'>
                   <!-- Fanpage -->
                   <b:section id='fanpage' preferred='yes' showaddelement='yes'>
                     <b:widget id='HTML1' locked='false' title='Tư Vấn / Đặt Hàng' type='HTML' visible='true'>
@@ -1055,6 +1022,8 @@
                   </b:section>
                 </div>
               </div>
+              <!-- End Bottom Footer -->
+              <p class='copyright'>Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
             </div>
           </div>
         </div>
