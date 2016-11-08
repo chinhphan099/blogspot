@@ -921,79 +921,34 @@
               </b:widget>
             </b:section>
             <div class='container'>
-              <div class='row top-footer'>
-                <div class='col-md-6'>
-                  <div class='row'>
-                    <div class='col-sm-6'>
-                      <b:section id='branch1' preferred='yes' showaddelement='yes'>
-                        <b:widget id='HTML6' locked='false' title='Chi nhánh Quận 1' type='HTML' visible='true'>
-                          <b:includable id='main'>
-                            <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
-                            <div class='outer'>
-                              <data:content/>
-                            </div>
-                            <!-- <b:include name='quickedit'/> -->
-                          </b:includable>
-                        </b:widget>
-                      </b:section>
-                    </div>
-                    <div class='col-sm-6'>
-                      <b:section id='branch2' preferred='yes' showaddelement='yes'>
-                        <b:widget id='HTML7' locked='false' title='Chi nhánh Phú Nhuận' type='HTML' visible='true'>
-                          <b:includable id='main'>
-                            <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
-                            <div class='outer'>
-                              <data:content/>
-                            </div>
-                            <!-- <b:include name='quickedit'/> -->
-                          </b:includable>
-                        </b:widget>
-                      </b:section>
-                    </div>
-                  </div>
-                </div>
-                <div class='col-md-6'>
-                  <div class='row'>
-                    <div class='col-sm-6'>
-                      <b:section id='branch3' preferred='yes' showaddelement='yes'>
-                        <b:widget id='HTML8' locked='false' title='Chi nhánh Tân Bình' type='HTML' visible='true'>
-                          <b:includable id='main'>
-                            <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
-                            <div class='outer'>
-                              <data:content/>
-                            </div>
-                            <!-- <b:include name='quickedit'/> -->
-                          </b:includable>
-                        </b:widget>
-                      </b:section>
-                    </div>
-                    <div class='col-sm-6'>
-                      <b:section id='subscribe' preferred='yes' showaddelement='yes'>
-                        <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail' visible='true'>
-                          <b:includable id='main'>
-                            <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
-                            <div class='outer'>
-                              <div class='follow-by-email-inner'>
-                                <form action='//feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;//feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-                                  <div class='custom-input'>
-                                    <button class='button' id='btnSearch' type='submit'><i class='ion-ios-arrow-right'></i></button>
-                                    <span><input name='email' placeholder='Nhập Email...' type='text'/></span>
-                                  </div>
-                                  <input expr:value='data:feedPath' name='uri' type='hidden'/>
-                                  <input name='loc' type='hidden' value='en_US'/>
-                                </form>
+              <div class="row top-footer">
+                <!-- Subcribe -->
+                <div class="col-md-6 col-md-offset-3">
+                  <b:section id='subscribe' preferred='yes' showaddelement='yes'>
+                    <b:widget id='FollowByEmail1' locked='false' title='Nhận Mail Khuyến Mãi' type='FollowByEmail' visible='true'>
+                      <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle text-center'><data:title/></h2></b:if>
+                        <div class='outer'>
+                          <div class='follow-by-email-inner'>
+                            <form action='//feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;//feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+                              <div class='custom-input'>
+                                <button class='button' id='btnSearch' type='submit'><i class='ion-ios-arrow-right'></i></button>
+                                <span><input name='email' placeholder='Nhập Email...' type='text'/></span>
                               </div>
-                            </div>
-                            <!-- <b:include name='quickedit'/> -->
-                          </b:includable>
-                        </b:widget>
-                      </b:section>
-                    </div>
-                  </div>
+                              <input expr:value='data:feedPath' name='uri' type='hidden'/>
+                              <input name='loc' type='hidden' value='en_US'/>
+                            </form>
+                          </div>
+                        </div>
+                        <!-- <b:include name='quickedit'/> -->
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
                 </div>
               </div>
               <div class='row bottom-footer'>
                 <div class='col-md-3'>
+                  <!-- fLogo -->
                   <b:section class='fLogoWrap' id='fLogoWrap' preferred='yes' showaddelement='yes'>
                     <b:widget id='Image2' locked='false' title='Kem Trang Rang USA' type='Image' visible='true'>
                       <b:includable id='main'>
@@ -1006,8 +961,36 @@
                       </b:includable>
                     </b:widget>
                   </b:section>
+
                 </div>
-                <div class='col-md-3 col-md-offset-6'>
+                <div class="col-md-6">
+                  <!-- Chi nhanh -->
+                  <b:section id='branch1' preferred='yes' showaddelement='yes'>
+                    <b:widget id='HTML6' locked='false' title='Chi nhánh:' type='HTML' visible='true'>
+                      <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
+                        <div class='outer'>
+                          <data:content/>
+                        </div>
+                        <b:include name='quickedit'/>
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
+                <div class='col-md-3'>
+                  <b:section id='helpfulLink' preferred='yes' showaddelement='yes'>
+                    <b:widget id='HTML7' locked='false' title='Thông tin' type='HTML' visible='true'>
+                      <b:includable id='main'>
+                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
+                        <div class='outer'>
+                          <data:content/>
+                        </div>
+                        <b:include name='quickedit'/>
+                      </b:includable>
+                    </b:widget>
+                  </b:section>
+                </div>
+                <div class='col-md-3 hidden'>
                   <!-- Fanpage -->
                   <b:section id='fanpage' preferred='yes' showaddelement='yes'>
                     <b:widget id='HTML1' locked='false' title='Tư Vấn / Đặt Hàng' type='HTML' visible='true'>
@@ -1024,7 +1007,7 @@
               </div>
               <!-- End Bottom Footer -->
               <div class="container">
-                <p class='copyright'>Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
+                <p class='copyright'>&#169; 2016 Kem Trang Rang USA. Designed and developed by <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
               </div>
             </div>
           </div>
@@ -1042,5 +1025,8 @@
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/select.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/pagination.js'></script>
+    <script type="text/javascript">
+    (function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="//static.zotabox.com/b/7/b783b69359613f2e5be68c65a8a1a967/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));
+    </script>
   </body>
 </html>

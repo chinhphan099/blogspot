@@ -125,6 +125,12 @@ footer {
 #related-post .outer {
   padding-top: 10px;
 }
+.post-body {
+  padding-bottom: 20px;
+}
+.tags {
+  padding-bottom: 20px;
+}
 /* Sidebar */
 .custom-select .sub-title,
 .sub-title {
