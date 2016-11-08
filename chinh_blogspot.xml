@@ -315,7 +315,7 @@
           <div class='container main-content'>
             <div class='row'>
               <!-- Main -->
-              <b:section class='main col-md-8 col-lg-9' id='main' preferred='yes' showaddelement='no'>
+              <b:section class='main col-md-8 col-lg-9 ' id='main' preferred='yes' showaddelement='no'>
                 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
                   <b:includable id='main' var='top'>
                     <!-- posts -->
