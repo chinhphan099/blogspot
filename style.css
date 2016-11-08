@@ -437,7 +437,7 @@ footer {
   margin-top: 1px;
   border-top: 1px dashed #696969;
   border-bottom: 1px dashed #696969;
-  background: url("//rawgit.com/chinhphan099/blogspot/master/bgdot.png");
+  background: url("//rawgit.com/chinhphan099/blogspot/master/bgdot.png") repeat;
 }
 .fNav {
   text-align: center;
