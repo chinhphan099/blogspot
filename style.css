@@ -105,6 +105,15 @@ footer {
 .blog-pager .older-post {
   text-transform: capitalize;
 }
+.blog-pager .newer-post {
+  float: left;
+}
+.blog-pager .older-post {
+  float: right;
+}
+.blog-pager i {
+  font-size: 1.5rem;
+}
 #related-post .outer {
   padding-top: 10px;
 }
