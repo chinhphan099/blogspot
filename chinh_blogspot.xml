@@ -192,7 +192,7 @@
               </script>
             </div>
           </div>
-          <b:include name='quickedit'/>
+          <!-- <b:include name='quickedit'/> -->
         </div>
       </div>
       <!-- End Left Navigation -->
@@ -264,7 +264,7 @@
                   </div>
                 </b:if>
                 <span class='hidden-md-up' data-nav='open-right-nav'><i class='ion-ios-search'></i> <i class='ion-ios-close-empty'></i></span>
-                <b:include name='quickedit'/>
+                <!-- <b:include name='quickedit'/> -->
               </div>
             </b:includable>
           </b:widget>
@@ -280,7 +280,7 @@
                       <div class='slider single-slider' data-cslider='{"type": "single", "dots": true}'>
                         <data:content/>
                       </div>
-                      <b:include name='quickedit'/>
+                      <!-- <b:include name='quickedit'/> -->
                     </b:includable>
                   </b:widget>
                 </b:section>
@@ -300,7 +300,7 @@
                           <span class='caption'><data:caption/></span>
                         </b:if>
                       </div>
-                      <b:include name='quickedit'/>
+                      <!-- <b:include name='quickedit'/> -->
                     </b:includable>
                   </b:widget>
                 </b:section>
@@ -366,7 +366,7 @@
                     <!-- Đây là đoạn mã khi chúng ta xem trước bài viết trong khi viết bài, cái ngăn cản chúng ta không thể click chọn vào bài viết là đây -->
                     <b:if cond='data:top.showDummy'><data:top.dummyBootstrap/></b:if>
                     <!-- posts -->
-                    <b:include name='quickedit'/>
+                    <!-- <b:include name='quickedit'/> -->
                   </b:includable>
                   <b:includable id='backlinkDeleteIcon' var='backlink'>
                     <span expr:class='&quot;item-control &quot; + data:backlink.adminClass'>
@@ -1162,7 +1162,7 @@
                         <div class='outer clearfix'>
                           <data:content/>
                         </div>
-                        <b:include name='quickedit'/>
+                        <!-- <b:include name='quickedit'/> -->
                       </b:if>
                     </b:includable>
                   </b:widget>
@@ -1201,7 +1201,7 @@
                             </span>
                           </b:loop>
                         </b:if>
-                        <b:include name='quickedit'/>
+                        <!-- <b:include name='quickedit'/> -->
                       </div>
                     </b:includable>
                   </b:widget>
@@ -1215,7 +1215,7 @@
                           <b:include data='post' name='post'/>
                         </b:loop>
                       </div>
-                      <b:include name='quickedit'/>
+                      <!-- <b:include name='quickedit'/> -->
                     </b:includable>
                     <b:includable id='post' var='post'>
                       <div class='post'>
@@ -1252,7 +1252,7 @@
                       <div class='outer clearfix'>
                         <data:content/>
                       </div>
-                      <b:include name='quickedit'/>
+                      <!-- <b:include name='quickedit'/> -->
                     </b:includable>
                   </b:widget>
 
@@ -1263,7 +1263,7 @@
                       <div class='outer clearfix'>
                         <data:content/>
                       </div>
-                      <b:include name='quickedit'/>
+                      <!-- <b:include name='quickedit'/> -->
                     </b:includable>
                   </b:widget>
                 </b:section>
@@ -1295,7 +1295,7 @@
                       </ul>
                     </div>
                   </div>
-                  <b:include name='quickedit'/>
+                  <!-- <b:include name='quickedit'/> -->
                 </b:includable>
               </b:widget>
             </b:section>
@@ -1311,7 +1311,7 @@
                             <div class='outer'>
                               <data:content/>
                             </div>
-                            <b:include name='quickedit'/>
+                            <!-- <b:include name='quickedit'/> -->
                           </b:includable>
                         </b:widget>
                       </b:section>
@@ -1324,7 +1324,7 @@
                             <div class='outer'>
                               <data:content/>
                             </div>
-                            <b:include name='quickedit'/>
+                            <!-- <b:include name='quickedit'/> -->
                           </b:includable>
                         </b:widget>
                       </b:section>
@@ -1341,7 +1341,7 @@
                             <div class='outer'>
                               <data:content/>
                             </div>
-                            <b:include name='quickedit'/>
+                            <!-- <b:include name='quickedit'/> -->
                           </b:includable>
                         </b:widget>
                       </b:section>
@@ -1363,7 +1363,7 @@
                                 </form>
                               </div>
                             </div>
-                            <b:include name='quickedit'/>
+                            <!-- <b:include name='quickedit'/> -->
                           </b:includable>
                         </b:widget>
                       </b:section>
@@ -1399,7 +1399,7 @@
                             </li>
                           </ul>
                         </div>
-                        <b:include name='quickedit'/>
+                        <!-- <b:include name='quickedit'/> -->
                       </b:includable>
                     </b:widget>
                   </b:section>
@@ -1416,7 +1416,7 @@
                         <div class='content'>
                           <p class="copyright">Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
                         </div>
-                        <b:include name='quickedit'/>
+                        <!-- <b:include name='quickedit'/> -->
                       </b:includable>
                     </b:widget>
                   </b:section>
