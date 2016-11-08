@@ -18,6 +18,7 @@
 .arrow-2 {
   animation: arrow-movement 1.4s .7s ease-in-out infinite;
 }
+/* Structure */
 .main-container > .inner > .container {
   position: relative;
 }
@@ -25,6 +26,7 @@
   padding-bottom: 20px;
   background-color: white;
 }
+/* Main */
 .main-post .thumbnail {
   display: block;
   margin-bottom: 20px;
