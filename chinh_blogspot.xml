@@ -494,7 +494,7 @@
                             </b:if>
                           </ul>
                           <b:if cond='data:blog.pageType != &quot;item&quot;'>
-                            <div class="desc" expr:id='&quot;summary&quot; + data:post.id'>
+                            <div class="thread-desc" expr:id='&quot;summary&quot; + data:post.id'>
                               <data:post.body/>
                             </div>
                             <script type='text/javascript'>createSummaryAndThumb(&quot;summary<data:post.id/>&quot;);</script>
