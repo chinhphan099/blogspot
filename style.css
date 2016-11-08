@@ -59,12 +59,14 @@
   padding: 10px;
   font-family: Georgia;
   font-size: 1.286rem;
+  color: #333;
   text-transform: uppercase;
   transition: all .3s ease;
+  border: none;
   border-bottom: 1px solid #333;
 }
 #sidebar .sub-title ~ .ion-ios-arrow-down {
-  color: white;
+  color: #333;
   opacity: 0;
   position: absolute;
   top: 50%;
