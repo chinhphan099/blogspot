@@ -658,7 +658,7 @@
                                                   '<img class="img-view" alt="' + titles[c] + '" src="' + thumb[c].replace("/s72-c/", "/s300/") + '"/>' +
                                                 '</a>' +
                                               '</div>' +
-                                              '<div class="content"><h3 class="title"><a href="' + urls[c] + '" rel="nofollow">' + titles[c] + '</a></h3></div>' +
+                                              '<div class="content"><h3 class="title text-truncate"><a href="' + urls[c] + '" rel="nofollow">' + titles[c] + '</a></h3></div>' +
                                             '</div>' +
                                           '</div>' +
                                         '</div>';
@@ -700,7 +700,7 @@
                             (function ($) {
                               var newerPost = $('#newerPost').attr('href');
                               newerPost = newerPost.split('/');
-                              newerPost = newerPost[newerPost.length - 1].split('.html')[0].replace('-', ' ');
+                              newerPost = newerPost[newerPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
                               $('.text', '#newerPost')
                                 .attr('title', newerPost)
                                 .html(newerPost);
@@ -716,7 +716,7 @@
                             (function ($) {
                               var olderPost = $('#olderPost').attr('href');
                               olderPost = olderPost.split('/');
-                              olderPost = olderPost[olderPost.length - 1].split('.html')[0].replace('-', ' ');
+                              olderPost = olderPost[olderPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
                               $('.text', '#olderPost')
                                 .attr('title', olderPost)
                                 .html(olderPost);

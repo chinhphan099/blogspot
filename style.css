@@ -58,6 +58,10 @@
 .entry-meta li + li {
   padding-left:  15px;
 }
+.blog-pager .newer-post,
+.blog-pager .older-post {
+  text-transform: capitalize;
+}
 /* Sidebar */
 #sidebar .sub-title {
   padding: 10px;
