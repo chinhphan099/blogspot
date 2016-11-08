@@ -61,6 +61,11 @@ footer {
 .main-post .thumbnail {
   display: block;
   margin-bottom: 20px;
+  max-height: 330px;
+  overflow: hidden;
+}
+.main-post .thumbnail img {
+  width: 100%;
 }
 .main-title {
   padding-bottom: 10px;
