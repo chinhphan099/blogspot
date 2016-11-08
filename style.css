@@ -400,7 +400,10 @@ footer {
 .footer .wrap {
 }
 .footer .inner {
-  padding-bottom: 10px;
+}
+.top-footer .outer,
+.bottom-footer .outer {
+  padding-top: 10px;
 }
 .fnav-wrap {
   border-top: 1px solid #696969;
@@ -427,9 +430,6 @@ footer {
 }
 .top-footer .section {
   padding-top: 15px;
-}
-.top-footer .outer {
-  padding-top: 10px;
 }
 .fTitle {
   padding-bottom: 5px;
