@@ -2896,12 +2896,6 @@ Copyright (c) 2015 Daniel Eden
   float: left;
   width: 200px;
   text-align: center;
-  opacity: 0.4;
-  -webkit-transition: opacity 2s ease;
-  -moz-transition: opacity 2s ease;
-  -ms-transition: opacity 2s ease;
-  -o-transition: opacity 2s ease;
-  transition: opacity 2s ease;
 }
 .no-slide.slick .item {
   opacity: 1;
