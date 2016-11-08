@@ -68,6 +68,7 @@
   transition: all .3s ease;
   border: none;
   border-bottom: 1px solid #333;
+  text-shadow: 1px 1px 0px #F2F2F2, 2px 2px 0px rgb(192, 192, 192);
 }
 #sidebar .sub-title ~ .ion-ios-arrow-down {
   color: #333;
