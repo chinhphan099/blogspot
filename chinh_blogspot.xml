@@ -639,7 +639,7 @@
                               var b = 0;
                               if (titles.length > 0) {
                                 dw += ry;
-                                dw += '<div class="outer row" data-cslider="{&quot;type&quot;: &quot;carousel&quot;}"><div class="slick">';
+                                dw += '<div class="row"><div class="outer" data-cslider="{&quot;type&quot;: &quot;carousel&quot;}"><div class="slick">';
                                 while (b < titles.length && b < 20 && b < maxresults) {
                                   if (y != -1) {
                                     urls[c] = urls[c] + '?m=0';
@@ -670,7 +670,7 @@
                                   }
                                   b++;
                                 }
-                                dw += '</div><span class="load"></span></div>'
+                                dw += '</div><span class="load"></span></div></div>'
                               }
                               urls.splice(0, urls.length);
                               titles.splice(0, titles.length);
