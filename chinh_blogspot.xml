@@ -1172,7 +1172,7 @@
                   <!-- Danh Muc -->
                   <b:widget id='Label2' locked='false' title='Danh mục' type='Label' version='1' visible='true'>
                     <b:includable id='main'>
-                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><data:title/></h2></b:if>
+                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><span><data:title/></span></h2></b:if>
                       <div expr:class='&quot;outer &quot; + data:display + &quot;-label-outer&quot;'>
                         <b:if cond='data:display == &quot;list&quot;'>
                           <ul class='links'>
@@ -1211,7 +1211,7 @@
                   <!-- Bài viết mới -->
                   <b:widget id='PopularPosts1' locked='false' title='Bài viết mới' type='PopularPosts' version='1' visible='true'>
                     <b:includable id='main'>
-                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><data:title/></h2></b:if>
+                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><span><data:title/></span></h2></b:if>
                       <div class='outer clearfix'>
                         <b:loop values='data:posts' var='post'>
                           <b:include data='post' name='post'/>
@@ -1250,7 +1250,7 @@
                   <b:widget id='HTML2' locked='false' title='Comments' type='HTML' visible='true'>
                     <b:includable id='main'>
                       <!-- only display title if it's non-empty -->
-                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><data:title/></h2></b:if>
+                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><span><data:title/></span></h2></b:if>
                       <div class='outer clearfix'>
                         <data:content/>
                       </div>
@@ -1261,7 +1261,7 @@
                   <!-- Fanpage -->
                   <b:widget id='HTML1' locked='false' title='INBOX Hỏi Thoải Mái' type='HTML' visible='true'>
                     <b:includable id='main'>
-                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><data:title/></h2></b:if>
+                      <b:if cond='data:title != &quot;&quot;'><h2 class='sub-title'><span><data:title/></span></h2></b:if>
                       <div class='outer clearfix'>
                         <data:content/>
                       </div>
