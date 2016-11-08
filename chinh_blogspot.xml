@@ -1023,7 +1023,9 @@
                 </div>
               </div>
               <!-- End Bottom Footer -->
-              <p class='copyright'>Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
+              <div class="container">
+                <p class='copyright'>Copyright &#169; 2016 <a expr:href='data:blog.homepageUrl'>Chinh Phan</a></p>
+              </div>
             </div>
           </div>
         </div>
