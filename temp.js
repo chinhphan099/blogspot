@@ -69,5 +69,59 @@
             }
             */
         //}
-        return true ;
+        return true;
     },
+    countryCheck: function() {
+        /*
+        country: [
+            '.mobile-country option:selected',
+            ' is invalid',
+            ' MOBILE NUMBER MUST BE BETWEEN 6-14 DIGITS',
+            ' MOBILE NUMBER MUST BE BETWEEN 2-23 DIGITS',
+            /^[0-9]*$/i,
+            '.mobile-no',
+            '.sub-item' ]
+        */
+        var countryID = jQuery(this.rules.country[0]).val(); // option:selected .val()
+        var countryText = jQuery(this.rules.country[0]).text().split('(')[0].trim();
+        //hot fix
+        var mobileDiv = jQuery(this.rules.country[5]); // .mobile-no
+        var parentDiv = jQuery(this.rules.country[6]); // .sub-item
+        //mobileDiv.removeClass('error');
+        //mobileDiv.parent(parentDiv).find('.valid-msg .error').css('display', 'none');
+
+        if (!(this.rules.country[4].test(this.currentVal)) ) {
+            this.errorText = this.currentVal + this.rules.country[1];
+            return false;
+        }else if (countryID == '64' || countryID == '61') {
+            if (this.currentVal.length >= 6 && this.currentVal.length <= 14) {
+                if (countryID == '64') {
+                    if (/^(02|2)/.test(this.currentVal)) {
+                        return true;
+                    } else {
+                        this.errorText = this.currentVal + this.rules.country[1];
+                        return false;
+                    }
+                } else if (countryID == '61') {
+                    if (/^(04|4)/.test(this.currentVal)) {
+                        return true;
+                    } else {
+                        this.errorText = this.currentVal + this.rules.country[1];
+                        return false;
+                    }
+                }
+            } else {
+                this.errorText = countryText + this.rules.country[2];
+                return false;
+            }
+        } else if(countryID != "") {
+            if (this.currentVal.length >= 2 && this.currentVal.length <= 23) {
+                return true;
+            } else {
+                this.errorText = countryText + this.rules.country[3];
+                return false;
+            }
+        }
+    },
+
+
