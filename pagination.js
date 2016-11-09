@@ -22,7 +22,12 @@ function looppagecurrentg(pageInfo) {
   pageStart = currentPageNo - pageNumber;
   if (pageStart < 1) pageStart = 1;
   lastPageNo = parseInt(pageInfo / perPage) + 1;
-  if (lastPageNo - 1 == pageInfo / perPage) lastPageNo = lastPageNo - 1;
+  if (lastPageNo - 1 == pageInfo / perPage) {
+    lastPageNo = lastPageNo - 1;
+  }
+  if(lastPageNo === 1) {
+    break;
+  }
   pageEnd = pageStart + numPages - 1;
   if (pageEnd > lastPageNo) pageEnd = lastPageNo;
   var prevNumber = parseInt(currentPageNo) - 1;
