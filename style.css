@@ -486,7 +486,8 @@ footer {
 .follow-by-email .custom-input button,
 .follow-by-email .custom-input input {
   border: none;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: transparent;
 }
 .flogo {
   width: 100px;

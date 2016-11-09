@@ -968,7 +968,7 @@
                   <b:section id='branch1' preferred='yes' showaddelement='yes'>
                     <b:widget id='HTML6' locked='false' title='Chi nhánh:' type='HTML' visible='true'>
                       <b:includable id='main'>
-                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><data:title/></h2></b:if>
+                        <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle'><span><data:title/></span></h2></b:if>
                         <div class='outer'>
                           <data:content/>
                         </div>
