@@ -425,6 +425,7 @@ footer {
 .footer .wrap {
 }
 .footer .inner {
+  background: url("//rawgit.com/chinhphan099/blogspot/master/bgdot-bottom.png") repeat-x;
 }
 .top-footer .outer,
 .bottom-footer .outer {
@@ -452,7 +453,6 @@ footer {
 }
 .top-footer {
   padding-bottom: 30px;
-  background-color: white;
 }
 .top-footer .section {
   padding-top: 15px;
@@ -470,7 +470,6 @@ footer {
   padding-top: 15px;
   padding-bottom: 15px;
   border-top: 1px solid #f1f1f1;
-  background-color: white;
 }
 .fLogoWrap .content {
   text-align: center;
