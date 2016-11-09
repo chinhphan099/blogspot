@@ -484,6 +484,18 @@ footer {
 .flogo {
   width: 100px;
 }
+.branches li,
+.helpful-link li {
+  padding: 10px 0;
+}
+.branches a,
+.helpful-link a {
+  color: #333;
+}
+.branches a:hover,
+.helpful-link a:hover {
+  color: #610000;
+}
 .copyright {
   padding-top: 30px;
   padding-bottom: 20px;
