@@ -929,7 +929,7 @@
                       <b:includable id='main'>
                         <b:if cond='data:title != &quot;&quot;'><h2 class='fTitle text-center'><data:title/></h2></b:if>
                         <div class='outer'>
-                          <div class='follow-by-email-inner'>
+                          <div class='follow-by-email'>
                             <form action='//feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;//feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
                               <div class='custom-input'>
                                 <button class='button' id='btnSearch' type='submit'><i class='ion-ios-arrow-right'></i></button>

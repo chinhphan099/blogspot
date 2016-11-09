@@ -483,6 +483,11 @@ footer {
 .hotline li {
   display: block;
 }
+.follow-by-email .custom-input button,
+.follow-by-email .custom-input input {
+  border: none;
+  border-bottom: 1px solid #efefef;
+}
 .flogo {
   width: 100px;
 }
