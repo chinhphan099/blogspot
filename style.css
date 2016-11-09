@@ -419,13 +419,13 @@ footer {
 
 /* Footer */
 .footer {
+  background: url("//rawgit.com/chinhphan099/blogspot/master/bgdot-bottom.png") 100% 100% repeat-x;
 }
 .footer .container {
 }
 .footer .wrap {
 }
 .footer .inner {
-  background: url("//rawgit.com/chinhphan099/blogspot/master/bgdot-bottom.png") repeat-x;
 }
 .top-footer .outer,
 .bottom-footer .outer {
@@ -487,6 +487,8 @@ footer {
 .follow-by-email .custom-input input {
   border: none;
   border-bottom: 1px solid #dbdbdb;
+}
+.follow-by-email .custom-input input {
   background-color: transparent;
 }
 .flogo {
@@ -505,7 +507,8 @@ footer {
   color: #610000;
 }
 .copyright {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+  border-top: 1px solid #dbdbdb;
 }
