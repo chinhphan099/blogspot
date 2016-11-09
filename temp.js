@@ -1,25 +1,31 @@
     mobileCountryCheck : function(){
-        var countryID = jQuery(this.rules.mobileCountry[0]).val();
-        var mobileElem = jQuery(this.rules.mobileCountry[1]).val();
+        var mess;
+        var parentDiv = jQuery(this.rules.mobileCountry[6]); // .sub-item
+        var mobileDiv = jQuery(this.rules.mobileCountry[1]); // .mobile-no
+        var countryID = jQuery(this.rules.mobileCountry[0]).val(); // .mobile-country option:selected .val();
+        var countryText = jQuery(this.rules.mobileCountry[0]).text().split('(')[0];
+        //var mobileElem = mobileDiv.val(); // .mobile-no .val();
+        //var mobileElemNew = mobileDiv.val();
 
-
-        if(countryID == '64' /*&&  (mobileElem.length == '' || mobileElem == '04')*/ ){
-            jQuery(this.rules.mobileCountry[1]).val('2');
-        } else if(countryID == '61' /*&& (mobileElem.length == '' || mobileElem == '02') */) {
-            jQuery(this.rules.mobileCountry[1]).val('4');
-        }else {
-            jQuery(this.rules.mobileCountry[1]).val('');
+        switch (countryID) {
+            case '61':// AU
+                jQuery(this.rules.mobileCountry[1]).val('4');
+                mess = countryText + this.rules.mobileCountry[4];
+                break;
+            case '64':// New Zealand
+                jQuery(this.rules.mobileCountry[1]).val('2');
+                mess = countryText + this.rules.mobileCountry[4];
+                break;
+            case '':// No select
+                jQuery(this.rules.mobileCountry[1]).val('');
+                mess = 'Invalid mobile number';
+                break;
+            default:// Other country
+                jQuery(this.rules.mobileCountry[1]).val('');
+                mess = countryText + this.rules.mobileCountry[2];
         }
-        //s60 - temp solution - hot fix
-
-        var mobileDiv = jQuery(this.rules.mobileCountry[1]);
-        var mobileElemNew = jQuery(this.rules.mobileCountry[1]).val();
-        var mobileElem = jQuery(this.rules.mobileCountry[1]).val();
-        var parentDiv = jQuery(this.rules.mobileCountry[6]);
-
-        var countryText = jQuery(this.rules.mobileCountry[0]).text().replace(countryID,'').replace('()', '');
         mobileDiv.removeClass('error');
-        mobileDiv.parent(parentDiv).find('.valid-msg .error').html(countryText + this.rules.mobileCountry[4]).css('display', 'none');
+        mobileDiv.closest(parentDiv).find('.valid-msg .error').html(mess).css('display', 'none');
 
         //if(mobileElemNew != ''/* && mobileElemNew != '02' */){
             /*
