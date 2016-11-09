@@ -23,7 +23,6 @@
   position: relative;
 }
 .main-container > .inner > .main-content {
-  padding-bottom: 20px;
   background-color: white;
 }
 .main {
@@ -45,9 +44,7 @@
 }
 .sidebar .widget {
   position: relative;
-}
-.sidebar .widget + .widget {
-  margin-top: 15px;
+  margin-bottom: 20px;
 }
 .sidebar .widget .outer {
   position: relative;
