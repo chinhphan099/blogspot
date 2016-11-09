@@ -933,7 +933,7 @@
                             <form action='//feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;//feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
                               <div class='custom-input'>
                                 <button class='button' id='btnSearch' type='submit'>Đăng Ký</button>
-                                <span><input name='email' placeholder='Nhập Email...' type='text'/></span>
+                                <span><input name='email' placeholder='Nhập Email...' type='text' autocomplete='off'/></span>
                               </div>
                               <input expr:value='data:feedPath' name='uri' type='hidden'/>
                               <input name='loc' type='hidden' value='en_US'/>

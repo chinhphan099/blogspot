@@ -88,6 +88,7 @@ footer {
 .post-title {
   padding-bottom: 10px;
   font-family: "Noto Sans", sans-serif;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.35;
   text-transform: capitalize;
