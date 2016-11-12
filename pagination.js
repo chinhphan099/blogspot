@@ -26,7 +26,7 @@ function looppagecurrentg(pageInfo) {
     lastPageNo = lastPageNo - 1;
   }
   if(lastPageNo === 1) {
-    break;
+    return;
   }
   pageEnd = pageStart + numPages - 1;
   if (pageEnd > lastPageNo) pageEnd = lastPageNo;
