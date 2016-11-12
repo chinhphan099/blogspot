@@ -315,6 +315,9 @@
   .post-outer {
     padding-top: 0;
   }
+  .post-outer:last-child {
+    margin-bottom: 0;
+  }
   .bottom-footer .img-wrap {
     margin-top: 0;
   }
