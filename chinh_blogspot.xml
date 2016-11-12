@@ -350,6 +350,18 @@
                         </b:if>
                       </b:loop>
                       <data:adEnd/>
+                      <b:if cond='data:blog.pageType == &quot;index&quot;'>
+                        <script type="text/javascript">
+                          (function ($) {
+                            var cloneItem = $('.blog-posts').find('.thumbnail').clone();
+                            cloneItem.addClass('item').find('img').addClass('img-view');
+                            $('.single-slider').find('.slick').html(cloneItem);
+                            setTimeout(function() {
+                              $('.single-slider').cslider();
+                            }, 100);
+                          })(jQuery);
+                        </script>
+                      </b:if>
                     </div>
                     <!-- End Post -->
                     <!-- navigation -->
@@ -523,6 +535,16 @@
                       <b:else/>
                         <div class='post-body' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
                           <data:post.body/>
+                          <script type='text/javascript'>
+                            (function ($) {
+                              var mainImgWrap = $('.separator'),
+                                mainImg = $(mainImgWrap.find('img')[0]);
+                              if(mainImg.length) {
+                                mainImg.closest(mainImgWrap).addClass('hidden').next('br').remove();
+                                $('.img-banner').attr('src', mainImg.attr('src'));
+                              }
+                            })(jQuery);
+                          </script>
                         </div>
                       </b:if>
                       <!-- clear for photos floats -->
@@ -543,6 +565,42 @@
                           <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'>
                             <data:post.jumpText/>
                           </a>
+                        </div>
+                      </b:if>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                        <div class='blog-pager clearfix' id='blog-pager'>
+                          <b:if cond='data:newerPageUrl'>
+                            <a class='newer-post' expr:href='data:newerPageUrl' id='newerPost'>
+                              <i class='ion-ios-undo-outline'></i>
+                              <span class='text'></span>
+                            </a>
+                            <script type='text/javascript'>
+                              (function ($) {
+                                var newerPost = $('#newerPost').attr('href');
+                                newerPost = newerPost.split('/');
+                                newerPost = newerPost[newerPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
+                                $('.text', '#newerPost')
+                                  .attr('title', newerPost)
+                                  .html(newerPost);
+                              })(jQuery);
+                            </script>
+                          </b:if>
+                          <b:if cond='data:olderPageUrl'>
+                            <a class='older-post' expr:href='data:olderPageUrl' id='olderPost'>
+                              <span class='text'></span>
+                              <i class='ion-ios-redo-outline'></i>
+                            </a>
+                            <script type='text/javascript'>
+                              (function ($) {
+                                var olderPost = $('#olderPost').attr('href');
+                                olderPost = olderPost.split('/');
+                                olderPost = olderPost[olderPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
+                                $('.text', '#olderPost')
+                                  .attr('title', olderPost)
+                                  .html(olderPost);
+                              })(jQuery);
+                            </script>
+                          </b:if>
                         </div>
                       </b:if>
                       <b:if cond='data:blog.pageType == &quot;item&quot;'>
@@ -687,42 +745,6 @@
                         </div>
                       </b:if>
                     </article>
-                    <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                      <div class='blog-pager clearfix' id='blog-pager'>
-                        <b:if cond='data:newerPageUrl'>
-                          <a class='newer-post' expr:href='data:newerPageUrl' id='newerPost'>
-                            <i class='ion-ios-undo-outline'></i>
-                            <span class='text'></span>
-                          </a>
-                          <script type='text/javascript'>
-                            (function ($) {
-                              var newerPost = $('#newerPost').attr('href');
-                              newerPost = newerPost.split('/');
-                              newerPost = newerPost[newerPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
-                              $('.text', '#newerPost')
-                                .attr('title', newerPost)
-                                .html(newerPost);
-                            })(jQuery);
-                          </script>
-                        </b:if>
-                        <b:if cond='data:olderPageUrl'>
-                          <a class='older-post' expr:href='data:olderPageUrl' id='olderPost'>
-                            <span class='text'></span>
-                            <i class='ion-ios-redo-outline'></i>
-                          </a>
-                          <script type='text/javascript'>
-                            (function ($) {
-                              var olderPost = $('#olderPost').attr('href');
-                              olderPost = olderPost.split('/');
-                              olderPost = olderPost[olderPost.length - 1].split('.html')[0].replace(/-/gi, ' ');
-                              $('.text', '#olderPost')
-                                .attr('title', olderPost)
-                                .html(olderPost);
-                            })(jQuery);
-                          </script>
-                        </b:if>
-                      </div>
-                    </b:if>
                   </b:includable>
                   <b:includable id='postQuickEdit' var='post'>
                     <b:if cond='data:post.editUrl'>

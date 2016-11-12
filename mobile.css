@@ -312,4 +312,10 @@
   .sub-nav li li li a {
     padding-left: 40px;
   }
+  .post-outer {
+    padding-top: 0;
+  }
+  .bottom-footer .img-wrap {
+    margin-top: 0;
+  }
 }

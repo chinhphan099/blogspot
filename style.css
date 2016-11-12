@@ -83,7 +83,7 @@ footer {
 }
 .post-outer {
   padding-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .post-outer + .post-outer {
   padding-top: 30px;
@@ -115,6 +115,11 @@ footer {
 .entry-meta li + li {
   padding-left:  15px;
 }
+.blog-pager {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-top: 1px solid #efefef;
+}
 .blog-pager .newer-post,
 .blog-pager .older-post {
   text-transform: capitalize;
@@ -132,8 +137,9 @@ footer {
   padding-top: 10px;
 }
 .tags {
-  padding: 20px 0;
-  border-top: 1px solid #efefef;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 15px;
 }
 .tags a {
   display: inline-block;
@@ -518,6 +524,7 @@ footer {
 }
 .branches a,
 .helpful-link a {
+  line-height: 1.35;
   color: #333;
 }
 .branches a:hover,
