@@ -118,7 +118,7 @@ footer {
 .blog-pager {
   padding-bottom: 15px;
   margin-bottom: 15px;
-  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
 }
 .blog-pager .newer-post,
 .blog-pager .older-post {
@@ -137,9 +137,9 @@ footer {
   padding-top: 10px;
 }
 .tags {
+  padding-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #efefef;
-  margin-bottom: 15px;
+  border-top: 1px solid #efefef;
 }
 .tags a {
   display: inline-block;
