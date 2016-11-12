@@ -229,6 +229,8 @@ footer {
   text-transform: uppercase;
   position: relative;
   display: inline-block;
+  font-family: "Noto sans", sans-serif;
+  font-weight: 700;
 }
 .links a:before {
   color: black;
@@ -447,6 +449,8 @@ footer {
 .fNav a {
   display: block;
   padding: 10px;
+  font-family: "Noto sans", sans-serif;
+  font-weight: 700;
   text-transform: capitalize;
 }
 .top-footer {
