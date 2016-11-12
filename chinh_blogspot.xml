@@ -326,14 +326,14 @@
                         <div class='post-outer'>
                           <b:include data='post' name='post'/>
                           <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-                            <b:if cond='data:post.showThreadedComments'>
+                            <!-- <b:if cond='data:post.showThreadedComments'> -->
                               <b:include data='post' name='threaded_comments'/>
-                            </b:if>
+                            <!-- </b:if> -->
                           </b:if>
                           <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                            <b:if cond='data:post.showThreadedComments'>
+                            <!-- <b:if cond='data:post.showThreadedComments'> -->
                               <b:include data='post' name='threaded_comments'/>
-                            </b:if>
+                            <!-- </b:if> -->
                           </b:if>
                         </div>
 
@@ -358,7 +358,7 @@
                             $('.single-slider').find('.slick').html(cloneItem);
                             setTimeout(function() {
                               $('.single-slider').cslider();
-                            }, 100);
+                            }, 300);
                           })(jQuery);
                         </script>
                       </b:if>
@@ -800,13 +800,10 @@
                   <b:includable id='status-message'></b:includable>
                   <b:includable id='threaded_comments' var='post'>
                     <!-- Comment Facebook -->
-                    <b:if cond='data:blog.pageType == "index"'>
-                    <b:else/>
-                      <div class='comment-facebook 123'>
-                        <script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/>
-                        <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='100%'/>
-                      </div>
-                    </b:if>
+                    <div class='comment-facebook'>
+                      <script src='http://connect.facebook.net/en_US/all.js#xfbml=1'/>
+                      <fb:comments colorscheme='light' expr:href='data:post.url' expr:title='data:post.title' expr:xid='data:post.id' width='100%'/>
+                    </div>
                     <!-- End Comment Facebook -->
                   </b:includable>
                 </b:widget>
@@ -990,7 +987,7 @@
                         <div class='outer'>
                           <data:content/>
                         </div>
-                        <b:include name='quickedit'/>
+                        <!-- <b:include name='quickedit'/> -->
                       </b:includable>
                     </b:widget>
                   </b:section>
@@ -1003,7 +1000,7 @@
                         <div class='outer'>
                           <data:content/>
                         </div>
-                        <b:include name='quickedit'/>
+                        <!-- <b:include name='quickedit'/> -->
                       </b:includable>
                     </b:widget>
                   </b:section>

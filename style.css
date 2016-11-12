@@ -201,6 +201,7 @@ footer {
 }
 .post:hover .title a {
   white-space: normal;
+  overflow: visible;
 }
 .post:hover .desc {
   transform: translateX(0);
