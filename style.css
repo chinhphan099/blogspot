@@ -196,6 +196,7 @@ footer {
 }
 .post:hover .title {
   /*background-color: transparent;*/
+  background-color: rgba(255,255,255,.9);
   transform: translateY(0);
 }
 .post:hover .title a {
