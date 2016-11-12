@@ -733,7 +733,7 @@
                               document.getElementById('related-post').innerHTML = dw;
                               setTimeout(function() {
                                 $('[data-cslider]').cslider();
-                              }, 300);
+                              }, 500);
                             }
                             //]]></script>
                           <b:loop values='data:post.labels' var='label'>
@@ -900,7 +900,7 @@
                           </b:if>
                           <div class='content'>
                             <h3 class='title'><a expr:href='data:post.href' expr:title='data:post.title' class='text-truncate'><data:post.title/></a></h3>
-                            <p class='desc'><data:post.snippet/></p>
+                            <p class='desc hidden'><data:post.snippet/></p>
                           </div>
                         </div>
                       </div>

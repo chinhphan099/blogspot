@@ -192,11 +192,14 @@ footer {
   transform: translateY(0);
 }
 .post:hover .thumbnail img {
-  opacity: .5;
+  /*opacity: .5;*/
 }
 .post:hover .title {
-  background-color: transparent;
+  /*background-color: transparent;*/
   transform: translateY(0);
+}
+.post:hover .title a {
+  white-space: normal;
 }
 .post:hover .desc {
   transform: translateX(0);
@@ -219,16 +222,16 @@ footer {
   bottom: 0;
   left: 0;
   background-color: rgba(255,255,255,.7);
-  transform: translateY(100%);
-  transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  /*transform: translateY(100%);
+  transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);*/
 }
 .post .title {
   padding: 10px;
   font-size: 1.143rem;
   text-transform: capitalize;
   background-color: rgba(255,255,255,.7);
-  transform: translateY(-100%);
-  transition: all .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  /*transform: translateY(-100%);*/
+  transition: all .3s ease;
 }
 .post .title a {
   display: block;
@@ -236,8 +239,8 @@ footer {
 .post .desc {
   font-size: 0.929rem;
   padding: 0 10px 10px;
-  transform: translateX(-100%);
-  transition: all .3s .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  /*transform: translateX(-100%);
+  transition: all .3s .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);*/
 }
 /* Category Sidebar */
 .links li {

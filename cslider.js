@@ -210,6 +210,7 @@
       infinite: true,
       autoplay: true,
       speed: 600,
+      autoplaySpeed: 1000,
       slidesToShow: 1,
       accessibility: false, // Disable Slide to to top on after change
       rtl: $('html').attr('dir') === 'rtl' ? true : false
