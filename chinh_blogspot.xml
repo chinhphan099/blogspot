@@ -1005,20 +1005,6 @@
                     </b:widget>
                   </b:section>
                 </div>
-                <div class='col-md-3 hidden'>
-                  <!-- Fanpage -->
-                  <b:section id='fanpage' preferred='yes' showaddelement='yes'>
-                    <b:widget id='HTML1' locked='false' title='Tư Vấn / Đặt Hàng' type='HTML' visible='true'>
-                      <b:includable id='main'>
-                        <h2 class='fTitle'><span><data:title/></span></h2>
-                        <div class='outer clearfix'>
-                          <data:content/>
-                        </div>
-                        <!-- <b:include name='quickedit'/> -->
-                      </b:includable>
-                    </b:widget>
-                  </b:section>
-                </div>
               </div>
               <!-- End Bottom Footer -->
             </div>

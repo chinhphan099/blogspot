@@ -321,4 +321,10 @@
   .bottom-footer .img-wrap {
     margin-top: 0;
   }
+  .fTitle span {
+    display: block;
+  }
+  .branches {
+    padding-bottom: 15px;
+  }
 }
