@@ -38,6 +38,13 @@
   padding-bottom: 20px;
   line-height: 1.35;
 }
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+  padding-top: 15px;
+  font-family: "Noto sans", sans-serif;
+  font-weight: 700;
+}
 /* Sidebar */
 .sidebar {
   position: static;
@@ -126,6 +133,13 @@ footer {
 }
 .tags {
   padding-bottom: 20px;
+}
+.tags a {
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  font-family: Georgia;
+  font-weight: 600;
+  background-color: #f1f1f1;
 }
 /* Sidebar */
 .custom-select .sub-title,
