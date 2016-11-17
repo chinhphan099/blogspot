@@ -350,18 +350,6 @@
                         </b:if>
                       </b:loop>
                       <data:adEnd/>
-                      <b:if cond='data:blog.pageType == &quot;index&quot;'>
-                        <script type="text/javascript">
-                          (function ($) {
-                            var cloneItem = $('.blog-posts').find('.thumbnail').clone();
-                            cloneItem.addClass('item').find('img').addClass('img-view');
-                            $('.single-slider').find('.slick').html(cloneItem);
-                            setTimeout(function() {
-                              $('.single-slider').cslider();
-                            }, 300);
-                          })(jQuery);
-                        </script>
-                      </b:if>
                     </div>
                     <!-- End Post -->
                     <!-- navigation -->
@@ -731,9 +719,6 @@
                               urls.splice(0, urls.length);
                               titles.splice(0, titles.length);
                               document.getElementById('related-post').innerHTML = dw;
-                              setTimeout(function() {
-                                $('[data-cslider]').cslider();
-                              }, 500);
                             }
                             //]]></script>
                           <b:loop values='data:post.labels' var='label'>
@@ -1016,6 +1001,15 @@
       </div>
       <!-- End Main Container -->
     </div>
+    <b:if cond='data:blog.pageType == &quot;index&quot;'>
+      <script type="text/javascript">
+        (function ($) {
+          var cloneItem = $('.blog-posts').find('.thumbnail').clone();
+          cloneItem.addClass('item').find('img').addClass('img-view');
+          $('.single-slider').find('.slick').html(cloneItem);
+        })(jQuery);
+      </script>
+    </b:if>
     <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyAIlQFC86Q2W1wp1cnjdXQDH9WnU7wH1e8&amp;libraries=places'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/collapse.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/cslider.js'></script>

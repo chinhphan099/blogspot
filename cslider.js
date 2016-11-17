@@ -328,7 +328,7 @@
   };
 
   $(function() {
-    //$('[data-' + pluginName + ']')[pluginName]();
+    $('[data-' + pluginName + ']')[pluginName]();
   });
 
 }(jQuery, window));
