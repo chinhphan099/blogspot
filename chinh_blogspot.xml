@@ -694,7 +694,7 @@
                                   else {
                                     comments[c] = '';
                                   }
-                                  dw += '<div class="col-xs-12 item">' +
+                                  dw += '<div class="container-fluid item">' +
                                           '<div class="post">' +
                                             '<div class="inner">' +
                                               '<div class="thumbnail">' +
@@ -725,7 +725,7 @@
                             <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&quot;' type='text/javascript'/>
                           </b:loop>
                           <script type='text/javascript'>
-                            var maxresults=3;removeRelatedDuplicates();printRelatedLabels(&#39;<data:post.url/>&#39;);
+                            var maxresults=15;removeRelatedDuplicates();printRelatedLabels(&#39;<data:post.url/>&#39;);
                           </script>
                         </div>
                       </b:if>

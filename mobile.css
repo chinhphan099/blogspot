@@ -272,6 +272,7 @@
     display: block;
     position: relative;
     padding: .7em;
+    font-family: "Noto Sans", sans-serif;
     font-size: 1.071rem;
     color: #fff;
     border-bottom: 1px solid #999;
