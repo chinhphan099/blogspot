@@ -31,8 +31,8 @@
     <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/style.css' />
     <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/mobile.css' />
     <b:include data='blog' name='google-analytics'/>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/modernizr.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/libs.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/modernizr.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/lib.min.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.autocomplete.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.mockjax.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky-kit.js'></script>
@@ -1011,15 +1011,15 @@
       </script>
     </b:if>
     <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyAIlQFC86Q2W1wp1cnjdXQDH9WnU7wH1e8&amp;libraries=places'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/collapse.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/cslider.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/gmap.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/scrollto.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sameheight.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slidemenu.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/select.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/pagination.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/collapse.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slider.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/gmap.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/scrollto.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sameheight.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/slidemenu.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/select.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/pagination.min.js'></script>
     <script type="text/javascript">
     (function(d,s,id){var z=d.createElement(s);z.type="text/javascript";z.id=id;z.async=true;z.src="//static.zotabox.com/b/7/b783b69359613f2e5be68c65a8a1a967/widgets.js";var sz=d.getElementsByTagName(s)[0];sz.parentNode.insertBefore(z,sz)}(document,"script","zb-embed-code"));
     </script>
