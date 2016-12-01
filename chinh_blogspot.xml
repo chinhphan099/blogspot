@@ -32,7 +32,7 @@
     <link rel='stylesheet' href='//rawgit.com/chinhphan099/blogspot/master/mobile.css' />
     <b:include data='blog' name='google-analytics'/>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/modernizr.min.js'></script>
-    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/lib.min.js'></script>
+    <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/libs.min.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.autocomplete.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/jquery.mockjax.js'></script>
     <script type='text/javascript' src='//rawgit.com/chinhphan099/blogspot/master/sticky-kit.js'></script>
