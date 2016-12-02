@@ -43,6 +43,23 @@
     <meta content='1812285465652183 ' property='fb:app_id'/>
     <meta content='http://www.facebook.com/chinhphan099' property='fb:admins'/>
     <meta content='article' property='og:type'/>
+    <link rel="apple-touch-icon" sizes="57x57" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="//rawgit.com/chinhphan099/blogspot/master/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="//rawgit.com/chinhphan099/blogspot/master/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="//rawgit.com/chinhphan099/blogspot/master/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="//rawgit.com/chinhphan099/blogspot/master/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="//rawgit.com/chinhphan099/blogspot/master/favicon-16x16.png">
+    <link rel="manifest" href="//rawgit.com/chinhphan099/blogspot/master/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="//rawgit.com/chinhphan099/blogspot/master/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <script type='text/javascript'>
       var summary_noimg = 500;
     </script>
@@ -867,16 +884,15 @@
                         <div class='inner'>
                           <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
                             <div class='thumbnail'>
-                              <a expr:href='data:post.href' expr:title='data:post.title'>
-                                <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 300) : data:post.thumbnail' var='image'>
-                                  <img expr:alt='data:post.title' expr:src='data:image' />
-                                </b:with>
-                              </a>
+                              <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 300) : data:post.thumbnail' var='image'>
+                                <a expr:href='data:post.href' expr:title='data:post.title' expr:style="background-image: src('data:image')">
+                                  <!-- <img expr:alt='data:post.title' expr:src='data:image' /> -->
+                                </a>
+                              </b:with>
                             </div>
                           <b:else/>
                             <div class='thumbnail'>
-                              <a expr:href='data:post.href' expr:title='data:post.title'>
-                                <img alt='' src='//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg'/>
+                              <a expr:href='data:post.href' expr:title='data:post.title' style="background-image: src(//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg)">
                               </a>
                             </div>
                           </b:if>
