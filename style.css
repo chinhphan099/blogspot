@@ -41,9 +41,24 @@
 .post-body h2,
 .post-body h3,
 .post-body h4 {
-  padding-top: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   font-family: "Noto sans", sans-serif;
   font-weight: 700;
+}
+.post-body p {
+  margin-top: 10px;
+}
+.post-body ul {
+  list-style: disc outside;
+  padding-left: 20px;
+}
+.post-body ol {
+  list-style: decimal outside;
+  padding-left: 20px;
+}
+.post-body li {
+  margin-top: 10px;
 }
 /* Sidebar */
 .sidebar {
