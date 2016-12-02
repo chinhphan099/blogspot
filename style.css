@@ -335,12 +335,12 @@ footer {
     background-color: white;
   }
   .logo {
-    width: 100px;
+    width: 124px;
     position: absolute;
     z-index: 1;
     left: 50%;
     margin-left: -50px;
-    top: -50px;
+    top: -67px;
   }
   .logo a {
     display: block;
