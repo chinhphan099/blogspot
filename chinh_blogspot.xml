@@ -885,14 +885,15 @@
                           <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
                             <div class='thumbnail'>
                               <b:with value='data:post.featuredImage.isResizable ? resizeImage(data:post.featuredImage, 300) : data:post.thumbnail' var='image'>
-                                <a expr:href='data:post.href' expr:title='data:post.title' expr:style="background-image: src('data:image')">
-                                  <!-- <img expr:alt='data:post.title' expr:src='data:image' /> -->
+                                <a expr:href='data:post.href' expr:title='data:post.title'>
+                                  <img expr:alt='data:post.title' expr:src='data:image' />
                                 </a>
                               </b:with>
                             </div>
                           <b:else/>
                             <div class='thumbnail'>
-                              <a expr:href='data:post.href' expr:title='data:post.title' style="background-image: src(//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg)">
+                              <a expr:href='data:post.href' expr:title='data:post.title'>
+                                <img expr:alt='data:post.title' src='//2.bp.blogspot.com/-pAkyABlSI9I/V5Vb3h5bgGI/AAAAAAAAEEg/03XLR_fUHfciuaylJJCi1GxDG2Lw9WqVwCLcB/s320/couper.jpg' />
                               </a>
                             </div>
                           </b:if>

@@ -15,7 +15,7 @@
   var pluginName = 'slidemenu',
     win = $(window),
     userAgent = navigator.userAgent,
-    isMobile = /IEMobile|Windows Phone|Lumia|iPhone|iP[oa]d|Android|BlackBerry|PlayBook|BB10|Mobile Safari|webOS|Mobile|Tablet|Opera Mini|\bCrMo\/|Opera Mobi/i.test(userAgent) ? 1 : 0;
+    isMobile = /Android|BlackBerry|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(userAgent) ? 1 : 0;
 
   function Plugin(element, options) {
     this.element = $(element);
