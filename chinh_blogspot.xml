@@ -294,16 +294,19 @@
           <div class='container main-slider'>
             <div class='row'>
               <b:if cond='data:blog.pageType == "index"'>
+                <div class="banner"><img src="//chinhphan099.github.io/blogger-assets/images/home/blog-banner.jpg"></div>
+                <!--
                 <b:section class='main-banner' id='main-slider' preferred='yes' showaddelement='yes'>
                   <b:widget id='HTML4' locked='true' title='Main Slider' type='HTML' visible='true'>
                     <b:includable id='main'>
                       <div class='slider single-slider' data-cslider='{"type": "single", "dots": true}'>
                         <data:content/>
                       </div>
-                      <!-- <b:include name='quickedit'/> -->
+                      < ! - - <b:include name='quickedit'/> - - >
                     </b:includable>
                   </b:widget>
                 </b:section>
+                -->
               <b:else/>
                 <b:section class='main-banner' id='main-banner' preferred='yes' showaddelement='yes'>
                   <b:widget id='Image1' locked='false' title='banner' type='Image' visible='true'>
